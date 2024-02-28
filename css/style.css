@@ -1,0 +1,294 @@
+@font-face {
+  src: url(../fonts/ITCEDSCR.ttf);
+  font-family:"Edwardian Script ITC";
+}
+.slider ul{
+padding: 0;
+list-style: none;
+display: flex;
+width: max-content;
+animation: runSlider 90s linear infinite;
+
+
+}
+.slider img{
+  height: 160px;
+  margin-right: 20px;
+
+}
+.slider li{
+ width: 150px;
+ display: flex;
+ justify-content: start;
+ align-items: center;
+ width: 15px;
+ padding: 10px 59px 20px;
+ margin-right:1px;
+}
+.slider{
+  overflow: hidden;
+  margin:0;
+
+}
+@keyframes runSlider{
+    from {
+      transform:translateX(0);
+    }to{
+      transform: translateX(calc(-180px*20));
+    }
+}
+
+.card{
+  margin-bottom: 45%;
+  border-width: 3px;
+  border-style:outset;
+  border-radius: 1px;
+
+  
+}
+.card-title{
+  color: #202020;
+  font-weight: bold;
+}
+
+
+
+
+
+
+.hatter{
+  background-color:rgba(0, 0, 0, 0.5);
+margin: 4% 25% 30%;
+ padding: 2% 3% 2%;
+ width: 49%;
+}
+.cukorv{
+  font-family:"Edwardian Script ITC";
+color: #FFB800;
+  font-size: 400%;
+  padding: 0% 4% 0%;
+  margin-top: 10%;
+  text-shadow: 10% 10% 20% black;
+
+
+}
+#kozepre{
+
+  margin-left: 16%;
+}
+h2{
+  font-family:"Edwardian Script ITC";
+ margin-left: 21%;
+  font-size: 380%;
+color: wheat;
+opacity: 100%;
+}
+a:link { 
+  text-decoration:none;
+} 
+a:visited { 
+  text-decoration: none; 
+} 
+a:hover { 
+  text-decoration: none; 
+} 
+a:active { 
+  text-decoration:none;
+}
+/* Dropdown Button */
+.dropbtn {
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3f423f;}
+hr{
+  color: white;
+  height: 60px;
+ 
+}
+h4{
+  color: white;
+}
+#Lenkekep{
+  padding: 5px 10px 5px;
+  margin-top: 150px;
+  margin-bottom: 100px;
+}
+#bemutato{
+  color: #f1f1f1;
+  line-height: 400%;
+}
+.hr{
+  height: 200px;
+ 
+}
+.row{
+  text-align: center;
+}
+#nincs{
+  color: black;
+  height: 50px;
+}
+h1{
+  color: white;
+}
+body{
+  font-family: "Lexend Exa", sans-serif;
+  font-optical-sizing: auto;
+  background-color: black;
+
+}
+header, nav, footer
+{
+    background-color: #202020;
+
+}
+.kezdolapcim
+{
+    text-align: center;
+    padding-left: 300px;
+    margin: auto;
+}
+.igazitottcimek
+{
+    text-align: center;
+    padding-left: 30px;
+    margin: auto;
+}
+.felulet
+{
+    text-align: center;
+    padding-left: 300px;
+    margin: auto;
+}
+.ikon
+{
+    text-indent: 100px;
+    font-size:40px;
+    margin: auto;
+    padding-left: 6px;
+    color: #FFB800;
+  font-family: "Edwardian Script ITC";
+      
+}
+.szin
+{
+  color: #FFB800;
+}
+
+h6
+{
+    
+    color: white;
+    font-size: 20px;
+    
+}
+.alcim
+{
+    padding-left: 60px;
+    color: white;
+}
+.footermagassag
+{
+  height: 70px;
+}
+.copyright
+{
+  width: 800px;
+  font-size: small;
+ 
+}
+.ikonok
+{
+  padding-left: 15px;
+}
+.navbar-brand
+{
+  font-family: "Edwardian Script ITC";
+}
+.navbar{
+ padding: 3px 25px 5px;
+}
+.content{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    background-image: url(img/virag.jpeg),url(img/virag2.jpeg),url(img/virag3.jpeg),url(img/ludak1.jpg),url(img/virag5.jpeg),url(img/virag6.jpeg),url(img/virag7.jpeg),url(img/virag8.jpg),url(img/virag9.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 800s;
+    animation-name: animate;
+    animation-direction: alternate-reverse;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
+    animation-duration: 40s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+  }
+  @keyframes animate{
+    0%{
+      background-image: url(img/virag.jpeg);
+    }
+    12.5%{
+      background-image: url(img/virag2.jpeg);
+    }
+    25%{
+      background-image: url(img/virag3.jpeg);
+    }
+    37.5%{
+      background-image: url(img/ludak1.jpg);
+    }
+    50%{
+      background-image: url(img/virag5.jpeg);
+    } 
+    62.5%{
+      background-image: url(img/virag6.jpeg);
+    }
+    75%{
+      background-image: url(img/virag7.jpeg);
+    }
+    87.5%{
+      background-image: url(img/virag8.jpg);
+    }
+    100%{
+      background-image: url(img//virag9.jpg);
+    }
+   
+  
+  }
