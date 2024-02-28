@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" >
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" ></script>
+  <link rel="stylesheet" href="../Cukraszda-main/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&display=swap" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+ 
+
+  
+  <title>Regisztráció</title>
+  
+</head>
+<body class="bej">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="Cukraszda.html"><img src="../Cukraszda-main/img/orchidea.svg"><span class="ikon"> Cukorvarázslat</span> <br> <h6 class="alcim">Cukorvirágok és Cukordíszek</h6></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item kezdolapcim">
+                <a class="nav-link" aria-current="page" href="Cukraszda.html">Kezdőlap </a>
+              </li>
+              <li class="nav-item igazitottcimek">
+                <a class="nav-link" href="Presing Lenke.html">Presing Lenke</a>
+              </li>
+              <li class="nav-item igazitottcimek">
+                <a class="nav-link" href="Galleria.html">Galléria</a>
+              </li>
+              <li class="nav-item igazitottcimek">
+                <a class="nav-link" href="Bolt.html">Bolt</a>
+              </li>
+              <li class="nav-item igazitottcimek">
+                <a class="nav-link" href="Kapcsolat.html">Kapcsolat</a>
+              </li>
+              <li class="nav-item igazitottcimek">
+                <a class="nav-link" href="Megosztas.html"><img src="../Cukraszda-main/img/megosztas.svg" alt="" srcset=""></a>
+              </li>
+              <li class="nav-item igazitottcimek">
+                <a class="nav-link" href="Vásárlás.html"><img src="../Cukraszda-main/img/kosar.svg" alt="" srcset=""></a>
+              </li>
+              <li class="nav-item felulet">
+                <a class="nav-link" href="Bejelentkezés.html">Bejelentkezés <img src="../Cukraszda-main/img/belepes.svg" alt="" class="ikonok"></a>
+                <a class="nav-link active" href="Regisztráció.html"><span class="szin">Regisztráció</span> <img src="../Cukraszda-main/img/regisztracio.svg" alt="" class="ikonok"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+  </header>
+    
+  <div class="container">
+
+ 
+  <form action="Regisztráció.html" method="POST">
+    
+    <h1 class="cimtartalom">Regisztráció</h1>
+    <hr>
+
+    <fieldset>
+      <label for="name" class="nkozep"> Vezetéknév: <span class="nigazit"> Keresztnév: </span></label>
+      <input type="text" id="name" name="user_name">
+      <input type="text" id="name" name="user_name">
+
+      <hr>
+      
+      <label for="name" class="nkozep">Irányítószám: <span class="nigazit">  Ország: </span></label>
+      <input type="number" id="name" name="user_name">
+      <input type="text" id="name" name="user_name">
+      
+      <hr>
+
+      <label for="name" class="nkozep">Lakcím:  <span class="nigazit2"> Város:</span> </label>
+      <input type="text" id="name" name="user_name">
+      <input type="text" id="name" name="user_name">
+     
+      <hr>
+
+      <label for="name" class="nkozep">E-mail cím: <span class="nigazit3">  Jelszó: </span> </label>
+      <input type="text" id="name" name="user_name">
+      <input type="password" id="name" name="user_name">
+
+      <hr>
+
+      <button type="submit">Regisztrálok</button>
+      
+      
+    </fieldset>
+    
+    
+  </form>
+</div>
+
+  <footer class="fixed-bottom footermagassag">
+    <div class="row">
+      <div class="col-md-2 offset-1">
+        <br>
+        <h6 class="copyright">
+          © Copyright Presing Lenke • Cukorvarázs 2024 • Photography by Presing Lenke 
+        </h6>
+
+
+    <div class="modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            
+            <p>Modal body text goes here.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+  <script src="Regisztracio.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  
+</body>
+</html>
