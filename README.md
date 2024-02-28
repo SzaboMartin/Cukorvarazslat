@@ -1,1 +1,1 @@
-# Cukorvarazslat Ódry Attila 
+# Cukorvarazslat Földi Ákos
