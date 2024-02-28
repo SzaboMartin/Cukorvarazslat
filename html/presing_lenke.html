@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+  </div>
+  <div class="col">
+    <img id="Lenkekep" ng-src="./img/PresingLenke.jpeg" alt="">
+    <h1 id="nincs"></h1>
+  </div>
+  <div class="col">
+    </div>
+  </div>
+  <div class="row">
+    <hr>
+    <h1>Presing Lenke</h1>
+    <h1 id="nincs">----</h1>
+    <p id="bemutato">
+      Presing Lenke vagyok. 1973.07.09 én születtem. A művészetek iránti szerelem azt hiszem a véremben van.<br> Képzőművészeti főiskolára készültem, de az élet más útra terelt sok sok éven át. De a sorsát senki sem kerülheti el. <br> Beleszerettem a cukrászatba, és 2011-ben cukrász diplomát szereztem, de a díszítés, a cukorvirágok, figurák, diszitési technikák sokkal jobban érdekeltek, így 2012 óta ez a hivatásom.<br> Magyarországon elsőként tanultam meg a cukorvirágok készitését,és elsőként foglalkoztam oktatással. Szeretek egyedi, személyre szabott díszeket készíteni.<br> <h4>Ez egy csodálatos világ.<h3>
+    </p>
+    <hr class="hr">
+  </div>
+</div>
+
+<div class="slider">
+  <ul>
+    <li ng-repeat="x in [].constructor(22) track by $index">
+      <img ng-src="./img/Cukorviragdisz/disz{{$index+1}}.jpeg" alt="">
+    </li>
+    <li ng-repeat="x in [].constructor(36) track by $index">
+      <img ng-src="./img/Eskuvocukor/cukor{{$index}}.jpeg" alt="">
+    </li>
+  </ul>
+</div>
