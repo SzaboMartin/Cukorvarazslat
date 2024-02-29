@@ -9,13 +9,68 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&display=swap" rel="stylesheet">
-    <title>Bemutatkozás</title>
+    <title>Galléria</title>
+
+    <style>
+        body {
+          box-sizing: border-box;
+
+        }
+        
+        body {
+          margin: 20px;
+        }
+        
+        .header {
+          text-align: center;
+          padding: 32px;
+        }
+        
+        .row {
+          display:flex;
+
+          flex-wrap: wrap;
+          padding: 20px 30px 300x;
+        }
+        
+        /* Create four equal columns that sits next to each other */
+        .column {
+          flex: 25%;
+
+          max-width: 27%;
+
+          padding: 20px 30px;
+        }
+        
+        .column img {
+          margin-top: 60px;
+          vertical-align: middle;
+
+
+        }
+        
+        /* Responsive layout - makes a two column-layout instead of four columns */
+        @media screen and (max-width: 400px) {
+          .column {
+            flex: 50%;
+            max-width: 50%;
+          }
+        }
+        
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+          .column {
+            flex: 100%;
+            max-width: 100%;
+          }
+        }
+        </style>
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
             <div class="container-fluid">
-              <a class="navbar-brand" href="Cukraszda.html"><img src="./img/orchidea.svg"><span class="ikon"> Cukorvarázslat</span> <br> <h6 class="alcim">Cukorvirágok és Cukordíszek</h6></a>
+              <a class="navbar-brand" href="Főoldal.html"><img src="./img/orchidea.svg"><span class="ikon"> Cukorvarázslat</span> <br> <h6 class="alcim">Cukorvirágok és Cukordíszek</h6></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -25,19 +80,21 @@
                     <a class="nav-link " aria-current="page" href="Cukraszda.html">Kezdőlap </a>
                   </li>
                   <li class="nav-item igazitottcimek">
-                    <a class="nav-link active" href="Presing Lenke.html"><span class="szin">Presing Lenke</span></a>
+                    <a class="nav-link" href="Presing Lenke.html">Presing Lenke</a>
                   </li>
+              
                   <li class="nav-item igazitottcimek">
                     <div class="dropdown">
-                      <a href="Galleria.html">  <button class="dropbtn nav-link">Galléria</button></a> 
+                   <a href="Galleria.html">  <button class="dropbtn nav-link active"><span class="szin">Galléria</span></button></a> 
                       <div class="dropdown-content">
                         <a href="Cukordiszek.html">Cukorvirágdíszek</a>
                         <a href="eskuvocukor.html">Esküvői díszek</a>
                         <a href="figurak.html">Figurák</a>
                         <a href="Naszparok.html">Nászpárok</a>
-    
+
                       </div>
                     </div>
+                   
                   </li>
                   <li class="nav-item igazitottcimek">
                     <a class="nav-link" href="Bolt.html">Bolt</a>
@@ -45,6 +102,7 @@
                   <li class="nav-item igazitottcimek">
                     <a class="nav-link" href="Kapcsolat.html">Kapcsolat</a>
                   </li>
+             
                   <li class="nav-item igazitottcimek">
                     <a class="nav-link" href="Megosztás.html"><img src="./img/megosztas.svg" alt="" srcset=""></a>
                   </li>
@@ -57,32 +115,82 @@
                   </li>
                 </ul>
               </div>
+           
             </div>
           </nav>
           
         </header>
-        <div class="container">
-          <div class="row">
-            <div class="col">
-          </div>
-          <div class="col">
-            <img id="Lenkekep" src="img/PresingLenke.jpeg" alt="">
-            <h1 id="nincs"></h1>
-          </div>
-          <div class="col">
-            </div>
-          </div>
-          <div class="row">
-            <hr>
-            <h1>Presing Lenke</h1>
-            <h1 id="nincs">----</h1>
-            <p id="bemutato">
-              Presing Lenke vagyok. 1973.07.09 én születtem. A művészetek iránti szerelem azt hiszem a véremben van.<br> Képzőművészeti főiskolára készültem, de az élet más útra terelt sok sok éven át. De a sorsát senki sem kerülheti el. <br> Beleszerettem a cukrászatba, és 2011-ben cukrász diplomát szereztem, de a díszítés, a cukorvirágok, figurák, diszitési technikák sokkal jobban érdekeltek, így 2012 óta ez a hivatásom.<br> Magyarországon elsőként tanultam meg a cukorvirágok készitését,és elsőként foglalkoztam oktatással. Szeretek egyedi, személyre szabott díszeket készíteni.<br> <h4>Ez egy csodálatos világ.<h3>
-            </p>
-            <hr class="hr">
-          </div>
-        </div>
 
+      
+  
+          <div class="header">
+            <h1>Galléria</h1>
+
+            <h1 id="nincs">-----------------------</h1>
+
+            <h1>Cukordíszek</h1>
+
+          </div>
+          
+        <div id="kozepre">
+          <div class="row"> 
+            <div class="column">
+             
+              <img src="img/Cukorviragdisz/disz.jpeg" style="width:95%">
+              <img src="img/Cukorviragdisz/disz2.jpeg"  style="width:95%">
+
+              <img src="img/Cukorviragdisz/disz3.jpeg" style="width:95%">
+
+              <img src="img/Cukorviragdisz/disz4.jpeg"  style="width:95%">
+
+              <img src="img/Cukorviragdisz/disz5.jpeg"  style="width:95%">
+              <img src="img/Cukorviragdisz/disz19.jpeg"  style="width:95%">
+
+              <img src="img/Cukorviragdisz/disz20.jpeg"  style="width:95%">
+              <img src="img/Cukorviragdisz/disz23.jpeg"  style="width:95%">
+            
+            </div>
+            
+            <div class="column">
+                <img src="img/Cukorviragdisz/disz6.jpeg" style="width:95%">
+              <img src="img/Cukorviragdisz/disz7.jpeg"  style="width:95%">
+
+              <img src="img/Cukorviragdisz/disz23.jpeg" style="width:95%">
+
+              <img src="img/Cukorviragdisz/disz9.jpeg"  style="width:95%">
+
+              <img src="img/Cukorviragdisz/disz10.jpeg"  style="width:95%">
+              <img src="img/Cukorviragdisz/disz16.jpeg" style="width:95%">
+              <img src="img/Cukorviragdisz/disz17.jpeg"  style="width:95%">
+
+              <img src="img/Cukorviragdisz/disz18.jpeg" style="width:95%">
+              
+            </div> 
+             
+            <div class="column">
+                <img src="img/Cukorviragdisz/disz11.jpeg" style="width:95%">
+              <img src="img/Cukorviragdisz/disz12.jpeg"  style="width:95%">
+
+              <img src="img/Cukorviragdisz/disz13.jpeg" style="width:95%">
+
+              <img src="img/Cukorviragdisz/disz14.jpeg"  style="width:95%">
+
+              <img src="img/Cukorviragdisz/disz15.jpeg"  style="width:95%">
+                
+              <img src="img/Cukorviragdisz/disz21.jpeg"  style="width:95%">
+
+              <img src="img/Cukorviragdisz/disz22.jpeg"  style="width:95%">
+            
+
+            
+            </div>
+            
+           
+          </div>
+
+
+        </div>
+        
         <div class="slider">
           <ul>
             <li>
@@ -156,8 +264,6 @@
             <li>
               <img src="img/Cukorviragdisz/disz23.jpeg" alt="">
             </li>
-
-            
             <li>
               <img src="img/Eskuvocukor/cukor.jpeg" alt="">
             </li>
@@ -282,7 +388,7 @@
 
 
         </div>
-
+       
 
 
     <footer class="fixed-bottom footermagassag">
