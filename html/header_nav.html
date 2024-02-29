@@ -1,0 +1,172 @@
+<!-- Navbar -->
+<nav class="navbar navbar-dark bg-dark navbar-expand-xl">
+
+	<!-- Container -->
+	<div class="container-fluid">
+
+		<!-- Logo -->
+	  <a class="navbar-brand" height="40" href="">
+		  <img ng-src="./img/orchidea.svg" alt="logo">
+		</a>
+
+    <!-- Hambureger icon -->
+	  <button class="navbar-toggler" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#navbarNav" 
+            aria-controls="navbarNav" 
+            aria-expanded="false" 
+            aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+	  </button>
+
+		<!-- Navigation -->
+	  <div class="collapse navbar-collapse" id="navbarNav">
+
+			<!-- Navbar content LEFT -->
+			<ul class="navbar-nav me-auto">
+
+        <!-- Home -->
+		    <li class="nav-item mx-1">
+		  	  <a class="nav-link" 
+             ui-sref="home"
+             ui-sref-active="active">
+						Kezdőlap
+          </a>
+		    </li>
+
+        <!-- Presing Lenke -->
+		    <li class="nav-item mx-1">
+		  	  <a class="nav-link text-nowrap" 
+             ui-sref="presing_lenke"
+             ui-sref-active="active">
+            Presing Lenke
+          </a>
+		    </li>
+
+        <!-- Galléria -->
+		    <li class="nav-item dropdown mx-1">
+          <a class="nav-link dropdown-toggle" 
+						 href="#" 
+						 role="button" 
+						 data-bs-toggle="dropdown" 
+						 aria-expanded="false">
+						Galléria
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+
+						<!-- Cukorvirágdíszek -->
+		  		  <li>
+							<a class="dropdown-item" 
+								 ui-sref-active="active" 
+								 ui-sref="galeria({type:'Cukorviragdisz'})">
+								Cukorvirágdíszek
+							</a>
+						</li>
+
+						<!-- Esküvői díszek -->
+		  		  <li>
+							<a class="dropdown-item" 
+								 ui-sref-active="active" 
+								 ui-sref="galeria({type:'Eskuvocukor'})">
+								Esküvői díszek
+							</a>
+						</li>
+
+						<!-- Figurák -->
+		  		  <li>
+							<a class="dropdown-item" 
+								 ui-sref-active="active" 
+								 ui-sref="galeria({type:'Figurak'})">
+								Figurák
+							</a>
+						</li>
+
+						<!-- Nászpárok -->
+		  		  <li>
+							<a class="dropdown-item" 
+								 ui-sref-active="active" 
+								 ui-sref="galeria({type:'Nászpárok'})">
+								Nászpárok
+							</a>
+						</li>
+		  	  </ul>
+		    </li>
+
+        <!-- Bolt -->
+		    <li class="nav-item mx-1">
+		  	  <a class="nav-link" 
+             ui-sref="bolt"
+             ui-sref-active="active">
+             Bolt
+          </a>
+		    </li>
+
+        <!-- Kapcsolat -->
+		    <li class="nav-item mx-1">
+		  	  <a class="nav-link" 
+             ui-sref="kapcsolat"
+             ui-sref-active="active">
+            Kapcsolat
+          </a>
+		    </li>
+		  </ul>
+
+			<!-- Navbar content RIGHT -->
+			<ul class="navbar-nav ms-auto">
+
+				<!-- Bejelentkezés -->
+		    <li class="nav-item mx-1"
+						ng-if="!$root.user.id && $root.state.id !== 'login'">
+		  	  <a class="nav-link" 
+             ui-sref="login"
+						 ui-sref-active="active">
+						<i class="fa-solid fa-right-to-bracket fa-xl me-1"></i>
+						<span class="text-capitalize text-small-caps">
+							Bejelentkezés
+						</span>
+          </a>
+        </li>
+
+        <!-- Regisztráció  -->
+        <li class="nav-item mx-1"
+						ng-if="!$root.user.id && $root.state.id === 'login'">
+		  	  <a class="nav-link" 
+             ui-sref="register"
+						 ui-sref-active="active">
+						<i class="fa-solid fa-id-card fa-xl me-1"></i>
+						<span class="text-capitalize text-small-caps">
+							Regisztráció
+						</span>
+          </a>
+		    </li>
+
+				<!-- Profil  -->
+        <li class="nav-item mx-1"
+						ng-if="$root.user.id">
+		  	  <a class="nav-link" 
+             ui-sref="profile"
+						 ui-sref-active="active">
+						<i class="fa-solid fa-id-card fa-xl me-1"></i>
+						<span class="text-capitalize text-small-caps">
+							Profil
+						</span>
+          </a>
+		    </li>
+
+				<!-- Logout -->
+		    <li class="nav-item cursor-pointer" 
+						ng-if="$root.user.id">
+		  	  <a class="nav-link"
+						 ui-sref-active="active" 
+						 ng-click="logout()">
+						<i class="fa-solid fa-right-from-bracket fa-xl me-1"></i>
+						<span class="text-capitalize text-small-caps">
+							Kijelenkezés
+						</span>
+					</a>
+		    </li>
+			</ul>
+	  </div>
+	</div>
+</nav>
