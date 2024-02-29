@@ -219,13 +219,6 @@ height: 300px;
 {
   color: #FFB800;
 }
-h6
-{
-    
-    color: white;
-    font-size: 20px;
-    
-}
 
 .alcim
 {
@@ -240,6 +233,7 @@ h6
 {
   width: 800px;
   font-size: small;
+  color: white;
  
 }
 .ikonok
@@ -253,17 +247,7 @@ h6
 .navbar{
  padding: 3px 25px 5px;
 }
-form {
 
-  height: 1010px;
-  width: 870px;
-  margin: 200px auto;
-  padding: 10px 20px;
-  background: black;
-  border-radius: 8px;
-  outline: auto white;
-  
-}
 h1 {
   margin: 0 10 0 0;
   text-align: center;
@@ -397,4 +381,24 @@ padding-left: 295px;
     background-image: url(../img/hatter3.png);
     background-size: 95%;
     background-position: center;
+  }
+  #regist{
+    
+  height: 800px;
+  width: 870px;
+  margin: 200px auto;
+  padding: 10px 20px;
+  background: black;
+  border-radius: 8px;
+  outline: auto white;
+
+  }
+  #login{
+    height: 600px;
+    width: 870px;
+    margin: 200px auto;
+    padding: 10px 20px 20px;
+    background: black;
+    border-radius: 8px;
+    outline: auto white;
   }
