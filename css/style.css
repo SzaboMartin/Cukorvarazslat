@@ -402,3 +402,56 @@ padding-left: 295px;
     border-radius: 8px;
     outline: auto white;
   }
+  #kapcsolat
+  {
+    
+    margin-right: 20px;
+    height: 450px;
+    width: 425px;
+    
+  }
+  #kapcsolat2
+  {
+    
+    float: right;
+    margin-right: 200px;
+    background-color: grey;
+    color: black;
+    
+  }
+  #kapcsolat3
+  {
+    padding-left: 300px;
+    width: 33%;
+    margin-left: 200px;
+  }
+  #kapcsolat4
+  {
+    float: right;
+    margin-right: 200px;
+    height: 350px;
+    background-color: grey;
+    color: black;
+  }
+  #kapcsolat5
+  {
+    
+    float: right;
+    margin-right: 400px;
+    height: 100px;
+    width: 400px;
+    background-color: black;
+    color: white;
+    
+  }
+  .kapcsolat
+  {
+    padding-left: 1170px;
+    
+  }
+
+  .kapcsolat2
+  {
+    padding-left: 400px;
+    
+  }
