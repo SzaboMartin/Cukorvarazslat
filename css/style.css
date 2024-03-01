@@ -261,6 +261,7 @@ h1 {
   margin-left: 180px;
 }
 
+
 input[type="text"],
 input[type="password"],
 input[type="date"],
@@ -339,6 +340,10 @@ padding-left: 235px;
 {
 padding-left: 295px;
 }
+.nkozep4
+{
+padding-left: 265px;
+}
 .ikozep
 {
   padding-left: 80px;
@@ -384,7 +389,7 @@ padding-left: 295px;
   }
   #regist{
     
-  height: 700px;
+  height: 790px;
   width: 870px;
   margin: 200px auto;
   padding: 10px 20px;
