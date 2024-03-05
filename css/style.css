@@ -52,10 +52,15 @@ margin: 4% 25% 30%;
 .cukorv{
   font-family:"Edwardian Script ITC";
   color: #FFB800;
-  font-size: 10rem;
+  
   padding: 0% 4% 0%;
-  margin-top: 10%;
-  text-shadow: 10% 10% 20% black;
+  
+  text-shadow: 10% 10% 20% black; 
+  display: inline-block;
+  word-break: break-all; 
+  max-width: 100%; 
+  font-size: 8vw;
+ 
 }
 #kozepre{
   margin-left: 16%;
@@ -431,4 +436,10 @@ padding-left: 265px;
     margin-right: 200px;
     opacity: 0;
     pointer-events: none;
+}
+.artigo_nome{
+  display: inline-block;
+  word-break: break-all; 
+  max-width: 100%; 
+  font-size: 1vw;
 }
