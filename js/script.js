@@ -14,3 +14,4 @@ shareBtn.addEventListener('click', event => {
     alert("The current browser does not support the share function. Please, manually share the link")
   }
 });
+

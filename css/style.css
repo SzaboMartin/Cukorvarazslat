@@ -90,6 +90,7 @@ a:active {
 .dropdown {
   position: relative;
   display: inline-block;
+  
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -99,7 +100,8 @@ a:active {
   background-color: #f1f1f1;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+
+
 }
 /* Links inside the dropdown */
 .dropdown-content a {
@@ -153,7 +155,7 @@ header, nav, footer
     background-color: #202020;
 }
 .header{
-height: 300px;
+height: 150px;
 }
 .kezdolapcim
 {
@@ -209,6 +211,7 @@ height: 300px;
 .navbar-brand
 {
   font-family: "Edwardian Script ITC";
+
 }
 .navbar{
  padding: 3px 25px 5px;
