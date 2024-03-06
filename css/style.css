@@ -20,7 +20,6 @@ animation: runSlider 90s linear infinite;
  align-items: center;
  width: 15px;
  padding: 10px 59px 20px;
- margin-right:1px;
 }
 .slider{
   overflow: hidden;
@@ -201,7 +200,7 @@ height: 150px;
 }
 .footermagassag
 {
-  height: 70px;
+  height: 90px;
   padding: 15px;
 }
 .copyright
