@@ -19,7 +19,7 @@ animation: runSlider 90s linear infinite;
  justify-content: start;
  align-items: center;
  width: 100px;
- padding: 10px 59px 20px;
+ padding: 30px 59px 20px;
 }
 .slider{
   overflow: hidden;
@@ -202,8 +202,7 @@ height: 150px;
 {
   height: 90px;
   padding: 15px;
-  
-  
+ 
 }
 .copyright
 {
