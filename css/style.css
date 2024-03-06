@@ -13,7 +13,13 @@ animation: runSlider 90s linear infinite;
   height: 160px;
   margin-right: 20px;
 }
+#line{
 
+  color: white;
+  border-width: 5px;
+  padding: 5%;
+
+}
 .slider li{
  width: 150px;
  display: flex;
@@ -123,10 +129,7 @@ a:active {
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: #3f423f;}
-.lenkehr{
-  color: white;
-  height: 60px;
-}
+
 h4{
   color: white;
 }
