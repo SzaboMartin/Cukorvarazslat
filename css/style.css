@@ -44,9 +44,9 @@ animation: runSlider 90s linear infinite;
 }
 .hatter{
   background-color:rgba(0, 0, 0, 0.5);
-margin: 4% 25% 30%;
+margin: 4% 25% 2%;
  padding: 2% 3% 2%;
- width: 49%;
+ width: 47.5%;
 }
 .cukorv{
   font-family:"Edwardian Script ITC";
