@@ -116,6 +116,25 @@
       <label for="name" class="nkozep4">Telefonszám:</label>
       <input type="tel" id="name2" name="user_name" maxlength="11" value="" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required />
 
+      <div data-role="main" class="ui-content">
+        <form method="post" action="/action_page_post.php">
+          <fieldset data-role="controlgroup">
+            <h4>Neme:</h4>
+            <div class="row">
+                <div class="col">
+                    <label for="male">Férfi</label>
+                    <input type="radio" name="gender" id="male" value="male" checked>
+                </div>
+                <div class="col">
+                    <label for="female">Nő</label>
+                    <input type="radio" name="gender" id="female" value="female">
+                </div>
+            </div>
+        </fieldset>
+        
+        </form>
+      </div>
+
       <button type="submit">Regisztrálok</button>
       
       
