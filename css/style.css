@@ -358,7 +358,7 @@ padding-left: 265px;
   }
   #regist{
     
-  height: 790px;
+  height: 900px;
   width: 870px;
   margin: 200px auto;
   padding: 10px 20px;
@@ -446,4 +446,8 @@ padding-left: 265px;
   word-break: break-all; 
   max-width: 100%; 
   font-size: 1vw;
+}
+h4
+{
+  text-align: center;
 }
