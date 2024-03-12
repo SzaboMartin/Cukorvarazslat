@@ -468,6 +468,8 @@ h4
   text-align: center;
 }
 .wrapper{
+ background-color:wheat;
+padding: 20px;
 }
 .iras{
   width: 600px;
@@ -482,4 +484,28 @@ h4
 #ferfi,#no
 {
   color: white;
+}
+.input-group{
+ margin-top: 10px;
+ margin-bottom: 10px;
+  width: 300px;
+
+}
+.input-group i {
+position: absolute;
+left: 7rem;
+top: 7px;
+}
+.wrapper ul li{
+  list-style: none;
+  padding: 1px 0;
+  border-radius: 8px;
+  background-color: #FFB800;
+  margin:6px;
+  cursor:pointer;
+ transition: .3s;
+
+}
+.wrapper ul li:hover{
+  background-color: #e8eeef;
 }
