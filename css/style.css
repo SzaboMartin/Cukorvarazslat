@@ -45,6 +45,16 @@ animation: runSlider 90s linear infinite;
   border-width: 3px;
   border-style: outset;
   border-radius: 1px;
+  
+}
+#kapcsolatokCard
+{
+  margin-bottom: 30%;
+  border-width: 3px;
+  border-style: outset;
+  border-radius: 1px;
+  background-color: black;
+  border: black;
 }
 
 .card-title{
@@ -408,10 +418,9 @@ padding-left: 265px;
   {
    
     height: 100px;
-    width: 400px;
+    width: 60%;
     background-color: black;
     color: white;
-    margin-left: 7rem;
     margin-bottom: 10rem;
   }
   .kapcsolat
