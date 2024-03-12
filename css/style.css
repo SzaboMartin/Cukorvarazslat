@@ -307,22 +307,27 @@ label.light {
 .nkozep, .ekozep, .lkozep
 {
 padding-left: 100px;
+color: white;
 }
 .nkozep2
 {
 padding-left: 235px;
+color: white;
 }
 .nkozep3
 {
 padding-left: 295px;
+color: white;
 }
 .nkozep4
 {
 padding-left: 265px;
+color: white;
 }
 .ikozep
 {
   padding-left: 80px;
+  color: white;
 }
 .cimtartalom
 {
@@ -473,4 +478,8 @@ h4
 }
 .regioldal{
   color:#FFB800;
+}
+#ferfi,#no
+{
+  color: white;
 }
