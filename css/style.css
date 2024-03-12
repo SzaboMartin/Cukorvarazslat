@@ -497,6 +497,12 @@ position: absolute;
 left: 7rem;
 top: 7px;
 }
+.input-group .fa-xmark{
+display: none;
+font-size: 18px;
+
+}
+
 .wrapper ul li{
   list-style: none;
   padding: 1px 0;
@@ -505,10 +511,14 @@ top: 7px;
   margin:6px;
   cursor:pointer;
  transition: .3s;
+ color: #202020;
 
 }
 .wrapper ul li:hover{
   background-color: #e8eeef;
+}
+.wrapper ul li:last-child{
+  margin: 10px 0 0;
 }
 ::placeholder
 {
