@@ -394,6 +394,7 @@ padding-left: 265px;
     margin-right: 180px;
     background-color: grey;
     color: black;
+    width: 58%;
   }
   #kapcsolat3
   {
@@ -406,6 +407,7 @@ padding-left: 265px;
     float: right;
     margin-right: 180px;
     height: 350px;
+    width: 58%;
     background-color: grey;
     color: black;
   }
@@ -417,6 +419,7 @@ padding-left: 265px;
     background-color: black;
     color: white;
     margin-bottom: 10rem;
+    margin-top: 6rem;
   }
   .kapcsolat
   {
