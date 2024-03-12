@@ -40,11 +40,13 @@ animation: runSlider 90s linear infinite;
     }
 }
 .card{
+  
   margin-bottom: 30%;
   border-width: 3px;
-  border-style:outset;
+  border-style: outset;
   border-radius: 1px;
 }
+
 .card-title{
   color: #202020;
   font-weight: bold;
