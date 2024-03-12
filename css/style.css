@@ -41,6 +41,7 @@ animation: runSlider 90s linear infinite;
 }
 .card{
   
+  margin-bottom: 30%;
   border-width: 3px;
   border-style: outset;
   border-radius: 1px;
@@ -379,7 +380,7 @@ padding-left: 265px;
   #kapcsolat
   { 
     
-    height: 430px;
+    height: 530px;
     width: 410px;
   }
   #kapcsolat2
@@ -410,6 +411,8 @@ padding-left: 265px;
     width: 400px;
     background-color: black;
     color: white;
+    margin-left: 7rem;
+    margin-bottom: 10rem;
   }
   .kapcsolat
   {
@@ -451,4 +454,6 @@ padding-left: 265px;
 h4
 {
   text-align: center;
+}
+.wrapper{
 }
