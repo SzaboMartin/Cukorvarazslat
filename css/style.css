@@ -149,6 +149,7 @@ h4{
   padding: 5px 10px 5px;
   margin-top: 150px;
   margin-bottom: 100px;
+  
 }
 #bemutato{
   color: #f1f1f1;
@@ -482,4 +483,8 @@ h4
 #ferfi,#no
 {
   color: white;
+}
+::placeholder
+{
+  color: rgba(0, 0, 0, 0.5);
 }
