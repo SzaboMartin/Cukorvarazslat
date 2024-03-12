@@ -17,7 +17,7 @@ animation: runSlider 90s linear infinite;
 
   color: white;
   border-width: 5px;
-  padding: 5%;
+ 
 
 }
 .slider li{
@@ -40,8 +40,8 @@ animation: runSlider 90s linear infinite;
     }
 }
 .card{
+  margin-bottom: 16%;
   
-  margin-bottom: 30%;
   border-width: 3px;
   border-style: outset;
   border-radius: 1px;
@@ -294,11 +294,6 @@ fieldset {
   margin-bottom: 15px;
   border: none;
 }
-label {
-  display: block;
-  margin-bottom: 8px;
-  color: white;
-}
 
 label.light {
   font-weight: 300;
@@ -465,4 +460,14 @@ h4
   text-align: center;
 }
 .wrapper{
+}
+.iras{
+  width: 600px;
+}
+.elerhetoseg{
+  display: block;
+  color: white;
+}
+.regioldal{
+  color:#FFB800;
 }
