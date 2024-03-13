@@ -486,8 +486,9 @@ padding: 20px;
 }
 .regioldal{
   color:#FFB800;
+  text-shadow: 2px 1px gray;
 }
-#ferfi,#no
+#ferfi, #no
 {
   color: white;
 }
