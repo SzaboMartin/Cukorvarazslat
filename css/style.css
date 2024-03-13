@@ -537,6 +537,9 @@ html{
   overflow: hidden;
   overflow-y: auto;
 }
+
+<!----------------------------------------------------------------->
+
 header .shopping{
   position: relative;
   text-align: right;
