@@ -655,4 +655,6 @@ header .shopping span{
 .listCard .count{
   margin: 0 10px;
 }
-
+.containerszelesseg{
+  width: 98%;
+}
