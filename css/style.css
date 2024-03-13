@@ -533,3 +533,7 @@ h6
 {
   color: white;
 }
+html{
+  overflow: hidden;
+  overflow-y: auto;
+}
