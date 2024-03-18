@@ -69,11 +69,12 @@
 				parent: 'root',
 				templateUrl: './html/uder_construction.html'
 			})
-      .state('kapcsolat', {
-				url: '/kapcsolat',
+		.state('Kapcsolat', {
+				url: '/Kapcsolat',
 				parent: 'root',
 				templateUrl: './html/uder_construction.html'
 			})
+     
       .state('megosztas', {
 				url: '/megosztas',
 				parent: 'root',
