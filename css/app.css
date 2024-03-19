@@ -240,6 +240,7 @@ h6 {
 }
 .navbar {
  padding: 3px 25px 5px;
+ background-color: #0a0a0a;
 }
 
 
@@ -317,5 +318,5 @@ h6 {
 }
 .footerhatter
 {
-  background-color: #181818;
+  background-color: #0a0a0a;
 }
