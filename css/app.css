@@ -245,7 +245,7 @@ h6 {
 
 
 .page-container.home main {
-  background-image: url(../img/virag4.jpeg),url(../img/virag.jpeg),
+  background-image: url(../img/virag4.jpeg),url(../img/disz19.jpeg),
                     url(../img/virag3.jpeg),url(../img/ludak1.jpg),
                     url(../img/virag5.jpeg),url(../img/virag6.jpeg),
                     url(../img/virag7.jpeg),url(../img/virag8.jpg),
@@ -291,7 +291,7 @@ h6 {
     background-image: url(../img/virag4.jpeg);
   }
   12.5%{
-    background-image: url(../img/virag.jpeg);
+    background-image: url(../img/disz19.jpeg);
   }
   25%{
     background-image: url(../img/virag3.jpeg);
