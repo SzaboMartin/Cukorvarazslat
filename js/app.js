@@ -67,7 +67,7 @@
       .state('bolt', {
 				url: '/bolt',
 				parent: 'root',
-				templateUrl: './html/uder_construction.html'
+				templateUrl: './html/bolt.html'
 			})
 		.state('Kapcsolat', {
 				url: '/Kapcsolat',
