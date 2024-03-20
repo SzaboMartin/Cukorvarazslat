@@ -331,3 +331,10 @@ h6 {
 .centerr{
   text-align: center;
 }
+.bej
+  {
+    background-image: url(../img/hatter3.png);
+    background-size: 95%;
+    background-position: center;
+    background-blend-mode: hard-light;
+  }

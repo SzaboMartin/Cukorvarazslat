@@ -2,11 +2,11 @@
 	<div class="row my-5 justify-content-center">
 
     <!-- Panel -->
-		<div class="form-panel register p-4 border bg-wheat rounded-4 
+		<div class="form-panel register p-4 border bg-black rounded-4 
                 col-11 col-md-8 col-lg-6 col-xxl-5">
 
       <!-- Title -->
-			<h3 class="text-center">Regisztráció</h3>
+			<h3 class="text-center text-white">Regisztráció</h3>
 
       <!-- Register form -->	 
       <form name="registerForm">
@@ -15,12 +15,12 @@
         <div class="mb-3">
           <label for="regName" class="form-label">
             <i class="fa-solid fa-star fa-2xs text-danger"></i>
-            <span>Név:</span>
+            <span class="text-white">Név:</span>
           </label>
           <input class="form-control"
                 id="regName"
                 name="regName"
-                placeholder="név"
+                placeholder="Név"
                 type="text"
                 spellcheck="false" 
                 autocomplete="off"
@@ -34,7 +34,7 @@
         <div class="mb-3">
           <label for="regBorn" class="form-label">
             <i class="fa-solid fa-star fa-2xs text-danger"></i>
-            <span>Született:</span>
+            <span class="text-white">Született:</span>
           </label>
           <input class="form-control"
                 id="regBorn"
@@ -54,36 +54,36 @@
         <fieldset class="mb-3">
           <legend class="form-label fs-6">
             <i class="fa-solid fa-star fa-2xs text-danger"></i>
-            <span>Neme:</span>
+            <span class="text-white">Neme:</span>
           </legend>
-
-          <!-- Inpu/Label for female -->
-          <div class="form-check form-check-inline">
-            <input id="female"
-                  name="gender" 
-                  type="radio"
-                  value="F"
-                  class="form-check-input"
-                  ng-model="model.gender" 
-                  required>
-            <label for="female" class="form-check-label">
-              nő
-            </label>
-          </div>
 
           <!-- Inpu/Label for male -->
           <div class="form-check form-check-inline">
             <input id="male"
+                  name="gender" 
+                  type="radio"
+                  value="M"
+                  class="form-check-input"
+                  ng-model="model.gender" 
+                  required>
+            <label for="male" class="form-check-label text-white">
+              Férfi
+            </label>
+          </div>
+
+          <!-- Inpu/Label for female -->
+          <div class="form-check form-check-inline">
+            <input id="female"
                   name="gender"
                   type="radio" 
-                  value="M"
+                  value="F"
                   class="form-check-input"
                   ng-model="model.gender"
                   ng-init="model.gender=null" 
                   required
                   ng-check-mark>
-            <label for="male" class="form-check-label">
-              férfi
+            <label for="female" class="form-check-label text-white">
+              Nő
             </label>
           </div>
         </fieldset>
@@ -91,12 +91,12 @@
         <!-- Address -->
         <div class="mb-3">
           <label for="address" class="form-label">
-            <span>Lakcím:</span>
+            <span class="text-white">Lakcím:</span>
           </label>
           <textarea class="form-control"
                     id="address"
                     name="address" 
-                    placeholder="lakcím"
+                    placeholder="Lakcím"
                     spellcheck="false" 
                     autocomplete="off"
                     rows="1"
@@ -108,12 +108,12 @@
         <!-- Phone -->
         <div class="mb-3">
           <label for="country_code" class="form-label">
-            <span>Telefonszám:</span>
+            <span class="text-white">Telefonszám:</span>
           </label>
           <div class="mb-3">
 
             <!-- Country code -->
-            <span>+</span>
+            <span class="text-white">+</span>
             <input class="form-control d-inline-block mx-1"
                   id="country_code"
                   name="country_code" 
@@ -147,12 +147,12 @@
         <div class="mb-3">
           <label for="regEmail" class="form-label">
             <i class="fa-solid fa-star fa-2xs text-danger"></i>
-            <span>Email cím:</span>
+            <span class="text-white">Email cím:</span>
           </label>
           <input class="form-control"
                 id="regEmail"
                 name="regEmail"
-                placeholder="email cím"
+                placeholder="Email-cím"
                 type="email"
                 spellcheck="false" 
                 autocomplete="off"
@@ -167,12 +167,12 @@
         <div class="mb-1">
           <label for="regPassword" class="form-label">
             <i class="fa-solid fa-star fa-2xs text-danger"></i>
-            <span>Jelszó:</span>
+            <span class="text-white">Jelszó:</span>
           </label>
           <input class="form-control input-password"
                 id="regPassword"
                 name="regPassword"
-                placeholder="jelszó" 
+                placeholder="Jelszó" 
                 type="password"
                 spellcheck="false" 
                 autocomplete="off"
@@ -197,8 +197,8 @@
 								 ng-init="model.passwordShow=false"
 								 ng-click="event=$event"
 					 			 ng-change="methods.showHidePassword(event)">
-					<label class="form-check-label" for="passwordShow">
-						jelszót megjelenít
+					<label class="form-check-label  text-white" for="passwordShow">
+						Jelszót megjelenít
 					</label>
 				</div>
         <hr class="divider">
@@ -209,7 +209,7 @@
           <!-- Accept button -->
           <button data-key="register" 
                   type="button" 
-                  class="btn mx-1 mb-1 btn-primary"
+                  class="btn mx-1 mb-1 btn-primary bg-black text-white border-white"
                   style="min-width:120px;"
                   ng-disabled="registerForm.$invalid" 
                   ng-click="methods.accept($event)">
@@ -218,7 +218,7 @@
 
           <!-- Cancel -->
           <button type="button" 
-                  class="btn mx-1 mb-1 btn-secondary" 
+                  class="btn mx-1 mb-1 btn-secondary bg-black text-white border-white" 
                   style="min-width:120px;"
                   ng-click="methods.cancel($event)">
             Mégsem

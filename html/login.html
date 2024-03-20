@@ -2,25 +2,25 @@
 	<div class="row my-5 justify-content-center">
 
 		<!-- Panel -->
-		<div class="form-panel login p-4 border bg-wheat rounded-4 
+		<div class="form-panel login p-4 border bg-black rounded-4 
 								col-11 col-md-8 col-lg-6 col-xxl-5">
 
 			<!-- Title -->
-			<h3 class="text-center">Bejelenkezés</h3>
+			<h3 class="text-center  text-white">Bejelenkezés</h3>
 
 			<!-- Login form -->	 
 			<form name="loginForm">
 			
 				<!-- Email -->
 				<div class="mb-3">
-					<label for="logEmail" class="form-label">
+					<label for="logEmail" class="form-label text-white">
 						<i class="fa-solid fa-star fa-2xs text-danger"></i>
-						<span>Email cím:</span>
+						<span>Email-cím:</span>
 					</label>
 					<input class="form-control"
 								 id="logEmail"
 								 name="logEmail"
-								 placeholder="email cím"
+								 placeholder="Email-cím"
 								 type="email"
 								 spellcheck="false" 
 								 autocomplete="off"
@@ -32,14 +32,14 @@
 			
 				<!-- Password -->
 				<div class="mb-1">
-					<label for="logPassword" class="form-label">
+					<label for="logPassword" class="form-label text-white">
 						<i class="fa-solid fa-star fa-2xs text-danger"></i>
 						<span>Jelszó:</span>
 					</label>
 					<input class="form-control input-password"
 								 id="logPassword"
 								 name="logPassword"
-								 placeholder="jelszó" 
+								 placeholder="Jelszó" 
 								 type="password"
 								 spellcheck="false" 
 								 autocomplete="off"
@@ -64,8 +64,8 @@
 								 ng-init="model.passwordShow=false"
 								 ng-click="event=$event"
 					 			 ng-change="methods.showHidePassword(event)">
-					<label class="form-check-label" for="passwordShow">
-						jelszót megjelenít
+					<label class="form-check-label text-white" for="passwordShow">
+						Jelszót megjelenít
 					</label>
 				</div>
 				<hr class="divider">
@@ -76,7 +76,7 @@
 					<!-- Accept button -->
 					<button data-key="login" 
 									type="button" 
-									class="btn mx-1 mb-1 btn-primary" 
+									class="btn mx-1 mb-1 btn-primary bg-black text-white border-white" 
 									style="min-width:120px;"
 									ng-disabled="loginForm.$invalid" 
 									ng-click="methods.accept($event)">
@@ -85,7 +85,7 @@
 				
 					<!-- Cancel -->
 					<button type="button" 
-									class="btn mx-1 mb-1 btn-secondary"
+									class="btn mx-1 mb-1 btn-secondary bg-black text-white border-white"
 									style="min-width:120px;"
 									ng-click="methods.cancel($event)">
 						Mégsem
