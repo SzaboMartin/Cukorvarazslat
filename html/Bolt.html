@@ -1,596 +1,76 @@
-<!DOCTYPE html>
-<html lang="hu">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <title>Bolt</title>
+<!-- Wrapper -->
+<div class="position-relative">
 
-  
-</head>
-<body>
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="Cukraszda.html">
-                <img src="./img/orchidea.svg">
-                <span class="ikon"> Cukorvarázslat</span> <br>
-                <h6 class="alcim">Cukorvirágok és Cukordíszek</h6>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav">
-                    <li class="nav-item kezdolapcim">
-                        <a class="nav-link " aria-current="page" href="Cukraszda.html">Kezdőlap </a>
-                    </li>
-                    <li class="nav-item igazitottcimek">
-                        <a class="nav-link" href="Presing Lenke.html">Presing Lenke</a>
-                    </li>
-                    <li class="nav-item igazitottcimek">
-                        <div class="dropdown">
-                            <a href="Galleria.html"> <button class="nav-link">Galléria</button></a>
-                            <div class="dropdown-content">
-                                <a href="Cukordiszek.html">Cukorvirágdíszek</a>
-                                <a href="eskuvocukor.html">Esküvői díszek</a>
-                                <a href="figurak.html">Figurák</a>
-                                <a href="Naszparok.html">Nászpárok</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="nav-item igazitottcimek">
-                      <a class="nav-link" href="Kapcsolat.html"><span class="szin">Bolt</span></a>
-                  </li>
-                    <li class="nav-item igazitottcimek">
-                        <a class="nav-link" href="Kapcsolat.html">Kapcsolat</a>
-                    </li>
-                    <li class="nav-item megosztasIkon">
-                        <a class="nav-link" href="#"> <img id="shareBtn" src="./img/megosztas.svg" alt="" srcset=""> </a>
-                    </li>
-                    <li class="nav-item kosarIkon shopping">
-                      <a class="nav-link" href="#"> <img src="./img/shopping.svg" alt="" srcset=""></a>
-                    </li>
-                      <div class="card1">
-                        <h1>Card</h1>
-                        <ul class="listCard">
-                        </ul>
-                        <div class="checkOut">
-                            <div class="total">0</div>
-                            <div class="closeShopping">Bezár</div>
-                        </div>
-                    </div>
-                 
-                    <li class="nav-item kosarIkon2">
-                      <a class="nav-link" href="#"> <img src="./img/kosar.svg" alt="" srcset=""></a>
-                  </li>
-                    <li class="nav-item felulet">
-                        <a class="nav-link" href="Bejelentkezés.html">Bejelentkezés <img src="./img/belepes.svg" alt=""
-                                class="ikonok"></a>
-                        <a class="nav-link" href="Regisztráció.html">Regisztráció <img src="./img/regisztracio.svg" alt=""
-                                class="ikonok"></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    
-          
-        </header>
-          
-        
-            <div class="header mt-5">
-              <div class="row mt-5">
+	<!-- Gallery -->
+	<div class="container my-5"
+			 ng-if="data && data.length">
 
-                <h1>Bolt</h1>
-              </div>
-            </div>
-          
-      <div class="container-fluid containerszelesseg">
-        <div class="row row-cols-1 g-4">
-          
+		<!-- Gallery title -->
+		<div class="row justify-content-center mb-3 mt-5">
+			<p class="col-11 col-md-10 col-xl-9 nt-3 mb-5 text-center text-white display-6">
+	 			{{title}}
+			</p>
+		</div>
 
-          <div class="col-md-2">
-       <div class="wrapper">
-        <div class="input-group">
-          <input type="text" id="searchInput" placeholder="Search...">
-          <i class="fa-solid fa-magnifying-glass"></i>
-          <i class="fa-solid fa-xmark"></i>
-        </div>
+		<!-- Picture(s) -->
+		<div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-3">
+			<div class="col" ng-repeat="item in data track by $index">
+	 			<div class="card shadow-sm-bottom-end cursor-pointer overflow-hidden" 
+						 data-index="{{$index}}"
+						 ng-click="methods.itemClicked($event)">
+		 			<img class="card-img-top img-fluid" 
+							 alt="img" 
+							 ng-src="{{item}}"
+							 data-bs-toggle="modal" 
+		           data-bs-target="#image_preview">
+	 			</div>
+			</div>
+		</div>
+	</div>
 
-        <ul id="list">
-         
-         <div class="accordion accordion-flush" id="accordionFlushExample">
-          <li> 
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                Orchideák
-              </button>
-            </h2>
-            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body"> <code>.</code> .</div>
-            </div>
-          </div>
-        </li> 
-      <li> 
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                Liliomok
-              </button>
-            </h2>
-            <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body"><code>.</code> </div>
-            </div>
-          </div>
-        </li> 
-      <li> 
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                Rózsák
-              </button>
-            </h2>
-            <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body"> <code>.</code> </div>
-            </div>
-          </div>
-        </li> 
-       
-    
-        <li> <div class="dropdown">
-          <button  class="dropbtn">Virágok</button>
-          <div id="myDropdown" class="dropdown-content">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
-          </div>
-        </div></li>
-      </div>
-        </ul>
-
-       </div>  
-            <script src="/js/kereso.js"></script>
-          </div>
-        
-              <div class="col-md-2">
-          
-                <div class="card">
-                  <a href="NaszparokVasarlas.html">
-                   
-                      <img src="img/Cukorviragdisz/disz7.jpeg" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title">Orchidea cymbidium</h5>
-                        <p>3000 ft</p> <p>Kosár</p>
-                        
-                    </div>
-                  </a>
-                  
-                </div>
-                </div>
-                <div class="col-md-2">
-          
-                  <div class="card"  >
-                    <a href="NaszparokVasarlas.html">
-                     
-                        <img src="img/Eskuvocukor/cukor14.jpeg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Pillango Orchidea</h5>
-                         
-                          <p>3000 ft </p> <p >Kosár</p>
-                          
-                      </div>
-                    </a>
-                    
-                  </div>
-                  </div>
-             
-              <div class="col-md-2">               
-                    <div class="card"  >
-                      <a href="eskuvocukorVasarlas.html" >
-                      <img src="img/Figurak/miki_eger_csomag.jpeg" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title">Miki egér és barátai </h5>
-                       
-                        <p>2000 ft</p> <p>Kosár</p>
-                       
-                    </div>
-                  </a>
-                  </div>
-                
-              </div>
-              <div class="col-md-2">
-              
-                 
-                <div class="card"  >
-                   <a href="figurakVasarlas.html" >
-                    <img src="img/Figurak/dog.jpeg" class="card-img-top" alt="...">
-                      <div class="card-body">
-                    <h5 class="card-title">Dobbermann</h5>
-                    <p>2400 ft</p>
-                    <p>Kosár</p>
-                    
-                    </div>
-                   </a>
-                  </div>   
-                 </div>    
-              </div>
-              <hr>
-              <div class="row row-cols-1 g-4">
-
-                <div class="col-md-2">
-    
-                </div>
-                 
-                    <div class="col-md-2">
-                
-                      <div class="card"  >
-                        <a href="NaszparokVasarlas.html">
-                         
-                            <img src="img/Cukorviragdisz/disz.jpeg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-title">Pipacs</h5>
-                              <p>2500 ft</p>
-                              <p>Kosár</p>
-                              
-                              
-                          </div>
-                        </a>
-                        
-                      </div>
-                      </div>
-                      <div class="col-md-2">
-          
-                        <div class="card"  >
-                          <a href="NaszparokVasarlas.html">
-                           
-                              <img src="img/Cukorviragdisz/disz7.jpeg" class="card-img-top" alt="...">
-                              <div class="card-body">
-                                <h5 class="card-title">Orchidea </h5>
-                                <p>3000 ft</p> <p>Kosár</p>
-                                
-                            </div>
-                          </a>
-                          
-                        </div>
-                        </div>
-                   
-                    <div class="col-md-2">               
-                          <div class="card"  >
-                            <a href="eskuvocukorVasarlas.html" >
-                            <img src="img/Cukorviragdisz/disz2.jpeg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-title">Liliom</h5>
-                              <p>2400 ft</p>
-                              <p>Kosár</p>
-                              
-                             
-                          </div>
-                        </a>
-                        </div>
-                      
-                    </div>
-                    <div class="col-md-2">
-                    
-                       
-                      <div class="card"  >
-                         <a href="figurakVasarlas.html" >
-                          <img src="img/Figurak/dog.jpeg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-title">Dobbermann</h5>
-                              <p>2400 ft</p>
-                              <p>Kosár</p>
-                              
-                          
-                          </div>
-                         </a>
-                        </div>   
-                       </div>    
-                    </div>
-              <hr>
-
-                    <div class="row row-cols-1 g-4">
-
-                      <div class="col-md-2">
-          
-                      </div>
-                       
-                          <div class="col-md-2">
-                      
-                            <div class="card"  >
-                              <a href="NaszparokVasarlas.html">
-                               
-                                  <img src="img/Nászpárok/parok15.jpeg" class="card-img-top" alt="...">
-                                  <div class="card-body">
-                                    <h5 class="card-title">Dobbermann</h5>
-                                    <p>2400 ft</p>
-                                    <p>Kosár</p>
-                                    
-                                    
-                                </div>
-                              </a>
-                              
-                            </div>
-                            <div class="col-md-2">
-            
-                            
-                              </div>
-                           
-                            </div>
-                         
-                          <div class="col-md-2">               
-                                <div class="card"  >
-                                  <a href="eskuvocukorVasarlas.html" >
-                                  <img src="img/Eskuvocukor/cukor14.jpeg" class="card-img-top" alt="...">
-                                  <div class="card-body">
-                                    <h5 class="card-title">Dobbermann</h5>
-                                    <p>2400 ft</p>
-                                    <p>Kosár</p>
-                                    
-                                   
-                                </div>
-                              </a>
-                              </div>
-                            
-                          </div>
-                          <div class="col-md-2">
-          
-                            <div class="card"  >
-                              <a href="NaszparokVasarlas.html">
-                               
-                                  <img src="img/Cukorviragdisz/disz7.jpeg" class="card-img-top" alt="...">
-                                  <div class="card-body">
-                                    <h5 class="card-title">Orchidea </h5>
-                                    <p>3000 ft</p> <p>Kosár</p>
-                                    
-                                </div>
-                              </a>
-                              
-                            </div>
-                            </div>
-                          <div class="col-md-2">
-                          
-                             
-                            <div class="card"  >
-                               <a href="figurakVasarlas.html" >
-                                <img src="img/Figurak/dog.jpeg" class="card-img-top" alt="...">
-                                  <div class="card-body">
-                                    <h5 class="card-title">Dobbermann</h5>
-                    <p>2400 ft</p>
-                    <p>Kosár</p>
-                    
-                                
-                                </div>
-                               </a>
-                              </div>   
-                             </div>    
-                          </div>
-              <hr>
-
-
-      </div>
-              
-        <div class="slider">
-          <ul>
-            <li>
-              <img src="img/Cukorviragdisz/disz1.jpeg" alt="">
-
-            </li>
-            <li>
-              <img src="img/Cukorviragdisz/disz2.jpeg" alt="">
-            </li>
-            <li>
-              <img src="img/Cukorviragdisz/disz3.jpeg" alt="">
-            </li>
-            <li>
-              <img src="img/Cukorviragdisz/disz4.jpeg" alt="">
-            </li>
-            <li>
-              <img src="img/Cukorviragdisz/disz5.jpeg" alt="">
-            </li>
-            <li>
-              <img src="img/Cukorviragdisz/disz6.jpeg" alt="">
-
-            </li>
-            <li>
-              <img src="img/Cukorviragdisz/disz7.jpeg" alt="">
-            </li>
-            <li>
-              <img src="img/Cukorviragdisz/disz8.jpeg" alt="">
-            </li>
-            <li>
-              <img src="img/Cukorviragdisz/disz9.jpeg" alt="">
-            </li>
-            <li>
-              <img src="img/Cukorviragdisz/disz10.jpeg" alt="">
-            </li>
-            <li>
-              <img src="img/Cukorviragdisz/disz11.jpeg" alt="">
-            </li>
-            <li>
-              <img src="img/Cukorviragdisz/disz12.jpeg" alt="">
-            </li>
-            <li>
-              <img src="img/Cukorviragdisz/disz13.jpeg" alt="">
-            </li>
-            <li>
-              <img src="img/Cukorviragdisz/disz14.jpeg" alt="">
-            </li>
-            <li>
-              <img src="img/Cukorviragdisz/disz15.jpeg" alt="">
-            </li>
-            <li>
-              <img src="img/Cukorviragdisz/disz16.jpeg" alt="">
-            </li>
-            <li>
-              <img src="img/Cukorviragdisz/disz17.jpeg" alt="">
-            </li>
-            <li>
-              <img src="img/Cukorviragdisz/disz18.jpeg" alt="">
-            </li>
-            <li>
-              <img src="img/Cukorviragdisz/disz19.jpeg" alt="">
-            </li>
-            <li>
-              <img src="img/Cukorviragdisz/disz20.jpeg" alt="">
-            </li>
-            <li>
-              <img src="img/Cukorviragdisz/disz21.jpeg" alt="">
-            </li>
-            <li>
-              <img src="img/Cukorviragdisz/disz22.jpeg" alt="">
-            </li>
-            <li>
-              <img src="img/Cukorviragdisz/disz23.jpeg" alt="">
-            </li>
-           
-            <li>
-              <img src="img/Eskuvocukor/cukor1.jpeg" alt="">
-            </li>
-            <li>
-              <img src="img/Eskuvocukor/cukor2.jpeg" alt="">
-            </li>
-            <li>
-              <img src="img/Eskuvocukor/cukor3.jpeg" alt="">
-            </li>
-            <li>
-              <img src="img/Eskuvocukor/cukor4.jpeg" alt="">
-            </li>
-            <li>
-              <img src="img/Eskuvocukor/cukor5.jpeg" alt="">
-            </li>
-            <li>
-              <img src="img/Eskuvocukor/cukor6.jpeg" alt="">
-            </li>
-            <li>
-              <img src="img/Eskuvocukor/cukor7.jpeg" alt="">
-            </li>
-            <li>
-              <img src="img/Eskuvocukor/cukor8.jpeg" alt="">
-            </li>
-            <li>
-              <img src="img/Eskuvocukor/cukor9.jpeg" alt="">
-            </li>
-
-            <li>
-              <img src="img/Eskuvocukor/cukor10.jpeg" alt="">
-            </li>
-
-            <li>
-              <img src="img/Eskuvocukor/cukor11.jpeg" alt="">
-            </li>
-            <li>
-              <img src="img/Eskuvocukor/cukor12.jpeg" alt="">
-            </li>
-            <li>
-              <img src="img/Eskuvocukor/cukor13.jpeg" alt="">
-            </li>
-            <li>
-              <img src="img/Eskuvocukor/cukor14.jpeg" alt="">
-            </li>
-            <li>
-              <img src="img/Eskuvocukor/cukor15.jpeg" alt="">
-            </li>
-            <li>
-              <img src="img/Eskuvocukor/cukor16.jpeg" alt="">
-            </li>
-            <li>
-              <img src="img/Eskuvocukor/cukor17.jpeg" alt="">
-            </li>
-            <li>
-              <img src="img/Eskuvocukor/cukor18.jpeg" alt="">
-            </li>
-            <li>
-              <img src="img/Eskuvocukor/cukor19.jpeg" alt="">
-            </li>
-            <li>
-              <img src="img/Eskuvocukor/cukor20.jpeg" alt="">
-            </li>
-            <li>
-              <img src="img/Eskuvocukor/cukor21.jpeg" alt="">
-            </li>
-            <li>
-              <img src="img/Eskuvocukor/cukor22.jpeg" alt="">
-            </li>
-            <li>
-              <img src="img/Eskuvocukor/cukor23.jpeg" alt="">
-            </li>
-            <li>
-              <img src="img/Eskuvocukor/cukor24.jpeg" alt="">
-            </li>
-            <li>
-              <img src="img/Eskuvocukor/cukor25.jpeg" alt="">
-            </li>
-            <li>
-              <img src="img/Eskuvocukor/cukor26.jpeg" alt="">
-            </li>
-            <li>
-              <img src="img/Eskuvocukor/cukor27.jpeg" alt="">
-            </li>
-            <li>
-              <img src="img/Eskuvocukor/cukor28.jpeg" alt="">
-            </li>
-            <li>
-              <img src="img/Eskuvocukor/cukor29.jpeg" alt="">
-            </li>
-            <li>
-              <img src="img/Eskuvocukor/cukor30.jpeg" alt="">
-            </li>
-            <li>
-              <img src="img/Eskuvocukor/cukor31.jpeg" alt="">
-            </li>
-            <li>
-              <img src="img/Eskuvocukor/cukor32.jpeg" alt="">
-            </li>
-            <li>
-              <img src="img/Eskuvocukor/cukor33.jpeg" alt="">
-            </li>
-
-             <li>
-              <img src="img/Eskuvocukor/cukor34.jpeg" alt="">
-            </li>
-
-            <li>
-              <img src="img/Eskuvocukor/cukor35.jpeg" alt="">
-            </li>
-
-            <li>
-              <img src="img/Eskuvocukor/cukor36.jpeg" alt="">
-            </li>
-
-          </ul>
-        </div>
-        <footer class="bottom footermagassag">
-          <div class="row">
-              <div class="col-md-8 offset-1">
-                  <br>
-                  <h6 class="copyright">
-                      © Copyright Presing Lenke • Cukorvarázs 2024 • Photography by Presing Lenke 
-                  </h6>
-              </div>
-              <div class="col-md-2 offset-1 text-right">
-                  <h6>Elérhetőségek: </h6>
-                  <a href="https://www.facebook.com/LenkeCukorvirag?paipv=0&eav=Afb8I5Zfw4CnwqSD2lk4MkOQCFVVRGYK0_Xx5Cg3i-XkkjgvZZjQ4spqr_FQu2PziNk&_rdr" target="_blank"> 
-                    <img src="./img/facebook.svg" width="35" height="37"> 
-                </a>
-                <a href="https://hu.pinterest.com/lenke09/?amp_client_id=CLIENT_ID(_)&mweb_unauth_id="  target="_blank">
-                    <img src="./img/pinterest.svg" width="35" height="37">
-                </a>
-              </div>
-          </div>
-      </footer>
-    
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  <script src="js/script.js"></script>
-
-      
-</body>
-</html>
+	<!-- Modal -->
+	<div id="image_preview"
+			 class="modal fade"  
+			 data-bs-backdrop="static" 
+			 data-bs-keyboard="false" 
+			 tabindex="-1" 
+			 aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+	 			<div class="modal-header">
+					<button type="button" 
+									class="btn-close text-color-base" 
+									data-bs-dismiss="modal" 
+									aria-label="Close">
+					</button>
+	 			</div>
+	 			<div class="modal-body position-relative">
+					<div class="modal-image text-center">
+						<img ng-src="{{data[itemIndex]}}"
+								 class="img-fluid"
+								 alt="img">
+					</div>
+					<i class="modal-btn fa-solid fa-angle-right fa-4x text-color-company cursor-pointer
+									 	position-absolute btnClickEffect top-50 end-0 translate-middle me-2"
+						 ng-click="methods.changeImage($event)">
+					</i>
+					<i class="modal-btn fa-solid fa-angle-left fa-4x text-color-company cursor-pointer
+										position-absolute btnClickEffect top-50 start-0 translate-middle ms-5"
+						 ng-click="methods.changeImage($event)">
+					</i>
+	 			</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--Slider-->
+<div class="slider">
+	<ul>
+	  <li ng-repeat="x in [].constructor(22) track by $index">
+		<img ng-src="./img/Cukorviragdisz/disz{{$index+1}}.jpeg" alt="">
+	  </li>
+	  <li ng-repeat="x in [].constructor(36) track by $index">
+		<img ng-src="./img/Eskuvocukor/cukor{{$index}}.jpeg" alt="">
+	  </li>
+	</ul>
+</div>

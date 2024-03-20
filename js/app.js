@@ -67,12 +67,12 @@
       .state('bolt', {
 				url: '/bolt',
 				parent: 'root',
-				templateUrl: './html/uder_construction.html'
+				templateUrl: './html/bolt.html'
 			})
 		.state('Kapcsolat', {
 				url: '/Kapcsolat',
 				parent: 'root',
-				templateUrl: './html/uder_construction.html'
+				templateUrl: './html/kapcsolat.html'
 			})
      
       .state('megosztas', {
