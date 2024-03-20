@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&display=swap" rel="stylesheet">
-    <title>Bemutatkozás</title>
+    <title>Galléria</title>
 </head>
 <body>
     <header>
@@ -27,14 +27,14 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav">
                     <li class="nav-item kezdolapcim">
-                        <a class="nav-link " aria-current="page" href="Cukraszda.html">Kezdőlap</a>
+                        <a class="nav-link " aria-current="page" href="Cukraszda.html">Kezdőlap </a>
                     </li>
                     <li class="nav-item igazitottcimek">
-                        <a class="nav-link" href="Presing Lenke.html"><span class="szin">Presing Lenke</span></a>
+                        <a class="nav-link" href="Presing Lenke.html">Presing Lenke</a>
                     </li>
                     <li class="nav-item igazitottcimek">
                         <div class="dropdown">
-                            <a href="Galleria.html"> <button class="nav-link">Galléria</button></a>
+                            <a href="Galleria.html"> <button class="nav-link"><span class="szin">Galléria</span></button></a>
                             <div class="dropdown-content">
                                 <a href="Cukordiszek.html">Cukorvirágdíszek</a>
                                 <a href="eskuvocukor.html">Esküvői díszek</a>
@@ -77,31 +77,77 @@
                 </ul>
             </div>
         </div>
-    </nav>       
+    </nav>
+    
+          
         </header>
-        <div class="container">
-          <div class="row">
-            <div class="col">
-          </div>
-          <div class="col">
-            <img id="Lenkekep" src="img/PresingLenke.jpeg" alt="">
-          </div>
-          <div class="col">
+        <div class="header">
+        </div> 
+         <div class="container">
+            <div class="row mt-5">
+
+              <h1>Galléria</h1>
             </div>
-          </div>
-          <div class="row mt-5">
-            <h1>Presing Lenke</h1>
-            <hr class="mt-5" id="line">
-
-            <p id="bemutato">
+            <div class="row row-cols-1 g-4 mt-5">
+              <div class="col-md-3">   
+          
+                <div class="card">
+                  <a href="Cukordiszek.html" >
+                  <img src="img/Cukorviragdisz/disz5.jpeg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Cukordiszek
+                    </h5>
+                    <p> <a class="regioldal" href="Bolt.html">Vásárolok</a> </p>
+                  </div>
+                </a>
+                </div>
+              </div>         
+              <div class="col-md-3">
+          
+          
+                <div class="card"  >
+                  <a href="Naszparok.html">
+                   
+                      <img src="img/Nászpárok/parok8.jpeg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Nászpárok</h5>
+                        <p> <a class="regioldal" href="Bolt.html">Vásárolok</a> </p>
+                    </div>
+                  </a>
+                  
+                </div>
+                </div>
+             
+              <div class="col-md-3">
               
-              Presing Lenke vagyok. 1973.07.09 én születtem. A művészetek iránti szerelem azt hiszem a véremben van.<br> Képzőművészeti főiskolára készültem, de az élet más útra terelt sok sok éven át. De a sorsát senki sem kerülheti el. <br> Beleszerettem a cukrászatba, és 2011-ben cukrász diplomát szereztem, de a díszítés, a cukorvirágok, figurák, diszitési technikák sokkal jobban érdekeltek, így 2012 óta ez a hivatásom.<br> Magyarországon elsőként tanultam meg a cukorvirágok készitését, és elsőként foglalkoztam oktatással. Szeretek egyedi, személyre szabott díszeket készíteni.<br> <h4>Ez egy csodálatos világ.<h3> 
-            </p>
-            <hr id="line">
-            <img class="iras img-fluid" src="img/Lenkeirass.jpg" >
+                 
+                    <div class="card" >
+                      <a href="eskuvocukor.html" >
+                      <img src="img/Eskuvocukor/cukor2.jpeg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Esküvői díszek</h5>
+                        <p> <a class="regioldal" href="Bolt.html">Vásárolok</a> </p>
+                    </div>
+                  </a>
+                  </div>
+                
+              </div>
+              <div class="col-md-3">
+              
+                 
+                <div class="card" data-bs-toggle="modal" data-bs-target="#GerendaModal" >
+                  <a href="figurak.html" >
+                  <img src="img/Figurak/grincs.jpeg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Figurák</h5>
+                    <p> <a class="regioldal" href="Bolt.html">Vásárolok</a> </p>
+                </div>
+              </a>
+              </div>
+            
           </div>
+         </div>
         </div>
-
         <div class="slider">
           <ul>
             <li>
@@ -175,7 +221,6 @@
             <li>
               <img src="img/Cukorviragdisz/disz23.jpeg" alt="">
             </li>
-
           
             <li>
               <img src="img/Eskuvocukor/cukor1.jpeg" alt="">
@@ -298,6 +343,7 @@
 
 
         </div>
+
         <footer class="bottom footermagassag">
           <div class="row">
               <div class="col-md-8 offset-1">
@@ -318,8 +364,11 @@
           </div>
       </footer>
     
+  
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  <script src="js/script.js"></script>
+
+  <script src="js/script.js">
+  </script>
       
 </body>
 </html>
