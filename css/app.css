@@ -245,7 +245,8 @@ h6 {
 
 }
 
-.page-container.home main {
+.page-container.home main,
+.page-container:not(.home) .heafer-top {
   background-image: url(../img/szenvdvics_kes2.jpeg),url(../img/disz19.jpeg),
                     url(../img/virag3.jpeg),url(../img/ludak1.jpg),
                     url(../img/virag5.jpeg),url(../img/virag6.jpeg),
@@ -331,12 +332,15 @@ h6 {
 .centerr{
   text-align: center;
 }
-.bej
-  {
-    background-image: url(../img/hatter3.png);
-    background-size: 95%;
-    background-position: center;
-    background-blend-mode: hard-light;
-  }
+.page-container.presing_lenke,
+.page-container.login,
+.page-container.register,
+.page-container.profile {
+  background-image: url(../img/hatter3.png);
+  background-size: 95%;
+  background-position: center;
+  background-blend-mode: hard-light;
+  background-repeat: no-repeat;
+}
   
   
