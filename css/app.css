@@ -263,6 +263,7 @@ h6 {
   animation-duration: 40s;
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
+  text-shadow: 3px 2px black;
 }
 
   /*
