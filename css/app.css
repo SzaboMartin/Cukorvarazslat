@@ -222,7 +222,7 @@ h6 {
   font-size: 20px;
 }
 .alcim {
-  padding-left: 60px;
+  padding-left: 15px;
   color: white;
 }
 .footermagassag {
@@ -338,3 +338,4 @@ h6 {
     background-position: center;
     background-blend-mode: hard-light;
   }
+  

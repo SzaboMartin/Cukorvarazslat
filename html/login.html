@@ -2,18 +2,18 @@
 	<div class="row my-5 justify-content-center">
 
 		<!-- Panel -->
-		<div class="form-panel login p-4 border bg-black rounded-4 
+		<div class="form-panel login my-5 p-4 border bg-black rounded-4 
 								col-11 col-md-8 col-lg-6 col-xxl-5">
 
 			<!-- Title -->
-			<h3 class="text-center  text-white">Bejelenkezés</h3>
+			<h3 class="text-center text-white my-3">Bejelenkezés</h3>
 
 			<!-- Login form -->	 
 			<form name="loginForm">
 			
 				<!-- Email -->
 				<div class="mb-3">
-					<label for="logEmail" class="form-label text-white">
+					<label for="logEmail" class="form-label text-white my-3">
 						<i class="fa-solid fa-star fa-2xs text-danger"></i>
 						<span>Email-cím:</span>
 					</label>
@@ -32,7 +32,7 @@
 			
 				<!-- Password -->
 				<div class="mb-1">
-					<label for="logPassword" class="form-label text-white">
+					<label for="logPassword" class="form-label text-white my-3">
 						<i class="fa-solid fa-star fa-2xs text-danger"></i>
 						<span>Jelszó:</span>
 					</label>
@@ -64,7 +64,7 @@
 								 ng-init="model.passwordShow=false"
 								 ng-click="event=$event"
 					 			 ng-change="methods.showHidePassword(event)">
-					<label class="form-check-label text-white" for="passwordShow">
+					<label class="form-check-label text-white my-3" for="passwordShow">
 						Jelszót megjelenít
 					</label>
 				</div>
