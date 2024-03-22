@@ -2,11 +2,11 @@
 	<div class="row my-5 justify-content-center">
 		
 		<!-- Panel -->
-		<div class="form-panel profile p-4 border rounded-4 bg-wheat 
+		<div class="form-panel profile p-4 border rounded-4 bg-black 
 								col-11 col-md-8 col-lg-6 col-xxl-5">
 
       <!-- Title -->
-			<h3 class="text-center">Profil</h3>
+			<h3 class="text-center text-white">Profil</h3>
 
 			<!-- Profile form -->	 
 			<form name="profileForm">
@@ -14,7 +14,7 @@
 				<!-- User type -->
 				<div class="mb-3">
 					<label for="country_code" class="form-label">
-						<span>Típus:</span>
+						<span class="text-white">Típus:</span>
 					</label>
 					<div class="mb-3">
 
@@ -49,7 +49,7 @@
 				<div class="mb-3">
 					<label for="proName" class="form-label">
 						<i class="fa-solid fa-star fa-2xs text-danger"></i>
-						<span>Név:</span>
+						<span class="text-white">Név:</span>
 					</label>
 					<input class="form-control"
 								id="proName"
@@ -68,7 +68,7 @@
 				<div class="mb-3">
 					<label for="proBorn" class="form-label">
 						<i class="fa-solid fa-star fa-2xs text-danger"></i>
-						<span>Született:</span>
+						<span class="text-white">Született:</span>
 					</label>
 					<input class="form-control"
 								id="proBorn"
@@ -88,24 +88,12 @@
 				<fieldset class="mb-3">
 					<legend class="form-label fs-6">
 						<i class="fa-solid fa-star fa-2xs text-danger"></i>
-						<span>Neme:</span>
+						<span class="text-white">Neme:</span>
 					</legend>
 
-					<!-- Inpu/Label for female -->
-					<div class="form-check form-check-inline">
-						<input id="female"
-									name="gender" 
-									type="radio"
-									value="F"
-									class="form-check-input"
-									ng-model="model.gender" 
-									required>
-						<label for="female" class="form-check-label">
-							nő
-						</label>
-					</div>
 
-					<!-- Inpu/Label for male -->
+
+						<!-- Inpu/Label for male -->
 					<div class="form-check form-check-inline">
 						<input id="male"
 									name="gender"
@@ -116,16 +104,33 @@
 									ng-init="model.gender=$root.user.gender" 
 									required
 									ng-check-mark>
-						<label for="male" class="form-check-label">
-							férfi
+						<label for="male" class="form-check-label text-white">
+							Férfi
 						</label>
 					</div>
+
+					
+					<!-- Inpu/Label for female -->
+					<div class="form-check form-check-inline">
+						<input id="female"
+									name="gender" 
+									type="radio"
+									value="F"
+									class="form-check-input"
+									ng-model="model.gender" 
+									required>
+						<label for="female" class="form-check-label text-white">
+							Nő
+						</label>
+					</div>
+
+					
 				</fieldset>
 
 				<!-- Address -->
 				<div class="mb-3">
 					<label for="address" class="form-label">
-						<span>Lakcím:</span>
+						<span class="text-white">Lakcím:</span>
 					</label>
 					<textarea class="form-control"
 										id="address"
@@ -142,12 +147,12 @@
 				<!-- Phone -->
 				<div class="mb-3">
 					<label for="country_code" class="form-label">
-						<span>Telefonszám:</span>
+						<span class="text-white">Telefonszám:</span>
 					</label>
 					<div class="mb-3">
 
 						<!-- Country code -->
-						<span>+</span>
+						<span class="text-white">+</span>
 						<input class="form-control d-inline-block mx-1"
 									id="country_code"
 									name="country_code" 
@@ -183,7 +188,7 @@
 					<!-- Accept button -->
 					<button data-key="profile" 
 									type="button" 
-									class="btn mx-1 mb-1 btn-primary"
+									class="btn mx-1 mb-1 btn-primary text-white border-white bg-black"
 									style="min-width:120px;"
 									ng-disabled="profileForm.$invalid" 
 									ng-click="methods.accept($event)">
@@ -192,7 +197,7 @@
 
 					<!-- Cancel -->
 					<button type="button" 
-									class="btn mx-1 mb-1 btn-secondary" 
+									class="btn mx-1 mb-1 btn-secondary text-white border-white" 
 									style="min-width:120px;"
 									ng-click="methods.cancel($event)">
 						Mégsem
