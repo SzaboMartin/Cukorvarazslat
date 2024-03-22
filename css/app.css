@@ -352,3 +352,67 @@ border: 2px solid white;
 .navbar-toggler:focus{
 box-shadow: none;
 }
+#kapcsolatokCard
+{
+  margin-bottom: 30%;
+  border-width: 3px;
+  border-style: outset;
+  border-radius: 1px;
+  background-color: black;
+  border: black;
+}
+#kapcsolat
+  { 
+    
+    height: 530px;
+    width: 410px;
+  }
+  #kapcsolat2
+  {
+    float: right;
+    margin-right: 180px;
+    background-color: grey;
+    color: black;
+    width: 58%;
+  }
+  #kapcsolat3
+  {
+    padding-left: 300px;
+    width: 33%;
+    margin-left: 200px;
+  }
+  #kapcsolat4
+  {
+    float: right;
+    margin-right: 180px;
+    height: 350px;
+    width: 58%;
+    background-color: grey;
+    color: black;
+  }
+  #kapcsolat5
+  {
+   
+    height: 100px;
+    width: 60%;
+    background-color: black;
+    color: white;
+    margin-bottom: 10rem;
+    margin-top: 6rem;
+  }
+  .kapcsolat
+  {
+    padding-left: 1170px;
+  }
+  .kapcsolat2
+  {
+    padding-left: 400px;
+  }
+  .regioldal{
+    color:#FFB800;
+    text-shadow: 2px 1px gray;
+  }
+  .elerhetoseg{
+    display: block;
+    color: white;
+  }
