@@ -420,3 +420,7 @@ box-shadow: none;
   {
     color: #FFFFFF;
   }
+  li :hover
+  {
+    color: #FFB800;
+  }
