@@ -424,3 +424,9 @@ box-shadow: none;
   {
     color: #FFB800;
   }
+  .szegely
+  {
+    border-style:outset;
+    border-radius: 30px;
+    background-color: #181818;
+  }
