@@ -1,13 +1,13 @@
 
 //Megosztás ikon
-const shareBtn = document.getElementById('shareBtn')
+const shareBtn = document.getElementById('shareBtn');
 
 shareBtn.addEventListener('click', event => {
 
   if (navigator.share) {
     navigator.share({
       text: 'Please read this great article: ',
-      url: 'file:///C:/xampp/htdocs/2_14_a/vizsgaremek/Cukorvarazslat/Cukraszda.html'
+      url: './Cukorvarazslat/Cukraszda.html'
     }).then(() => {
       console.log('Thanks for sharing!');
     })
