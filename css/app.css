@@ -416,3 +416,7 @@ box-shadow: none;
     display: block;
     color: white;
   }
+  .bejelentkezes, .regisztracio
+  {
+    color: #FFFFFF;
+  }
