@@ -64,7 +64,17 @@
 				parent: 'root',
 				templateUrl: './html/uder_construction.html'
 			})
-      		.state('bolt', {
+			.state('tortak', {
+				url: '/tortak',
+				parent: 'root',
+				templateUrl: './html/uder_construction.html'
+			})
+			.state('sutemenyek', {
+				url: '/sutemenyek',
+				parent: 'root',
+				templateUrl: './html/uder_construction.html'
+			})
+      .state('bolt', {
 				url: '/bolt',
 				parent: 'root',
 				templateUrl: './html/bolt.html'
