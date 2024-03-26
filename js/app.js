@@ -59,18 +59,18 @@
 				parent: 'root',
 				templateUrl: './html/uder_construction.html'
 			})
-      .state('naszparok', {
-				url: '/naszparok',
+      .state('Nászpárok', {
+				url: '/Nászpárok',
 				parent: 'root',
 				templateUrl: './html/uder_construction.html'
 			})
-			.state('tortak', {
-				url: '/tortak',
+			.state('Torták', {
+				url: '/Torták',
 				parent: 'root',
 				templateUrl: './html/uder_construction.html'
 			})
-			.state('sutemenyek', {
-				url: '/sutemenyek',
+			.state('Sütemények', {
+				url: '/Sütemények',
 				parent: 'root',
 				templateUrl: './html/uder_construction.html'
 			})
