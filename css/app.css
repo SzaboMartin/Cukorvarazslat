@@ -170,11 +170,7 @@ h4 {
 .hr {
   height: 200px;
 }
-/*
-.row {
-  text-align: center;
-}
-*/
+
 #nincs {
   color: black;
   height: 50px;
@@ -187,11 +183,7 @@ body {
   font-optical-sizing: auto;
   background-color: black;
 }
-/*
-header, nav, footer {
-  background-color: #202020;
-}
-*/
+
 .kezdolapcim {
   text-align: center;
   padding-left: 300px;
@@ -558,3 +550,4 @@ box-shadow: none;
   .marginn{
     margin-bottom: 100px;
   }
+  
