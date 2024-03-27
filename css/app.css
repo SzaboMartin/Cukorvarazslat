@@ -370,9 +370,9 @@ box-shadow: none;
   {
     float: right;
     margin-right: 180px;
-    background-color: #FFFFFF;
-    color: black;
+    background-color: white;
     width: 58%;
+    
   }
   #kapcsolat3
   {
@@ -386,8 +386,7 @@ box-shadow: none;
     margin-right: 180px;
     height: 350px;
     width: 58%;
-    background-color: #FFFFFF;
-    color: black;
+    background-color: white;
   }
   #kapcsolat5
   {
@@ -563,13 +562,7 @@ box-shadow: none;
     background-blend-mode: hard-light;
     background-repeat: no-repeat;
   }
-  .page-container.presing_lenke{
-    background-image: url(../img/modern-flowers-concept-with-elegant-style.jpg);
-    background-size: 100%;
-    background-position: center;
-    background-blend-mode: hard-light;
-    background-repeat: no-repeat;
-  }
+  
   .page-container.bolt{
     
     background-image: url(../img/lovely-flowers-concept-with-white-stones.jpg);
@@ -577,4 +570,14 @@ box-shadow: none;
     background-position: center;
     background-blend-mode: hard-light;
     background-repeat: no-repeat;
+  }
+  .page-container.Kapcsolat,.page-container.presing_lenke,.page-container.galeria{
+    background-image: url(../img/viraghattersotet.jpeg);
+    background-size: 100%;
+    background-position: center;
+    background-blend-mode: hard-light;
+    background-repeat: no-repeat;
+  }
+  .marginn{
+    margin-bottom: 100px;
   }
