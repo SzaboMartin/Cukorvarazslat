@@ -333,7 +333,6 @@ h6 {
 .centerr{
   text-align: center;
 }
-.page-container.presing_lenke,
 .page-container.login,
 .page-container.register,
 .page-container.profile {
@@ -556,4 +555,26 @@ box-shadow: none;
 
     margin-bottom: 40px;
     line-height: 3;
+  }
+  .page-container.receptek{
+    background-image: url(../img/modern-flowers-concept-with-elegant-stylee.jpg);
+    background-size: 100%;
+    background-position: center;
+    background-blend-mode: hard-light;
+    background-repeat: no-repeat;
+  }
+  .page-container.presing_lenke{
+    background-image: url(../img/modern-flowers-concept-with-elegant-style.jpg);
+    background-size: 100%;
+    background-position: center;
+    background-blend-mode: hard-light;
+    background-repeat: no-repeat;
+  }
+  .page-container.bolt{
+    
+    background-image: url(../img/lovely-flowers-concept-with-white-stones.jpg);
+    background-size: 100%;
+    background-position: center;
+    background-blend-mode: hard-light;
+    background-repeat: no-repeat;
   }
