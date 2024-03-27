@@ -9,11 +9,12 @@
 		<div class="row justify-content-center mb-3 mt-5">
 			<p class="col-11 col-md-10 col-xl-9 nt-3 mb-5 text-center text-white display-6">
 	 			{{title}}
+				<hr style="color:white;">
 			</p>
 		</div>
 
 		<!-- Picture(s) -->
-		<div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-3">
+		<div class="row row-cols-1 row-cols-md-3 g-5" style="padding: 60px;">
 			<div class="col" ng-repeat="item in data track by $index">
 	 			<div class="card shadow-sm-bottom-end cursor-pointer overflow-hidden" 
 						 data-index="{{$index}}"
