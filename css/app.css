@@ -264,32 +264,9 @@ h6 {
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
   text-shadow: 3px 2px black;
+  height: max-content;
 }
 
-  /*
-  .content{
-      padding: 0;
-      margin: 0;
-      height: 100vh;
-      width: 100%;
-      background-image: url(../img/virag.jpeg),url(../img/virag2.jpeg),
-                        url(../img/virag3.jpeg),url(../img/ludak1.jpg),
-                        url(../img/virag5.jpeg),url(../img/virag6.jpeg),
-                        url(../img/virag7.jpeg),url(../img/virag8.jpg),
-                        url(../img/virag9.jpg);
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      transition: 800s;
-      animation-name: animate;
-      animation-direction: alternate-reverse;
-      animation-play-state: running;
-      animation-timing-function: ease-in-out;
-      animation-duration: 40s;
-      animation-fill-mode: forwards;
-      animation-iteration-count: infinite;
-    }
-*/
 @keyframes animate {
   0%{
     background-image: url(../img/szenvdvics_kes2.jpeg);
