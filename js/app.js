@@ -84,6 +84,11 @@
 				parent: 'root',
 				templateUrl: './html/kapcsolat.html'
 			})
+      .state('receptek', {
+				url: '/receptek',
+				parent: 'root',
+				templateUrl: './html/receptek.html'
+			})
      
       		.state('megosztas', {
 				url: '/megosztas',
