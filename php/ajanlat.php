@@ -14,57 +14,45 @@ $args = Util::getArgs();
 // Connect to database
 $db = new Database();
 
+// // Set query (Check new email already exist)
+// $query = "SELECT `id` 
+// 					 	FROM `users` 
+// 					 WHERE `email` = ?
+// 					 LIMIT 1;";
+
+// // Execute query with argument
+// $result = $db->execute($query, array($args['email']));
+
+// Check result
+if (!is_null($result)) {
+
+	// Set error
+	Util::setError('Ezen az email címen már létezik egy felhasználó!', $db);
+}
+
+// Set default user type
+$args['type'] = 'U';
+
 // Set query
-$query ="SELECT `users`.`id`,
-								`users`.`type`,
-								`type`.`name` AS `type_name`,
-								`users`.`name`,
-								`users`.`born`,
-								`users`.`gender`,
-								`users`.`address`,
-								`users`.`country_code`,
-								`users`.`phone`,
-								`users`.`password`,
-								`users`.`valid`
-					 FROM `users`
-		 INNER JOIN `type`
-						 ON `type`.`id` = `users`.`type` AND
-						 		`type`.`type` = 'USER'
-					WHERE `users`.`email` = ?
-					LIMIT 1;";
+$query = "INSERT INTO `ajanlatok` 
+					(`id`,`ajanlat`,`nev`,`email`,`datum`) 
+					VALUES(`user_name`,`user_email`,`user_message`)";
 
 // Execute query
-$result = $db->execute($query, array($args['email']));
+$result = $db->execute($query, $args);
 
 // Close connection
 $db = null;
 
-// Check not found
-if (is_null($result)) {
+// Check not success
+if (!$result['affectedRows']) {
 
 	// Set error
-	Util::setError("Az email cím helytelen!\nKérjük, próbálja újra!");
+	Util::setError('A regisztráció nem sikerült!');
 }
 
-// Simplifies result
-$result = $result[0];
-
-// Check user valid
-if (!$result['valid']) {
-
-	// Set error
-	Util::setError("A felhasználó le van tiltva!");
-}
-
-// Check password
-if ($result['password'] !== $args['password']) {
-
-	// Set error
-	Util::setError("A jelszó helytelen!\nKérjük, próbálja újra!");
-}
-
-// Unset not necessary keys
-unset($result['password'], $result['valid']);
+// Set result
+$result = array("id" => $result['lastInsertId']);
 
 // Set response
 Util::setResponse($result);
