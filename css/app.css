@@ -550,4 +550,46 @@ box-shadow: none;
   .marginn{
     margin-bottom: 100px;
   }
-  
+  #termekjel, #termekar
+  {
+    margin-top: 5%;
+    margin-left: 35%;
+    margin-bottom: 5%;
+    color: white;
+    font-size: 150%;
+  }
+  .termekkep
+  {
+    
+    height: 80%;
+    width: 40%;
+  }
+  .termekcsik
+  {
+    margin-left: 20%;
+    width: 55%;
+    color: white;
+
+  }
+  .termeknev
+  {
+    margin-left: 25%;
+    color: white;
+  }
+  .kosar
+  {
+    margin-top: 5%;
+    margin-left: 25%;
+    margin-bottom: 5%;
+    color: white;
+    font-size: 150%;
+    border: #FFFFFF;
+  }
+  .kosarcsik
+  {
+    margin-left: 20%;
+    margin-bottom: 20%;
+    width: 55%;
+    color: white;
+
+  }

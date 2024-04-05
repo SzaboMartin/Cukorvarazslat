@@ -59,7 +59,7 @@
 				parent: 'root',
 				templateUrl: './html/uder_construction.html'
 			})
-      .state('Nászpárok', {
+      		.state('Nászpárok', {
 				url: '/Nászpárok',
 				parent: 'root',
 				templateUrl: './html/uder_construction.html'
@@ -74,17 +74,22 @@
 				parent: 'root',
 				templateUrl: './html/uder_construction.html'
 			})
-      .state('bolt', {
+      		.state('bolt', {
 				url: '/bolt',
 				parent: 'root',
 				templateUrl: './html/bolt.html'
+			})
+			.state('termek', {
+				url: '/termek',
+				parent: 'root',
+				templateUrl: './html/termek.html'
 			})
 			.state('Kapcsolat', {
 				url: '/Kapcsolat',
 				parent: 'root',
 				templateUrl: './html/kapcsolat.html'
 			})
-      .state('receptek', {
+      		.state('receptek', {
 				url: '/receptek',
 				parent: 'root',
 				templateUrl: './html/receptek.html'
@@ -121,6 +126,7 @@
 				templateUrl: './html/profile.html',
 				controller: 'profileController',
 			});
+			
       
       $urlRouterProvider.otherwise('/');
     }
