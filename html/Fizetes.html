@@ -1,152 +1,158 @@
-<!DOCTYPE html>
-<html lang="hu">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div class="container">
+	<div class="row my-5 justify-content-center">
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" >
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" ></script>
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&display=swap" rel="stylesheet">
-  <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
- 
+    <!-- Panel -->
+		<div class="form-panel pay p-4 border bg-black rounded-4 
+                col-11 col-md-8 col-lg-6 col-xxl-5">
 
-  
-  <title>Fizetés</title>
-  
-</head>
-<body class="bej">
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="Cukraszda.html"><img src="./img/orchidea.svg"><span class="ikon"> Cukorvarázslat</span> <br> <h6 class="alcim">Cukorvirágok és Cukordíszek</h6></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item kezdolapcim">
-                <a class="nav-link" aria-current="page" href="Cukraszda.html">Kezdőlap </a>
-              </li>
-              <li class="nav-item igazitottcimek">
-                <a class="nav-link" href="Presing Lenke.html">Presing Lenke</a>
-              </li>
-              <li class="nav-item igazitottcimek">
-                <div class="dropdown">
-               <a href="Galleria.html"><button class="nav-link">Galléria</button></a> 
-                  <div class="dropdown-content">
-                    <a href="Cukordiszek.html">Cukorvirágdíszek</a>
-                    <a href="eskuvocukor.html">Esküvői díszek</a>
-                    <a href="figurak.html">Figurák</a>
-                    <a href="Naszparok.html">Nászpárok</a>
+      <!-- Title -->
+			<h3 class="text-center text-white">Fizetés</h3>
 
-                  </div>
-                </div>
-               
-              </li>
-              <li class="nav-item igazitottcimek">
-                <a class="nav-link" href="Bolt.html">Bolt</a>
-              </li>
-              <li class="nav-item igazitottcimek">
-                <a class="nav-link" href="Kapcsolat.html">Kapcsolat</a>
-              </li>
-              <li class="nav-item igazitottcimek">
-                <a class="nav-link"><img src="./img/megosztas.svg" alt="" srcset=""></a>
-              </li>
-              <li class="nav-item kosarIkon shopping">
-                <a class="nav-link" href="#"> <img src="./img/shopping.svg" alt="" srcset=""></a>
-            </li>
-                <div class="card1">
-                  <h1>Kosár</h1>
-                  <ul class="listCard">
-                  </ul>
-                  <div class="checkOut">
-                      <div class="total">0</div>
-                      <div class="closeShopping">Bezár</div>
-                  </div>
-              </div>
-            
-              <li class="nav-item felulet">
-                <a class="nav-link" href="Bejelentkezés.html">Bejelentkezés <img src="./img/belepes.svg" alt="" class="ikonok"></a>
-                <a class="nav-link" href="Regisztráció.html">Regisztráció<img src="./img/regisztracio.svg" alt="" class="ikonok"></a>
-              </li>
-            </ul>
+      <!-- pay form -->	 
+      <form name="payForm">
+
+        <!-- Name -->
+        <div class="mb-3">
+          <label for="payName" class="form-label">
+            <i class="fa-solid fa-star fa-2xs text-danger"></i>
+            <span class="text-white">Teljes név:</span>
+          </label>
+          <input class="form-control"
+                id="payName"
+                name="payName"
+                placeholder="Név"
+                type="text"
+                spellcheck="false" 
+                autocomplete="off"
+                maxlength="100"
+                ng-model="model.name"
+                ng-init="model.name=null"
+                required>
+        </div>
+
+         <!-- Email -->
+         <div class="mb-3">
+          <label for="payEmail" class="form-label">
+            <i class="fa-solid fa-star fa-2xs text-danger"></i>
+            <span class="text-white">Email cím:</span>
+          </label>
+          <input class="form-control"
+                id="payEmail"
+                name="payEmail"
+                placeholder="Email-cím"
+                type="email"
+                spellcheck="false" 
+                autocomplete="off"
+                maxlength="50"
+                ng-model="model.email"
+                ng-init="model.email=null"
+                ng-pattern="/^([a-z0-9_.+-])+\@(([a-z0-9-])+\.)+([a-z0-9]{2,4})+$/"
+                required>
+        </div>
+
+        <!-- Password -->
+        <div class="mb-1">
+          <label for="payPassword" class="form-label">
+            <i class="fa-solid fa-star fa-2xs text-danger"></i>
+            <span class="text-white">Jelszó:</span>
+          </label>
+          <input class="form-control input-password"
+                id="payPassword"
+                name="payPassword"
+                placeholder="Jelszó" 
+                type="password"
+                spellcheck="false" 
+                autocomplete="off"
+                maxlength="50"
+                ng-model="model.password"
+                ng-init="model.password=null"
+                ng-pattern="/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/"
+                required
+                aria-describedby="payPasswordHelp">
+          <div id="payPasswordHelp" class="form-text text-muted fs-sm">
+            6-20 karakter (kis-nagy betűt, és számot tartalmaz)
           </div>
         </div>
-      </nav>
-      
-  </header>
-    
-  <div class="container">
 
- 
-  <form id="regist" action="Regisztráció.html" method="POST">
-    
-    <h1 class="cimtartalom">Fizetés</h1>
-    <hr>
+        <!-- Show/Hide password -->
+				<div class="mb-3 form-check">
+					<input type="checkbox" 
+								 class="form-check-input" 
+								 id="passwordShow"
+								 name="passwordShow"
+								 ng-model="model.passwordShow"
+								 ng-init="model.passwordShow=false"
+								 ng-click="event=$event"
+					 			 ng-change="methods.showHidePassword(event)">
+					<label class="form-check-label  text-white" for="passwordShow">
+						Jelszót megjelenít
+					</label>
+				</div>
+       
+        <!-- Phone -->
+        <div class="mb-3">
+          <label for="country_code" class="form-label">
+            <span class="text-white">Telefonszám:</span>
+          </label>
+          <div class="mb-3">
 
-    <fieldset>
-      <label for="name" class="nkozep"> Vezetéknév: <span class="nigazit"> Keresztnév: </span></label>
-      <input type="text" id="name" name="user_name" required />
-      <input type="text" id="name" name="user_name" required />
+            <!-- Country code -->
+            <span class="text-white">+</span>
+            <input class="form-control d-inline-block mx-1"
+                  id="country_code"
+                  name="country_code" 
+                  type="text"
+                  placeholder="OH"
+                  style="max-width:60px;"
+                  spellcheck="false" 
+                  autocomplete="off"
+                  maxlength="3"
+                  ng-model="model.country_code"
+                  ng-init="model.country_code='36'"
+                  ng-pattern="/^$|^(?!(0))[0-9]{1,3}$/">
 
-      <hr>
-      
-      <label for="name" class="nkozep">E-mail cím: <span class="nigazit3">  Telefonszám: </span> </label>
-      <input type="text" id="name" name="user_name" required />
-      <input type="tel" id="name" name="user_name" maxlength="11" value="" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required />
-      
-      
-      <hr>
+            <!-- Phone -->
+            <input class="form-control d-inline-block"
+                  id="phone"
+                  name="phone" 
+                  type="text"
+                  placeholder="telefonszám"
+                  style="max-width:150px;"
+                  spellcheck="false" 
+                  autocomplete="off"
+                  maxlength="10"
+                  ng-model="model.phone"
+                  ng-init="model.phone=null"
+                  ng-pattern="/^$|^(?!(0))[0-9]{7,10}$/">
+          </div>
+        </div>
 
-      <label for="name" class="nkozep">Lakcím:  <span class="nigazit2"> Város:</span> </label>
-      <input type="text" id="name" name="user_name" required />
-      <input type="text" id="name" name="user_name" required />
-     
-      <hr>
+       
+        <hr class="divider">
 
-      <label for="name" class="nkozep">Irányítószám: <span class="nigazit">  Ország: </span></label>
-      <input type="number" id="name" name="user_name" required />
-      <input type="text" id="name" name="user_name" required />
+        <!-- Buttons -->
+        <div class="text-center text-sm-end">
 
-      <hr>
+          <!-- Accept button -->
+          <button data-key="pay" 
+                  type="button" 
+                  class="btn mx-1 mb-1 btn-primary bg-black text-white border-white"
+                  style="min-width:120px;"
+                  ng-disabled="payForm.$invalid" 
+                  ng-click="methods.accept($event)">
+            Regisztráció
+          </button>
 
-      ---
-
-      <button type="submit">Regisztrálok</button>
-      
-      
-    </fieldset>
-    
-    
-  </form>
-</div>
-
-<footer class="bottom footermagassag">
-  <div class="row">
-      <div class="col-md-8 offset-1">
-          <br>
-          <h6 class="copyright">
-              © Copyright Presing Lenke • Cukorvarázs 2024 • Photography by Presing Lenke 
-          </h6>
-      </div>
-      <div class="col-md-2 offset-1 text-right">
-          <h6>Elérhetőségek: </h6>
-          <a href="https://www.facebook.com/LenkeCukorvirag?paipv=0&eav=Afb8I5Zfw4CnwqSD2lk4MkOQCFVVRGYK0_Xx5Cg3i-XkkjgvZZjQ4spqr_FQu2PziNk&_rdr" target="_blank"> 
-            <img src="./img/facebook.svg" width="35" height="37"> 
-        </a>
-        <a href="https://hu.pinterest.com/lenke09/?amp_client_id=CLIENT_ID(_)&mweb_unauth_id="  target="_blank">
-            <img src="./img/pinterest.svg" width="35" height="37">
-        </a>
-      </div>
+          <!-- Cancel -->
+          <button type="button" 
+                  class="btn mx-1 mb-1 btn-secondary bg-black text-white border-white" 
+                  style="min-width:120px;"
+                  ng-click="methods.cancel($event)">
+            Mégsem
+          </button>
+        </div>
+        <p class="text-center text-white my-3">Már van fiókod? <a href="http://localhost/2_14_a/vizsgaremek/Cukorvarazslat/#!/login">Itt</a> tudsz bejelentkezni!</p>  
+      </form>
+    </div>
   </div>
-</footer>
-
-  <script src="Regisztracio.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  
-</body>
-</html>
+</div>
