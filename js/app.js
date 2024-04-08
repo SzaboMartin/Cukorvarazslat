@@ -59,23 +59,23 @@
 				parent: 'root',
 				templateUrl: './html/uder_construction.html'
 			})
-      		.state('Nászpárok', {
-				url: '/Nászpárok',
+      		.state('Naszparok', {
+				url: '/Naszparok',
 				parent: 'root',
 				templateUrl: './html/uder_construction.html'
 			})
-			.state('Torták', {
-				url: '/Torták',
+			.state('Tortak', {
+				url: '/Tortak',
 				parent: 'root',
 				templateUrl: './html/uder_construction.html'
 			})
-			.state('Sütemények', {
-				url: '/Sütemények',
+			.state('Sutemenyek', {
+				url: '/Sutemenyek',
 				parent: 'root',
 				templateUrl: './html/uder_construction.html'
 			})
-			.state('Karamellek', {
-				url: '/Karamellek',
+			.state('Karamell-cukrok', {
+				url: '/Karamell-cukrok',
 				parent: 'root',
 				templateUrl: './html/uder_construction.html'
 			})
@@ -216,6 +216,18 @@
 					break;
 				case 'Figurak':
 					$scope.title = 'Figurák';
+					break;
+				case 'Naszparok':
+					$scope.title = 'Nászpárok';
+					break;
+				case 'Sutemenyek':
+					$scope.title = 'Sütemények';
+					break;
+				case 'Tortak':
+					$scope.title = 'Torták';
+					break;
+				case 'Karamell-cukrok':
+					$scope.title = 'Karamell cukrok';
 					break;
 				default:
 					$scope.title = $stateParams.type;
