@@ -74,6 +74,11 @@
 				parent: 'root',
 				templateUrl: './html/uder_construction.html'
 			})
+			.state('Karamellek', {
+				url: '/Karamellek',
+				parent: 'root',
+				templateUrl: './html/uder_construction.html'
+			})
       		.state('bolt', {
 				url: '/bolt',
 				parent: 'root',
