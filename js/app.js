@@ -57,22 +57,22 @@
       		.state('figurak', {
 				url: '/figurak',
 				parent: 'root',
-				templateUrl: './html/uder_construction.html'
+				templateUrl: './html/under_construction.html'
 			})
       		.state('Naszparok', {
 				url: '/Naszparok',
 				parent: 'root',
-				templateUrl: './html/uder_construction.html'
+				templateUrl: './html/under_construction.html'
 			})
 			.state('Tortak', {
 				url: '/Tortak',
 				parent: 'root',
-				templateUrl: './html/uder_construction.html'
+				templateUrl: './html/under_construction.html'
 			})
 			.state('Sutemenyek', {
 				url: '/Sutemenyek',
 				parent: 'root',
-				templateUrl: './html/uder_construction.html'
+				templateUrl: './html/under_construction.html'
 			})
 			.state('Karamell-cukrok', {
 				url: '/Karamell-cukrok',
@@ -99,11 +99,16 @@
 				parent: 'root',
 				templateUrl: './html/receptek.html'
 			})
+			.state('fejlesztok', {
+				url: '/fejlesztok',
+				parent: 'root',
+				templateUrl: './html/fejlesztok.html'
+			})
      
       		.state('megosztas', {
 				url: '/megosztas',
 				parent: 'root',
-				templateUrl: './html/uder_construction.html'
+				templateUrl: './html/under_construction.html'
 			})
       		.state('vasarlas', {
 				url: '/vasarlas',
