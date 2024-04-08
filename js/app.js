@@ -57,22 +57,22 @@
       		.state('figurak', {
 				url: '/figurak',
 				parent: 'root',
-				templateUrl: './html/uder_construction.html'
+				templateUrl: './html/under_construction.html'
 			})
       		.state('Nászpárok', {
 				url: '/Nászpárok',
 				parent: 'root',
-				templateUrl: './html/uder_construction.html'
+				templateUrl: './html/under_construction.html'
 			})
 			.state('Torták', {
 				url: '/Torták',
 				parent: 'root',
-				templateUrl: './html/uder_construction.html'
+				templateUrl: './html/under_construction.html'
 			})
 			.state('Sütemények', {
 				url: '/Sütemények',
 				parent: 'root',
-				templateUrl: './html/uder_construction.html'
+				templateUrl: './html/under_construction.html'
 			})
       		.state('bolt', {
 				url: '/bolt',
@@ -94,11 +94,16 @@
 				parent: 'root',
 				templateUrl: './html/receptek.html'
 			})
+			.state('fejlesztok', {
+				url: '/fejlesztok',
+				parent: 'root',
+				templateUrl: './html/fejlesztok.html'
+			})
      
       		.state('megosztas', {
 				url: '/megosztas',
 				parent: 'root',
-				templateUrl: './html/uder_construction.html'
+				templateUrl: './html/under_construction.html'
 			})
       		.state('vasarlas', {
 				url: '/vasarlas',
