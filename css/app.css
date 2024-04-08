@@ -339,8 +339,10 @@ box-shadow: none;
   {
     float: right;
     margin-right: 180px;
-    background-color: rgba(255, 255, 255, 0.925);
+    background-color: black;
     width: 58%;
+    content: white;
+    color: white;
     
   }
   #kapcsolat3
@@ -355,7 +357,13 @@ box-shadow: none;
     margin-right: 180px;
     height: 350px;
     width: 58%;
-    background-color: rgba(255, 255, 255, 0.925);
+    background-color: black;
+    content: white;
+    opacity: 90%;
+    color: white;
+    align-content: left;
+
+
   }
   #kapcsolat5
   {
