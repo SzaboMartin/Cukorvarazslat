@@ -92,7 +92,8 @@
 			.state('Kapcsolat', {
 				url: '/Kapcsolat',
 				parent: 'root',
-				templateUrl: './html/kapcsolat.html'
+				templateUrl: './html/kapcsolat.html',
+				controller:'Kapcsolatcontroller'
 			})
       		.state('receptek', {
 				url: '/receptek',
