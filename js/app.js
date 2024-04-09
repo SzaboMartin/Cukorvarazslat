@@ -110,6 +110,11 @@
 				parent: 'root',
 				templateUrl: './html/vasarlas.html'
 			})
+			.state('fejlesztok', {
+				url: '/fejlesztok',
+				parent: 'root',
+				templateUrl: './html/fejlesztok.html'
+			})
       		.state('login', {
 				url: '/login',
 				parent: 'root',

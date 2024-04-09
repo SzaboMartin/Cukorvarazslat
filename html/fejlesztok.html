@@ -1,0 +1,44 @@
+<div class="header mt-5 bg-dark-transparent">
+	<div class="row mt-5">
+	  <h1 class="text-center my-3">Fejlesztőink</h1>
+	</div>
+</div>
+
+<div class="container-fluid mt-5">
+    <div class="row row-cols-4 g-2"> 
+        <div class="col-md-3">
+            <div class="card">
+                <a href="termek.html">
+                    <img src="img/anonim.jfif" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Szabó Martin Tamás</h5>   
+                        </div>
+                 </a>
+            </div>
+        </div>
+
+    <div class="col-md-3">
+        <div class="card"  >
+            <a href="termek.html">
+                <img src="img/anonim.jfif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                            <h5 class="card-title text-center">Földi Ákos Ádám</h5>
+                    </div>
+            </a>
+        </div>
+    </div>
+    </div>
+</div>
+
+
+    <!--Slider-->
+<div class="slider">
+	<ul>
+	  <li ng-repeat="x in [].constructor(22) track by $index">
+		<img ng-src="./img/Cukorviragdisz/disz{{$index+1}}.jpeg" alt="">
+	  </li>
+	  <li ng-repeat="x in [].constructor(36) track by $index">
+		<img ng-src="./img/Eskuvocukor/cukor{{$index}}.jpeg" alt="">
+	  </li>
+	</ul>
+</div>
