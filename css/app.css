@@ -601,4 +601,10 @@ box-shadow: none;
     color: white;
 
   }
+  .developercard {
+    margin-bottom: 25%;
+    border-width: 3px;
+    border-style:outset;
+    border-radius: 1px;
+  }
   
