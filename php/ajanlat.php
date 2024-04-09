@@ -24,19 +24,19 @@ $db = new Database();
 // $result = $db->execute($query, array($args['email']));
 
 // Check result
-if (!is_null($result)) {
+// if (!is_null($result)) {
 
-	// Set error
-	Util::setError('Ezen az email címen már létezik egy felhasználó!', $db);
-}
+// 	// Set error
+// 	Util::setError('Ezen az email címen már létezik egy felhasználó!', $db);
+// }
 
 // Set default user type
 $args['type'] = 'U';
 
 // Set query
 $query = "INSERT INTO `ajanlatok` 
-					(`id`,`ajanlat`,`nev`,`email`,`datum`) 
-					VALUES(`user_name`,`user_email`,`user_message`)";
+					(`ajanlat`,`nev`,`email`,`datum`) 
+					VALUES;";
 
 // Execute query
 $result = $db->execute($query, $args);
