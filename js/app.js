@@ -569,7 +569,7 @@
 	])
     
 // Home controller
-.controller('homeController', [
+.controller('Kapcsolatcontroller', [
     '$scope',
     '$timeout',
     'http',
