@@ -99,12 +99,7 @@
 				parent: 'root',
 				templateUrl: './html/receptek.html'
 			})
-			.state('fejlesztok', {
-				url: '/fejlesztok',
-				parent: 'root',
-				templateUrl: './html/fejlesztok.html'
-			})
-     
+			
       		.state('megosztas', {
 				url: '/megosztas',
 				parent: 'root',
