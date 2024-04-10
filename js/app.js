@@ -92,7 +92,7 @@
 			.state('Kapcsolat', {
 				url: '/Kapcsolat',
 				parent: 'root',
-				templateUrl: './html/kapcsolat.html',
+				templateUrl: './html/Kapcsolat.html',
 				controller:'Kapcsolatcontroller'
 			})
       		.state('receptek', {
@@ -568,22 +568,40 @@
 		}
 	])
     
-// Home controller
+//Kapcsolatcontroller
 .controller('Kapcsolatcontroller', [
     '$scope',
     '$timeout',
     'http',
-    function($scope, $timeout, http) {
-        http.request('./data/home.json')
-        .then(response => {
-    
-            // Set data, and apply change
-            $scope.data = response;
-            $scope.$applyAsync();
-        })
-        .catch(e => $timeout(() => { alert(e); }, 50));
+	'util',
+    function($scope, $timeout, http, util) {
+
+        	// Send
+			$scope.kuld = () => {
+				
+				// Get neccesary input properties
+				let args = util.objFilterByKeys($scope.model, [
+					'roole',
+					'table'
+				], false);
+
+				// Request to the server
+				http.request({
+					url: './php/offers.php',
+					data: args
+				})
+				.then(response => {
+
+					$timeout(() => { 
+						alert(response); 
+					}, 50);
+				})
+				.catch(e => $timeout(() => { alert(e); }, 50));
+
+			};
         }
     ])
+
   // Profile controller
   .controller('profileController', [
     '$state',
