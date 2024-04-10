@@ -14,9 +14,30 @@
                 </div>
             </div>
             <div class="col-md-8 col-lg-8" style="margin-top: 122px;">
-                <input type="text" id="kapcsolat2" name="user_name" placeholder="Név:">
-                <input type="email" id="kapcsolat2" name="user_email" placeholder="Email:">
-                <textarea cols="30" rows="10" type="text" id="kapcsolat4" name="user_message" placeholder="Üzenet:"></textarea>
+                <input type="text" 
+                        class="kapcsolatname" 
+                        id="name"
+                        name="name" 
+                        ng-model="model.name"
+                        ng-init="model.name=null"
+                        required
+                        placeholder="Név:">
+                <input type="email" 
+                        class="kapcsolatname" 
+                        id="email"
+                        name="email" 
+                        ng-model="model.email"
+                        ng-init="model.email=null"
+                        required
+                    placeholder="Email:">
+                <textarea cols="30" rows="10" 
+                        class="kapcsolatmessage" 
+                        id="message"
+                        name="message" 
+                        ng-model="model.message"
+                        ng-init="model.message=null"
+                        required
+                        placeholder="Üzenet:"></textarea>
             </div>
         </div>
         <div class="row">
@@ -34,7 +55,8 @@
              <hr>
             </div>
             <div class="col-md-8 col-lg-8">
-                <button type="button" id="kapcsolat5" name="submit_button">Küldés</button>
+
+                <button type="button" id="kapcsolat5" name="submit_button" ng-click="kuld()">Küldés</button>
             </div>
         </div>
     </div>
