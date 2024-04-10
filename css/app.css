@@ -335,7 +335,7 @@ box-shadow: none;
     height: 530px;
     width: 410px;
   }
-  #kapcsolat2
+  .kapcsolatname
   {
     float: right;
     margin-right: 180px;
@@ -351,7 +351,7 @@ box-shadow: none;
     width: 33%;
     margin-left: 200px;
   }
-  #kapcsolat4
+  .kapcsolatmessage
   {
     float: right;
     margin-right: 180px;
