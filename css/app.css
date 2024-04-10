@@ -602,8 +602,10 @@ box-shadow: none;
 
   }
   .developercard {
-    margin-bottom: 25%;
+    margin-bottom: 15%;
     border-width: 3px;
     border-style:outset;
     border-radius: 1px;
   }
+
+  
