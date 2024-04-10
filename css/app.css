@@ -607,5 +607,9 @@ box-shadow: none;
     border-style:outset;
     border-radius: 1px;
   }
-
+  .input-group
+{
+  margin-left: 9%;
+  margin-bottom: 10%;
+}
   
