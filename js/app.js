@@ -567,7 +567,23 @@
       methods.init();
 		}
 	])
-
+    
+// Home controller
+.controller('Kapcsolatcontroller', [
+    '$scope',
+    '$timeout',
+    'http',
+    function($scope, $timeout, http) {
+        http.request('./data/home.json')
+        .then(response => {
+    
+            // Set data, and apply change
+            $scope.data = response;
+            $scope.$applyAsync();
+        })
+        .catch(e => $timeout(() => { alert(e); }, 50));
+        }
+    ])
   // Profile controller
   .controller('profileController', [
     '$state',
