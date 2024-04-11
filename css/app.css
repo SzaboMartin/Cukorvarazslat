@@ -602,6 +602,7 @@ box-shadow: none;
     border-style:outset;
     border-radius: 1px;
     padding: 5px;
+    margin: 3rem;
     
   }
   .input-group
