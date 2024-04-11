@@ -34,11 +34,11 @@
 
 }
 .slider li {
- width: 150px;
+ width: 160px;
  display: flex;
  justify-content: start;
  align-items: center;
- width: 15px;
+ width: 20px;
  padding: 10px 59px 20px;
  margin-right:1px;
 }
@@ -540,7 +540,7 @@ box-shadow: none;
     background-repeat: no-repeat;
   }
   
-  .page-container.bolt{
+  .page-container.bolt,.page-container.fejlesztok{
     
     background-image: url(../img/lovely-flowers-concept-with-white-stones.jpg);
     background-size: 100%;
@@ -548,7 +548,7 @@ box-shadow: none;
     background-blend-mode: hard-light;
     background-repeat: no-repeat;
   }
-  .page-container.Kapcsolat,.page-container.presing_lenke,.page-container.galeria,.page-container.fejlesztok{
+  .page-container.Kapcsolat,.page-container.presing_lenke,.page-container.galeria{
     background-image: url(../img/viraghattersotet.jpeg);
     background-size: 100%;
     background-position: center;
@@ -606,6 +606,7 @@ box-shadow: none;
     border-width: 3px;
     border-style:outset;
     border-radius: 1px;
+    padding: 20px;
   }
   .input-group
 {
