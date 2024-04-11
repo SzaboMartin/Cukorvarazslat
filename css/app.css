@@ -612,4 +612,10 @@ box-shadow: none;
   margin-left: 9%;
   margin-bottom: 10%;
 }
-  
+.modal-content {
+  border-radius: 20px !important;
+}
+.developercard
+{
+  border-radius: 10px;
+}
