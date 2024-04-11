@@ -172,21 +172,18 @@
 					<a class="nav-link" href="#"> <img id="shareBtn" src="./img/megosztas.svg" alt="" srcset=""> </a>
 				</li>
 				<li class="nav-item kosarIkon shopping">
-				  <a class="nav-link" href="/html/Kosar.html"> <img src="./img/shopping.svg" alt="" srcset=""></a>
-			  </li>
+				  <a class="nav-link" ui-sref="Kosar"> <img src="./img/shopping.svg" alt="" srcset=""></a>
+			  	</li>
 
 				<!-- Bejelentkezés -->
-		    <li class="nav-item mx-1"
-						ng-if="!$root.user.id && $root.state.id !== 'login'">
-		  	  <a class="nav-link" 
-             ui-sref="login"
-						 ui-sref-active="active">
+		    	<li class="nav-item mx-1" ng-if="!$root.user.id && $root.state.id !== 'login'">
+		  	  		<a class="nav-link" ui-sref="login" ui-sref-active="active">
 						<i class="fa-solid fa-right-to-bracket fa-xl me-1 bejelentkezes"></i>
-						<span class="text-capitalize text-small-caps menupontok">
-							Bejelentkezés
-						</span>
-          </a>
-        </li>
+							<span class="text-capitalize text-small-caps menupontok">
+								Bejelentkezés
+							</span>
+          			</a>
+        		</li>
 
         <!-- Regisztráció  -->
         <li class="nav-item mx-1"

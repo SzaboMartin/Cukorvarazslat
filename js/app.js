@@ -111,6 +111,11 @@
 				parent: 'root',
 				templateUrl: './html/vasarlas.html'
 			})
+			.state('Kosar', {
+				url: '/Kosar',
+				parent: 'root',
+				templateUrl: './html/Kosar.html'
+			})
 			.state('fejlesztok', {
 				url: '/fejlesztok',
 				parent: 'root',
