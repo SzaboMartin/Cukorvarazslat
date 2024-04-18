@@ -114,7 +114,7 @@
 			.state('Kosar', {
 				url: '/Kosar',
 				parent: 'root',
-				templateUrl: './html/Kosar.html'
+				templateUrl: './html/under_construction.html'
 			})
 			.state('fejlesztok', {
 				url: '/fejlesztok',
