@@ -34,12 +34,11 @@
 
 }
 .slider li {
- width: 160px;
  display: flex;
  justify-content: start;
  align-items: center;
- width: 20px;
- padding: 10px 59px 20px;
+ width: 15px;
+ padding: 20px 50px 20px;
  margin-right:1px;
 }
 .slider {
