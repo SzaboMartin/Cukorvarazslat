@@ -34,12 +34,11 @@
 
 }
 .slider li {
- width: 150px;
  display: flex;
  justify-content: start;
  align-items: center;
  width: 15px;
- padding: 10px 59px 20px;
+ padding: 20px 50px 20px;
  margin-right:1px;
 }
 .slider {
@@ -329,13 +328,8 @@ box-shadow: none;
   background-color: black;
   border: black;
 }
-#kapcsolat
-  { 
-    
-    height: 530px;
-    width: 410px;
-  }
-  #kapcsolat2
+
+  .kapcsolatname
   {
     float: right;
     margin-right: 180px;
@@ -351,7 +345,7 @@ box-shadow: none;
     width: 33%;
     margin-left: 200px;
   }
-  #kapcsolat4
+  .kapcsolatmessage
   {
     float: right;
     margin-right: 180px;
@@ -539,8 +533,8 @@ box-shadow: none;
     background-blend-mode: hard-light;
     background-repeat: no-repeat;
   }
-   
-  .page-container.bolt{
+  
+  .page-container.bolt,.page-container.fejlesztok{
     
     background-image: url(../img/lovely-flowers-concept-with-white-stones.jpg);
     background-size: 100%;
@@ -606,10 +600,42 @@ box-shadow: none;
     border-width: 3px;
     border-style:outset;
     border-radius: 1px;
-  }
+    padding: 5px;
+   
+  } 
   .input-group
 {
   margin-left: 9%;
   margin-bottom: 10%;
 }
-  
+.modal-content {
+  border-radius: 20px !important;
+}
+.developercard
+{
+  border-radius: 10px;
+}
+.felso{
+
+  padding: 30px;
+}
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  flex: 0 0 calc(33.333% - 50px); 
+  margin-bottom: 20px; 
+}
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  flex: 0 0 calc(33.333% - 50px); 
+  margin-bottom: 20px; 
+}

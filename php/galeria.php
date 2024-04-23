@@ -17,4 +17,4 @@ $result = glob("./img/{$args['type']}/*.{jpg,jpeg,png,gif,tiff,webp}", GLOB_BRAC
 if (is_array($result) && !empty($result)) shuffle($result);
 
 // Set response
-Util::setResponse($result);
+Util::setResponse($result); 
