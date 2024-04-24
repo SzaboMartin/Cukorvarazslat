@@ -1,0 +1,2 @@
+Kosár, fizetés oldal, bolt oldal nincs kész és nem megy a javascript.
+megosztás icon nem megy a javascript.
