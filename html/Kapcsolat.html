@@ -18,9 +18,16 @@
             </div>
         </div>
         <div class="col-md-8 col-lg-8 mt-3 mt-md-0">
-            <form action="send_email.php" method="post">
+            <form name="kapcsolatForm">
                 <div class="form-group">
-                    <input type="text" class="form-control" id="name" name="name" ng-model="model.name" ng-init="model.name=null" required placeholder="Név:">
+                    <input type="text" 
+                           class="form-control" 
+                           id="name" 
+                           name="name" 
+                           ng-model="model.name" 
+                           ng-init="model.name=null" 
+                           required 
+                           placeholder="Név:">
                 </div>
                 <div class="form-group">
                     <input type="email" class="form-control" id="email" name="email" ng-model="model.email" ng-init="model.email=null" required placeholder="Email:">
@@ -30,7 +37,9 @@
                 </div>
                 
 
-                    <button type="button" id="kapcsolat5" name="submit_button" ng-click="kuld()">Küldés</button>
+                    <button type="button" id="kapcsolat5" name="submit_button" 
+                            ng-click="kuld()"
+                            ng-disabled="kapcsolatForm.$invalid">Küldés</button>
             </form>
         </div>
     </div>
