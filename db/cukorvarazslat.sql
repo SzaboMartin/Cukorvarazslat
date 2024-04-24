@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2024. Ápr 10. 19:39
+-- Létrehozás ideje: 2024. Ápr 24. 10:05
 -- Kiszolgáló verziója: 10.4.6-MariaDB
 -- PHP verzió: 7.3.8
 
@@ -29,21 +29,17 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `offers` (
-  `id` int(5) NOT NULL,
-  `name` varchar(50) NOT NULL,
-  `email` varchar(50) NOT NULL,
-  `message` text NOT NULL,
-  `date` datetime NOT NULL
+  `id` int(4) NOT NULL,
+  `name` varchar(20) NOT NULL,
+  `email` varchar(40) NOT NULL,
+  `message` varchar(200) NOT NULL,
+  `date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- A tábla adatainak kiíratása `offers`
 --
 
-INSERT INTO `offers` (`id`, `name`, `email`, `message`, `date`) VALUES
-(1, 'Amarilla Kiss', 'kissamarilla@gmail.com', 'Kedves Lenke!\r\n\r\nCsodásak a munkái! Kislányom születésnapjára szeretnék egy mesés emeletes tortát, 12 rózsa formájú cukorvirággal. \r\n2024. júmius 20-ára szeretnék rendelni. Kérem jelezze, tudja-e vállalni a rendelést és mennyiért?\r\n\r\nKöszönettel:\r\nKiss Amarilla', '2024-04-10 19:20:00'),
-(2, 'Nagy Virág', 'nagyvirag@gmail.com', 'Kedves Lenke!\n2024. július 1-én lesz az esküvőnk. Nagyon reméljük, hogy már nem későn szólunk és eltudja vállalni az esküvői tortánkat és esetleg a 120 fős vendégsereg aprósüteményekkel való ellátását. \nKérem jelezze részünkre, hogy tudja-e vállalni a felkérést! \nAmennyiben igen, a részleteket később pontosítjuk.\nElőre is köszönjük:\nVirág és Zoli', '2024-04-10 19:22:10'),
-(3, 'Jakab Zoltán', 'jakab@gmail.com', 'Tisztelt Hölgyem!\nMunkái felkeltették érdeklődésem. Kislányom ballagására 30 fős partyt tervezek. A menü utáni és a buli alatti süteményeket szeretném Öntől megrendelni, valamint egy ennyi főre elégséges ballagási tortát.\nKérem küldje el ajánlatát!\nTisztelettel:\nJakab Zoltán', '2024-04-10 19:26:44');
 
 -- --------------------------------------------------------
 
@@ -108,10 +104,24 @@ INSERT INTO `users` (`id`, `type`, `name`, `born`, `gender`, `country_code`, `ph
 (10, 'U', 'Valach Martin', NULL, 'M', NULL, NULL, NULL, 'valach.martin-2019@keri.mako.hu', '1234Aa', 1),
 (11, 'U', 'Vörös Alexandra', NULL, 'F', NULL, NULL, NULL, 'voros.alexandra-2019@keri.mako.hu', '1234Aa', 1),
 (12, 'A', 'Gera Imre', NULL, 'M', NULL, NULL, NULL, 'gera.imre.tch@gmail.com', '1234Aa', 1),
-(13, 'A', 'Kiss Andrea', '1974-12-01', 'F', '36', '301115555', 'Alkotmány utca 224.', 'kissamail@gmail.com', '1234Aa', 1),
+(13, 'A', 'Kiss Andrea', '1974-12-01', 'F', '36', '302360141', '6900 Makó, Posta utca 4-6.', 'kissamail@gmail.com', '1234Aa', 1),
 (14, 'A', 'Molnár Zsolt', NULL, 'M', NULL, NULL, NULL, 'molnarzsoltnavay@gmail.com', '1234Aa', 1),
 (15, 'A', 'Ódry Attila', '1964-03-08', 'M', '36', '304816888', '6725 Szeged, Futrinka utca 66.', 'odry.attila@keri.mako.hu', '1234Aa', 1),
-(16, 'A', 'Vidéki Gyula Milán', NULL, 'M', NULL, NULL, NULL, 'videki.gyula.milan@gmail.com', '1234Aa', 1);
+(16, 'A', 'Vidéki Gyula Milán', NULL, 'M', NULL, NULL, NULL, 'videki.gyula.milan@gmail.com', '1234Aa', 1),
+(17, 'U', 'Földi Ákos', '2004-03-17', 'M', '36', '301168611', 'Szegedi utca 9-13/c', 'akoska610@gmail.com', 'Majompok1', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Tábla szerkezet ehhez a táblához `vasarlas`
+--
+
+CREATE TABLE `vasarlas` (
+  `id` int(11) NOT NULL,
+  `userid` int(5) NOT NULL,
+  `kartyaszam` int(19) NOT NULL,
+  `fizetes_idopont` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Indexek a kiírt táblákhoz
@@ -137,6 +147,13 @@ ALTER TABLE `users`
   ADD UNIQUE KEY `email` (`email`);
 
 --
+-- A tábla indexei `vasarlas`
+--
+ALTER TABLE `vasarlas`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `userid` (`userid`);
+
+--
 -- A kiírt táblák AUTO_INCREMENT értéke
 --
 
@@ -144,13 +161,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT a táblához `offers`
 --
 ALTER TABLE `offers`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT a táblához `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
