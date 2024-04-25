@@ -1,5 +1,6 @@
 <!-- Navbar -->
-<nav class="navbar  navbar-expand-xl">
+<nav class="navbar  navbar-expand-xl ">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- Container -->
 	<div class="container-fluid">
@@ -17,7 +18,7 @@
             </a>
 		
     <!-- Hamburger icon -->
-	  <button class="navbar-toggler" 
+	  <button class="navbar-toggler " 
             type="button" 
             data-bs-toggle="collapse" 
             data-bs-target="#navbarNav" 
@@ -154,7 +155,13 @@
 			 <span class="menupontok">  Receptek</span>
           </a>
 		    </li>
-
+			<li class="nav-item mx-3">
+		  	  <a class="nav-link" 
+             ui-sref="fejlesztok"
+             ui-sref-active="active">
+			 <span class="menupontok">  Ügyfélszolgálat</span>
+          </a>
+		    </li>
 			 <!-- Fejlesztők -->
 
 			 
@@ -163,10 +170,10 @@
 			<!-- Navbar content RIGHT -->
 			<ul class="navbar-nav ms-auto">
 				<li class="nav-item megosztasIkon">
-					<a class="nav-link" id="shareBtn" ui-sref="megosztas"> <img  src="./img/share.svg" alt="" srcset=""> </a>
+					<a class="nav-link" id="shareBtn" ui-sref="megosztas"> <img  src="./img/share.svg" > </a>
 				</li>
 				<li class="nav-item kosarIkon shopping">
-				  <a class="nav-link" ui-sref="Kosar"> <img src="./img/shopping.svg" alt="" srcset=""></a>
+				  <a class="nav-link" ui-sref="Kosar"> <img src="./img/shopping.svg" ></a>
 			  	</li>
 
 				<!-- Bejelentkezés -->
