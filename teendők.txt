@@ -4,3 +4,6 @@ kapcsolat oldalnál ha nem írunk be semmit és küldünk üzenetet, hibát ír 
 
 Bolt szűrő, kereső...
 Kosár vásárlás
+
+
+Login/Register - oda-vissza váltása OK

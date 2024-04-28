@@ -95,18 +95,17 @@
 				templateUrl: './html/Kapcsolat.html',
 				controller:'Kapcsolatcontroller'
 			})
-      		.state('receptek', {
+      .state('receptek', {
 				url: '/receptek',
 				parent: 'root',
 				templateUrl: './html/receptek.html'
 			})
-			
-      		.state('megosztas', {
+      .state('megosztas', {
 				url: '/megosztas',
 				parent: 'root',
 				templateUrl: './html/under_construction.html'
 			})
-      		.state('vasarlas', {
+      .state('vasarlas', {
 				url: '/vasarlas',
 				parent: 'root',
 				templateUrl: './html/vasarlas.html'
@@ -121,7 +120,7 @@
 				parent: 'root',
 				templateUrl: './html/fejlesztok.html'
 			})
-      		.state('login', {
+      .state('login', {
 				url: '/login',
 				parent: 'root',
 				group: 'user',
@@ -135,7 +134,7 @@
 				templateUrl: './html/register.html',
 				controller: 'registerController',
 			})
-      		.state('profile', {
+      .state('profile', {
 				url: '/profile',
 				parent: 'root',
 				group: 'user',
