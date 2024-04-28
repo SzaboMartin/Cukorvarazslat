@@ -17,7 +17,8 @@
 }
 .navbar-nav .nav-link.active {
   text-decoration: underline;
-  
+  text-decoration-color: white;
+  cursor: context-menu;
 }
 
 /* Slider */
@@ -231,17 +232,20 @@ h6 {
   font-family: "Edwardian Script ITC";
 }
 .navbar {
- padding: 3px 25px 5px;
+ padding: 3px 3px 5px 10px;
  background-color: #1a1a1a;
-
 }
 
 .page-container.home main,
 .page-container:not(.home) .heafer-top {
-  background-image: url(../img/cropped-szenvdvics_kes2.jpeg),url(../img/disz19.jpeg),
-                    url(../img/virag3.jpeg),url(../img/ludak1.jpg),
-                    url(../img/virag5.jpeg),url(../img/virag6.jpeg),
-                    url(../img/virag7.jpeg),url(../img/virag8.jpg),
+  background-image: url(../img/cropped-szenvdvics_kes2.jpeg),
+                    url(../img/disz19.jpeg),
+                    url(../img/virag3.jpeg),
+                    url(../img/ludak1.jpg),
+                    url(../img/virag5.jpeg),
+                    url(../img/virag6.jpeg),
+                    url(../img/virag7.jpeg),
+                    url(../img/virag8.jpg),
                     url(../img/virag2.jpeg);
   background-size: cover;
   background-position: center;

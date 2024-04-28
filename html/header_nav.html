@@ -1,18 +1,18 @@
 <!-- Navbar -->
-<nav class="navbar  navbar-expand-xl"
+<nav class="navbar navbar-expand-xxl"
 		 ng-bs-navbar-collapse>
 
 	<!-- Container -->
 	<div class="container-fluid">
 
 		<!-- Logo -->
-	  <a class="navbar-brand" height="40">
-		  <img ng-src="./img/orchidea.svg" alt="logo">
+	  <a class="navbar-brand me-1">
+		  <img ng-src="./img/orchidea.svg" height="40" width="40" alt="logo">
 		</a>
 
 		<!--Name-->
-    <a class="navbar-brand" ui-sref="home">
-      <span class="ikon"> Cukorvarázslat</span> <br>
+    <a class="navbar-brand me-1" ui-sref="home">
+      <span class="ikon">Cukorvarázslat</span>
       <h6 class="alcim">Cukorvirágok és Cukordíszek</h6>
     </a>
 		
@@ -34,31 +34,31 @@
 			<ul class="navbar-nav me-auto">
 
         <!-- Home -->
-		    <li class="nav-item mx-3">
+		    <li class="nav-item mx-1">
 		  	  <a class="nav-link " 
              ui-sref="home"
              ui-sref-active="active">
-			 <span class="menupontok">	Kezdőlap</span>
+			 <span class="menupontok">Kezdőlap</span>
           </a>
 		    </li>
 
         <!-- Presing Lenke -->
-		    <li class="nav-item mx-3">
+		    <li class="nav-item mx-1">
 		  	  <a class="nav-link text-nowrap" 
              ui-sref="presing_lenke"
              ui-sref-active="active">
-			 <span class="menupontok">  Presing Lenke</span> 
+			 <span class="menupontok">Presing Lenke</span> 
           </a>
 		    </li>
 
         <!-- Galléria -->
-		    <li class="nav-item dropdown mx-3">
+		    <li class="nav-item dropdown ms-1">
           <a class="nav-link dropdown-toggle" 
 						 href="#" 
 						 role="button" 
 						 data-bs-toggle="dropdown" 
 						 aria-expanded="false">
-					<span class="menupontok">Galéria</span>	
+						<span class="menupontok">Galéria</span>	
           </a>
           <ul class="dropdown-menu dropdown-menu-dark">
 
@@ -117,73 +117,85 @@
 						</li>
 						<li>
 							
-							<!-- Karamell cukrok -->
-								<a class="dropdown-item" 
-									 ui-sref-active="active" 
-									 ui-sref="galeria({type:'Karamell-cukrok'})">
-									Karamell cukrok
-								</a>
-							</li>
-
+						<!-- Karamell cukrok -->
+							<a class="dropdown-item" 
+								 ui-sref-active="active" 
+								 ui-sref="galeria({type:'Karamell-cukrok'})">
+								Karamell cukrok
+							</a>
+						</li>
 		  	  </ul>
 		    </li>
 
         <!-- Bolt -->
-		    <li class="nav-item mx-3">
+		    <li class="nav-item me-1">
 		  	  <a class="nav-link" 
              ui-sref="bolt"
              ui-sref-active="active">
-			 <span class="menupontok">  Bolt</span>
+			 			<span class="menupontok">Bolt</span>
           </a>
 		    </li>
 
         <!-- Kapcsolat -->
-		    <li class="nav-item mx-3">
+		    <li class="nav-item mx-1">
 		  	  <a class="nav-link" 
              ui-sref="Kapcsolat"
              ui-sref-active="active">
-			 <span class="menupontok">  Kapcsolat</span>
+			 			<span class="menupontok">Kapcsolat</span>
           </a>
 		    </li>
-        <!-- Receptek -->
 
-			<li class="nav-item mx-3">
+        <!-- Receptek -->
+				<li class="nav-item mx-1">
 		  	  <a class="nav-link" 
              ui-sref="receptek"
              ui-sref-active="active">
-			 <span class="menupontok">  Receptek</span>
+			 			<span class="menupontok">Receptek</span>
           </a>
 		    </li>
-			<li class="nav-item mx-3">
+
+				<!-- Ügyfélszolgálat -->
+				<li class="nav-item mx-1">
 		  	  <a class="nav-link" 
              ui-sref="fejlesztok"
              ui-sref-active="active">
-			 <span class="menupontok">  Ügyfélszolgálat</span>
+			 			<span class="menupontok">Ügyfélszolgálat</span>
           </a>
 		    </li>
-			 <!-- Fejlesztők -->
 
-			 
+			 	<!-- Fejlesztők -->
 		  </ul>
 
 			<!-- Navbar content RIGHT -->
 			<ul class="navbar-nav ms-auto">
+
+				<!-- Megosztás -->
 				<li class="nav-item megosztasIkon">
-					<a class="nav-link" id="shareBtn" ui-sref="megosztas"> <img  ng-src="./img/share.svg" > </a>
+					<a class="nav-link" id="shareBtn" 
+						 ui-sref="megosztas" 
+						 ui-sref-active="active"> 
+						<img  ng-src="./img/share.svg" > 
+					</a>
 				</li>
+
+				<!-- Kosár -->
 				<li class="nav-item kosarIkon shopping">
-				  <a class="nav-link" ui-sref="Kosar"> <img ng-src="./img/shopping.svg" ></a>
-			  	</li>
+				  <a class="nav-link" 
+						 ui-sref="Kosar" 
+						 ui-sref-active="active"> 
+						<img ng-src="./img/shopping.svg" >
+					</a>
+			  </li>
 
 				<!-- Bejelentkezés -->
-		    	<li class="nav-item mx-1" ng-if="!$root.user.id && $root.state.id !== 'login'">
-		  	  		<a class="nav-link" ui-sref="login" ui-sref-active="active">
-						<i class="fa-solid fa-right-to-bracket fa-xl me-1 bejelentkezes"></i>
-							<span class="text-capitalize text-small-caps menupontok">
-								Bejelentkezés
-							</span>
-          			</a>
-        		</li>
+		    <li class="nav-item mx-1" ng-if="!$root.user.id && $root.state.id !== 'login'">
+		  		<a class="nav-link" ui-sref="login" ui-sref-active="active">
+						<i class="fa-solid fa-right-to-bracket fa-xl bejelentkezes"></i>
+						<span class="text-capitalize text-small-caps menupontok">
+							Bejelentkezés
+						</span>
+        	</a>
+        </li>
 
         <!-- Regisztráció  -->
         <li class="nav-item mx-1"
@@ -191,7 +203,7 @@
 		  	  <a class="nav-link" 
              ui-sref="register"
 						 ui-sref-active="active">
-						<i class="fa-solid fa-id-card fa-xl me-1 regisztracio"></i>
+						<i class="fa-solid fa-id-card fa-xl regisztracio"></i>
 						<span class="text-capitalize text-small-caps menupontok">
 							Regisztráció
 						</span>
@@ -225,7 +237,5 @@
 		    </li>
 			</ul>
 	  </div>
-	 
 	</div>
-	
 </nav>
