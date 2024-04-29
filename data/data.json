@@ -24,7 +24,30 @@
 		"type": "Figurak",
 		"price": 4999
 	},
-
+	{
+		"name": "Dobbermann",
+		"img": "dog.jpeg",
+		"type": "Figurak",
+		"price": 2999
+	},
+	{
+		"name": "miki egér csomag",
+		"img": "miki_eger_csomag.jpeg",
+		"type": "Figurak",
+		"price": 7999
+	},
+	{
+		"name": "micimackó és barátai",
+		"img": "micimacko.jpg",
+		"type": "Figurak",
+		"price": 3999
+	},
+	{
+		"name": "Jávorszarvas",
+		"img": "szarvass.jpeg",
+		"type": "Figurak",
+		"price": 4999
+	},
 
 	{
 		"name": "Liliom",
