@@ -1,20 +1,57 @@
 [
+	
 	{
-		"name": "Dobberman",
-		"img": "dog.jpeg",
+		"name": "Bambi",
+		"img": "bambi.jpg",
 		"type": "Figurak",
-		"price": 2400
+		"price": 2999
 	},
 	{
-		"name": "Miki egér és barátai",
-		"img": "miki_eger_csomag.jpeg",
+		"name": "Grincs",
+		"img": "grincs.jpeg",
 		"type": "Figurak",
-		"price": 2000
+		"price": 2999
 	},
+	{
+		"name": "Oroszlánkirály",
+		"img": "oroszlankiraly.jpeg",
+		"type": "Figurak",
+		"price": 3999
+	},
+	{
+		"name": "Verdák",
+		"img": "verdak_matuka_mc_queen.jpeg",
+		"type": "Figurak",
+		"price": 4999
+	},
+
+
 	{
 		"name": "Liliom",
 		"img": "disz5.jpeg",
 		"type": "Cukorviragdisz",
-		"price": 5000
+		"price": 2499
+	},
+	{
+		"name": "Liliom",
+		"img": "disz6.jpeg",
+		"type": "Cukorviragdisz",
+		"price": 2499
+	},
+	{
+		"name": "Liliom",
+		"img": "disz7.jpeg",
+		"type": "Cukorviragdisz",
+		"price": 2499
+	},
+	{
+		"name": "Liliom",
+		"img": "disz8.jpeg",
+		"type": "Cukorviragdisz",
+		"price": 2499
 	}
+
+
+
+
 ]
