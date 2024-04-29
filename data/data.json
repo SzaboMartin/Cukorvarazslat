@@ -148,7 +148,7 @@
 	},
 	{
 		"name": "Pillangó Orchidea",
-		"img": "",
+		"img": "cukor14.jpeg",
 		"type": "Eskuvocukor",
 		"price": 2000
 	},
@@ -166,13 +166,13 @@
 	},
 	{
 		"name": "Bazsarózsa",
-		"img": "",
+		"img": "cukor13.jpeg",
 		"type": "Eskuvocukor",
 		"price": 2000
 	},
 	{
 		"name": "Anemóna",
-		"img": "",
+		"img": "cukor2.jpeg",
 		"type": "Eskuvocukor",
 		"price": 2000
 	},
@@ -184,13 +184,13 @@
 	},
 	{
 		"name": "Frézia",
-		"img": "",
+		"img": "cukor2.jpeg",
 		"type": "Eskuvocukor",
 		"price": 2000
 	},
 	{
 		"name": "Sárga rózsa",
-		"img": "cukor12.jpeg",
+		"img": "cukor16.jpeg",
 		"type": "Eskuvocukor",
 		"price": 2000
 	}
