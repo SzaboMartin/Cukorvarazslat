@@ -1,6 +1,8 @@
 Kosár, fizetés oldal, bolt oldal nincs kész és nem megy a javascript.
 megosztás icon nem megy a javascript.
-kapcsolat oldalnál ha nem írunk be semmit és küldünk üzenetet, hibát ír ki.
+
+
+kapcsolat oldalnál ha nem írunk be semmit és küldünk üzenetet, hibát ír ki.  OK
 
 Bolt szűrő, kereső...
 Kosár vásárlás

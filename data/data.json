@@ -1,0 +1,20 @@
+[
+	{
+		"name": "Dobberman",
+		"img": "dog.jpeg",
+		"type": "Figurak",
+		"price": 2400
+	},
+	{
+		"name": "Miki egér és barátai",
+		"img": "miki_eger_csomag.jpeg",
+		"type": "Figurak",
+		"price": 2000
+	},
+	{
+		"name": "Liliom",
+		"img": "disz5.jpeg",
+		"type": "Cukorviragdisz",
+		"price": 5000
+	}
+]

@@ -1,0 +1,38 @@
+
+<div class="header mt-5 bg-dark-transparent">
+	<div class="row mt-5">
+	  <h1 class="text-center my-3 ">Bolt</h1>
+	</div>
+</div>
+
+<div class="container-fluid containerszelesseg mt-5">
+	
+	<div class="row row-cols-1 row-cols-md-2 row-cols-xxl-3 g-4">
+		<div class="col"
+				 ng-repeat="x in data track by $index">
+			<div class="card">
+				<a href="/html/termek.html">
+					<img ng-src="img/{{x.type}}/{{x.img}}" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">x.name</h5>
+						<p>{{x.price}} ft</p>
+						<p>Kosár</p>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>			
+</div>
+
+
+<!--Slider-->
+<div class="slider">
+	<ul>
+	  <li ng-repeat="x in [].constructor(22) track by $index">
+		<img ng-src="./img/Cukorviragdisz/disz{{$index+1}}.jpeg" alt="">
+	  </li>
+	  <li ng-repeat="x in [].constructor(36) track by $index">
+		<img ng-src="./img/Eskuvocukor/cukor{{$index}}.jpeg" alt="">
+	  </li>
+	</ul>
+</div>

@@ -82,7 +82,8 @@
       		.state('bolt', {
 				url: '/bolt',
 				parent: 'root',
-				templateUrl: './html/bolt.html'
+				templateUrl: './html/bolt.html',
+				controller:'boltController'
 			})
 			.state('termek', {
 				url: '/termek',
@@ -103,7 +104,8 @@
       .state('megosztas', {
 				url: '/megosztas',
 				parent: 'root',
-				templateUrl: './html/under_construction.html'
+				templateUrl: './html/under_construction.html',
+				controller: 'megosztasController',
 			})
       .state('vasarlas', {
 				url: '/vasarlas',
@@ -738,7 +740,23 @@
       // Initialize
       methods.init();
 		}
-	]);
+	])
+
+	// Bolt controller
+  .controller('boltController', [
+    '$scope',
+		'http',
+    function($scope, http) {
+
+			http.request('./data/data.json')
+			.then(response => {
+				$scope.data = response;
+				$scope.$applyAsync();
+			});
+
+			
+		}
+	])
 
 })(window, angular);
 
