@@ -31,13 +31,13 @@
 		"price": 2999
 	},
 	{
-		"name": "miki egér csomag",
+		"name": "Mickey egér csomag",
 		"img": "miki_eger_csomag.jpeg",
 		"type": "Figurak",
 		"price": 7999
 	},
 	{
-		"name": "micimackó és barátai",
+		"name": "Micimackó és barátai",
 		"img": "micimacko.jpg",
 		"type": "Figurak",
 		"price": 3999
@@ -51,51 +51,51 @@
 
 	{
 		"name": "Liliom",
-		"img": "disz5.jpeg",
+		"img": "disz2.jpeg",
 		"type": "Cukorviragdisz",
 		"price": 5000
 	},
 	{
-		"name": "",
-		"img": "",
+		"name": "Cymbídium Orchidea",
+		"img": "disz7.jpeg",
 		"type": "Cukorviragdisz",
 		"price": 2000
 	},
 	{
-		"name": "",
-		"img": "",
+		"name": "Hóvirág",
+		"img": "disz11.jpeg",
 		"type": "Cukorviragdisz",
-		"price": 2000
+		"price": 2600
 	},
 	{
-		"name": "",
-		"img": "",
+		"name": "Tulipán",
+		"img": "disz12.jpeg",
 		"type": "Cukorviragdisz",
-		"price": 2000
+		"price": 4000
 	},
 	{
-		"name": "",
-		"img": "",
+		"name": "Gyöngyvirág.jpeg",
+		"img": "disz23.jpeg",
 		"type": "Cukorviragdisz",
-		"price": 2000
+		"price": 3000
 	},
 	{
-		"name": "",
-		"img": "",
+		"name": "Mikulás virág",
+		"img": "disz29.jpg",
 		"type": "Cukorviragdisz",
-		"price": 2000
+		"price": 3500
 	},
 	{
-		"name": "",
-		"img": "",
+		"name": "Orgona",
+		"img": "disz16.jpeg",
 		"type": "Cukorviragdisz",
-		"price": 2000
+		"price": 2999
 	},
 	{
-		"name": "",
-		"img": "",
+		"name": "Rózsa",
+		"img": "disz4.jpeg",
 		"type": "Cukorviragdisz",
-		"price": 2000
+		"price": 3200
 	},
 	{
 		"name": "A halott menyasszony",
