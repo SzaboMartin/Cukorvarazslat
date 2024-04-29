@@ -74,15 +74,6 @@
 		"type": "Cukorviragdisz",
 		"price": 2000
 	},
-
-
-
-
-
-
-
-
-
 	{
 		"name": "A halott menyasszony",
 		"img": "halottmenny2.jpg",
@@ -125,8 +116,6 @@
 		"type": "Naszparok",
 		"price": 2400
 	},
-
-
 	{
 		"name": "Pillangó Orchidea",
 		"img": "cukor14.jpeg",
@@ -175,8 +164,4 @@
 		"type": "Eskuvocukor",
 		"price": 4300
 	}
-
-
-
-
 ]
