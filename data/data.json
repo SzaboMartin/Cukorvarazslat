@@ -1,52 +1,31 @@
 [
+	
 	{
-		"name": "Dobberman",
-		"img": "dog.jpeg",
+		"name": "Bambi",
+		"img": "bambi.jpg",
 		"type": "Figurak",
-		"price": 2400
+		"price": 2999
 	},
 	{
-		"name": "Miki egér és barátai",
-		"img": "miki_eger_csomag.jpeg",
+		"name": "Grincs",
+		"img": "grincs.jpeg",
 		"type": "Figurak",
-		"price": 2000
+		"price": 2999
 	},
 	{
-		"name": "",
-		"img": "",
+		"name": "Oroszlánkirály",
+		"img": "oroszlankiraly.jpeg",
 		"type": "Figurak",
-		"price": 2000
+		"price": 3999
 	},
 	{
-		"name": "",
-		"img": "",
+		"name": "Verdák",
+		"img": "verdak_matuka_mc_queen.jpeg",
 		"type": "Figurak",
-		"price": 2000
+		"price": 4999
 	},
-	{
-		"name": "",
-		"img": "",
-		"type": "Figurak",
-		"price": 2000
-	},
-	{
-		"name": "",
-		"img": "",
-		"type": "Figurak",
-		"price": 2000
-	},
-	{
-		"name": "",
-		"img": "",
-		"type": "Figurak",
-		"price": 2000
-	},
-	{
-		"name": "",
-		"img": "",
-		"type": "Figurak",
-		"price": 2000
-	},
+
+
 	{
 		"name": "Liliom",
 		"img": "disz5.jpeg",
@@ -178,9 +157,9 @@
 	},
 	{
 		"name": "Liliom",
-		"img": "cukor9.jpeg",
+		"img": "disz6.jpeg",
 		"type": "Eskuvocukor",
-		"price": 2000
+		"price": 2499
 	},
 	{
 		"name": "Frézia",
@@ -194,4 +173,8 @@
 		"type": "Eskuvocukor",
 		"price": 2000
 	}
+
+
+
+
 ]
