@@ -173,11 +173,17 @@
 				
 
 				<!-- Kosár -->
-				<li class="nav-item kosarIkon shopping">
+				<li class="nav-item kosarIkon shopping position-relative 
+									 mt-4 mt-xxl-0 me-3">
 				  <a class="nav-link" 
 						 ui-sref="Kosar" 
 						 ui-sref-active="active"> 
 						<img ng-src="./img/icons/shopping.svg" >
+						<div class="text-white position-absolute 
+											 border rounded-circle px-2"
+											 style="left:25px;top:-10px;">
+						{{$root.cart.length}}
+					</div>
 					</a>
 			  </li>
 

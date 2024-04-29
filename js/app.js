@@ -42,24 +42,24 @@
 				parent: 'root',
 				templateUrl: './html/presing_lenke.html'
 			})
-      		.state('galeria', {
+      .state('galeria', {
 				url: '/galeria',
 				parent: 'root',
 				templateUrl: './html/galeria.html',
 				controller: 'galeriaController',
 				params: {type: null},
 			})
-     		 .state('eskuvocukor', {
+     	.state('eskuvocukor', {
 				url: '/eskuvocukor',
 				parent: 'root',
 				templateUrl: './html/uder_construction.html'
 			})
-      		.state('figurak', {
+      .state('figurak', {
 				url: '/figurak',
 				parent: 'root',
 				templateUrl: './html/under_construction.html'
 			})
-      		.state('Naszparok', {
+      .state('Naszparok', {
 				url: '/Naszparok',
 				parent: 'root',
 				templateUrl: './html/under_construction.html'
@@ -79,10 +79,10 @@
 				parent: 'root',
 				templateUrl: './html/uder_construction.html'
 			})
-      		.state('bolt', {
+      .state('bolt', {
 				url: '/bolt',
 				parent: 'root',
-				templateUrl: './html/bolt.html',
+				templateUrl: './html/bolt_new.html',
 				controller:'boltController'
 			})
 			.state('termek', {
@@ -115,7 +115,8 @@
 			.state('Kosar', {
 				url: '/Kosar',
 				parent: 'root',
-				templateUrl: './html/under_construction.html'
+				templateUrl: './html/Kosar.html',
+				controller: 'kosarController',
 			})
 			.state('fejlesztok', {
 				url: '/fejlesztok',
@@ -149,6 +150,19 @@
     }
   ])
 
+	.filter('sumTotal', [
+    'util',
+    function(util) {
+      return function(data) {
+        let total = 0;
+        if (util.isArray(data) && data.length) {
+          data.forEach((item) => {total += Number(item.total)});
+        } 
+        return total;
+      };
+    }
+  ])
+
   // Application run
   .run([
 		'$state',
@@ -159,7 +173,10 @@
     ($state, $rootScope, $timeout, trans, util) => {
 
       // Transaction events
-			trans.events({group: 'user'});
+			trans.events({
+				name: 'Kosar',
+				group: 'user'
+			});
 
 			// Set user properties
 			$rootScope.user = {
@@ -175,29 +192,31 @@
 				email: null
 			};
 
-      // Check logout function exist
-			if (!util.isFunction($rootScope.logout)) {
+			// Set cart
+			$rootScope.cart = [];
 
-				// Logout
-				$rootScope.logout = () => {
+			// Logout
+			$rootScope.logout = () => {
 
-          // Reset asynchronous
-          $timeout(() => {
+        // Reset asynchronous
+        $timeout(() => {
 
-					  // Confirm
-					  if (confirm('Biztosan ki akar jelentkezni?')) {
+				  // Confirm
+				  if (confirm('Biztosan ki akar jelentkezni?')) {
 
-              // Reset user
-						  Object.keys($rootScope.user).forEach((key) => $rootScope.user[key] = null);
+            // Reset user
+					  Object.keys($rootScope.user).forEach((key) => $rootScope.user[key] = null);
 
-						  // Go to prevent enabled state, or to home
-					    if ($rootScope.state.prevEnabled)
-                    $state.go($rootScope.state.prevEnabled);
-              else	$state.go('home');
-					  }
-          }, 50);
-				};
-			}
+						// Reset cart
+						$rootScope.cart = [];
+
+					  // Go to prevent enabled state, or to home
+				    if ($rootScope.state.prevEnabled)
+                  $state.go($rootScope.state.prevEnabled);
+            else	$state.go('home');
+				  }
+        }, 50);
+			};
     }
   ])
 
@@ -574,15 +593,15 @@
 		}
 	])
     
-//Kapcsolatcontroller
-.controller('Kapcsolatcontroller', [
-    '$scope',
-    '$timeout',
-    'http',
+	//Kapcsolatcontroller
+	.controller('Kapcsolatcontroller', [
+  '$scope',
+  '$timeout',
+  'http',
 	'util',
     function($scope, $timeout, http, util) {
 
-        	// Send
+      // Send
 			$scope.kuld = () => {
 				
 				// Get neccesary input properties
@@ -606,7 +625,7 @@
 
 			};
         }
-    ])
+  ])
 
   // Profile controller
   .controller('profileController', [
@@ -744,19 +763,100 @@
 
 	// Bolt controller
   .controller('boltController', [
+		'$rootScope',
     '$scope',
+		'$timeout',
 		'http',
-    function($scope, http) {
+		'util',
+    function($rootScope, $scope, $timeout, http, util) {
 
-			http.request('./data/data.json')
+			// Get data
+			http.request('./data/data_new.json')
 			.then(response => {
+
+				// Set types
+				let types			= util.arrayObjFilterByKeys(response, 'type;typeName');
+				$scope.types	= util.arrayObjUniqueByKeys(types, 'type');
+
+				// Set data
 				$scope.data = response;
 				$scope.$applyAsync();
-			});
+			})
+			.catch(e => $timeout(() => { alert(e); }, 50));
 
-			
+			$scope.model = {};
+			$scope.setModal = (item) => {
+				$scope.item = item;
+				$scope.model.quantity = 1;
+				$scope.model.total = item.price;
+				$scope.$applyAsync();
+			};
+
+			$scope.sumTotal = () => {
+				$scope.model.total = $scope.item.price * $scope.model.quantity;
+			};
+
+			$scope.itemToCart = () => {
+				if (!$rootScope.user.id) {
+					$timeout(() => {alert('Be kell jelenkeznie!')}, 100);
+					return;
+				}
+				$scope.item.quantity = $scope.model.quantity;
+				$scope.item.total = $scope.model.total;
+				let index = util.indexByKeyValue($rootScope.cart, 'id', $scope.item.id);
+				if (index !== -1) {
+								$rootScope.cart[index].quantity += $scope.item.quantity;
+								$rootScope.cart[index].total += $scope.item.total;
+				} else	$rootScope.cart.push($scope.item);
+			};
 		}
 	])
+
+	.controller('kosarController', [
+		'$rootScope',
+    '$scope',
+		'$timeout',
+		'http',
+		'util',
+    function($rootScope, $scope, $timeout, http, util) {
+
+			// Set years
+      let currentYear = new Date().getFullYear();
+      $scope.years    = Array.from({length: 11}, 
+                        (_, i) => currentYear + i);
+
+      // Set months
+      $scope.months = [
+        "Január",
+        "Február",
+        "Március",
+        "Április",
+        "Május",
+        "Június",
+        "Július",
+        "Augusztus",
+        "Szeptember",
+        "Október",
+        "November",
+        "December",
+      ];
+
+			$scope.torol = (item) => {
+				if (!confirm('Biztos eltávolítja a kosárból?')) return;
+				let index = util.indexByKeyValue($rootScope.cart, 'id', item.id);
+				if (index !== -1) {
+					$rootScope.cart.splice(index, 1);
+					$scope.$applyAsync();
+				}
+			};
+			
+			$scope.vasarlas = () => {
+				$timeout(() => {
+					alert('Fejlesztés alatt!');
+				}, 100);
+			};
+		}
+	]);
 
 })(window, angular);
 
