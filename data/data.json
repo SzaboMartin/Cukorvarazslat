@@ -12,9 +12,186 @@
 		"price": 2000
 	},
 	{
+		"name": "",
+		"img": "",
+		"type": "Figurak",
+		"price": 2000
+	},
+	{
+		"name": "",
+		"img": "",
+		"type": "Figurak",
+		"price": 2000
+	},
+	{
+		"name": "",
+		"img": "",
+		"type": "Figurak",
+		"price": 2000
+	},
+	{
+		"name": "",
+		"img": "",
+		"type": "Figurak",
+		"price": 2000
+	},
+	{
+		"name": "",
+		"img": "",
+		"type": "Figurak",
+		"price": 2000
+	},
+	{
+		"name": "",
+		"img": "",
+		"type": "Figurak",
+		"price": 2000
+	},
+	{
 		"name": "Liliom",
 		"img": "disz5.jpeg",
 		"type": "Cukorviragdisz",
 		"price": 5000
+	},
+	{
+		"name": "",
+		"img": "",
+		"type": "Cukorviragdisz",
+		"price": 2000
+	},
+	{
+		"name": "",
+		"img": "",
+		"type": "Cukorviragdisz",
+		"price": 2000
+	},
+	{
+		"name": "",
+		"img": "",
+		"type": "Cukorviragdisz",
+		"price": 2000
+	},
+	{
+		"name": "",
+		"img": "",
+		"type": "Cukorviragdisz",
+		"price": 2000
+	},
+	{
+		"name": "",
+		"img": "",
+		"type": "Cukorviragdisz",
+		"price": 2000
+	},
+	{
+		"name": "",
+		"img": "",
+		"type": "Cukorviragdisz",
+		"price": 2000
+	},
+	{
+		"name": "",
+		"img": "",
+		"type": "Cukorviragdisz",
+		"price": 2000
+	},
+
+
+
+
+
+
+
+
+
+	{
+		"name": "A halott menyasszony",
+		"img": "halottmenny2.jpg",
+		"type": "Naszparok",
+		"price": 2000
+	},
+	{
+		"name": "Mosómedvék",
+		"img": "mosomacik.jpeg",
+		"type": "Naszparok",
+		"price": 2000
+	},
+	{
+		"name": "Király és királyné",
+		"img": "par3.jpg",
+		"type": "Naszparok",
+		"price": 2000
+	},
+	{
+		"name": "Cicák",
+		"img": "parok8.jpeg",
+		"type": "Naszparok",
+		"price": 2000
+	},
+	{
+		"name": "kutyák",
+		"img": "parok16.jpeg",
+		"type": "Naszparok",
+		"price": 2000
+	},
+	{
+		"name": "Shrek és Fióna",
+		"img": "shrekpar.jpg",
+		"type": "Naszparok",
+		"price": 2000
+	},
+	{
+		"name": "Ludak",
+		"img": "ludak.jpeg",
+		"type": "Naszparok",
+		"price": 2000
+	},
+	{
+		"name": "",
+		"img": "",
+		"type": "Eskuvocukor",
+		"price": 2000
+	},
+	{
+		"name": "",
+		"img": "",
+		"type": "Eskuvocukor",
+		"price": 2000
+	},
+	{
+		"name": "",
+		"img": "",
+		"type": "Eskuvocukor",
+		"price": 2000
+	},
+	{
+		"name": "",
+		"img": "",
+		"type": "Eskuvocukor",
+		"price": 2000
+	},
+	{
+		"name": "",
+		"img": "",
+		"type": "Eskuvocukor",
+		"price": 2000
+	},
+	{
+		"name": "",
+		"img": "",
+		"type": "Eskuvocukor",
+		"price": 2000
+	},
+	{
+		"name": "",
+		"img": "",
+		"type": "Eskuvocukor",
+		"price": 2000
+	},
+	{
+		"name": "",
+		"img": "",
+		"type": "Eskuvocukor",
+		"price": 2000
 	}
 ]
