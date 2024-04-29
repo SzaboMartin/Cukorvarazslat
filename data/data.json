@@ -87,91 +87,93 @@
 		"name": "A halott menyasszony",
 		"img": "halottmenny2.jpg",
 		"type": "Naszparok",
-		"price": 2000
+		"price": 4100
 	},
 	{
 		"name": "Mosómedvék",
 		"img": "mosomacik.jpeg",
 		"type": "Naszparok",
-		"price": 2000
+		"price": 3600
 	},
 	{
 		"name": "Király és királyné",
 		"img": "par3.jpg",
 		"type": "Naszparok",
-		"price": 2000
+		"price": 2700
 	},
 	{
 		"name": "Cicák",
 		"img": "parok8.jpeg",
 		"type": "Naszparok",
-		"price": 2000
+		"price": 6000
 	},
 	{
 		"name": "kutyák",
 		"img": "parok16.jpeg",
 		"type": "Naszparok",
-		"price": 2000
+		"price": 4000
 	},
 	{
 		"name": "Shrek és Fióna",
 		"img": "shrekpar.jpg",
 		"type": "Naszparok",
-		"price": 2000
+		"price": 3000
 	},
 	{
 		"name": "Ludak",
 		"img": "ludak.jpeg",
 		"type": "Naszparok",
-		"price": 2000
+		"price": 2400
 	},
+
+
 	{
 		"name": "Pillangó Orchidea",
 		"img": "cukor14.jpeg",
 		"type": "Eskuvocukor",
-		"price": 2000
+		"price": 3000
 	},
 	{
 		"name": "Tulipán",
-		"img": "",
+		"img": "cukor28.jpeg",
 		"type": "Eskuvocukor",
 		"price": 2000
 	},
 	{
 		"name": "Orchidea",
-		"img": "",
+		"img": "cukor20.jpeg",
 		"type": "Eskuvocukor",
-		"price": 2000
+		"price": 2500
 	},
 	{
 		"name": "Bazsarózsa",
 		"img": "cukor13.jpeg",
 		"type": "Eskuvocukor",
-		"price": 2000
+		"price": 4000
 	},
 	{
 		"name": "Anemóna",
 		"img": "cukor2.jpeg",
 		"type": "Eskuvocukor",
-		"price": 2000
+		"price": 3500
 	},
 	{
 		"name": "Liliom",
 		"img": "disz6.jpeg",
 		"type": "Eskuvocukor",
-		"price": 2499
+		"price": 3300
 	},
 	{
 		"name": "Frézia",
 		"img": "cukor2.jpeg",
 		"type": "Eskuvocukor",
-		"price": 2000
+		"price": 2800
 	},
 	{
 		"name": "Sárga rózsa",
 		"img": "cukor16.jpeg",
 		"type": "Eskuvocukor",
-		"price": 2000
+		"price": 4300
 	}
 
 
