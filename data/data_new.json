@@ -69,7 +69,7 @@
         "img": "disz2.jpeg",
         "type": "Cukorviragdisz",
         "typeName": "Cukorvirágdísz",
-        "price": 5000
+        "price": 4999
     },
     {
         "id": 9,
@@ -77,7 +77,7 @@
         "img": "disz7.jpeg",
         "type": "Cukorviragdisz",
         "typeName": "Cukorvirágdísz",
-        "price": 2000
+        "price": 1999
     },
     {
         "id": 10,
@@ -85,7 +85,7 @@
         "img": "disz11.jpeg",
         "type": "Cukorviragdisz",
         "typeName": "Cukorvirágdísz",
-        "price": 2600
+        "price": 2599
     },
     {
         "id": 11,
@@ -93,7 +93,7 @@
         "img": "disz12.jpeg",
         "type": "Cukorviragdisz",
         "typeName": "Cukorvirágdísz",
-        "price": 4000
+        "price": 3999
     },
     {
         "id": 12,
@@ -101,7 +101,7 @@
         "img": "disz23.jpeg",
         "type": "Cukorviragdisz",
         "typeName": "Cukorvirágdísz",
-        "price": 3000
+        "price": 2999
     },
     {
         "id": 13,
@@ -109,7 +109,7 @@
         "img": "disz29.jpg",
         "type": "Cukorviragdisz",
         "typeName": "Cukorvirágdísz",
-        "price": 3500
+        "price": 3499
     },
     {
         "id": 14,
@@ -125,7 +125,7 @@
         "img": "disz4.jpeg",
         "type": "Cukorviragdisz",
         "typeName": "Cukorvirágdísz",
-        "price": 3200
+        "price": 3199
     },
     {
         "id": 16,
@@ -133,7 +133,7 @@
         "img": "halottmenny2.jpg",
         "type": "Naszparok",
         "typeName": "Nászpárok",
-        "price": 4100
+        "price": 4099
     },
     {
         "id": 17,
@@ -141,7 +141,7 @@
         "img": "mosomacik.jpeg",
         "type": "Naszparok",
         "typeName": "Nászpárok",
-        "price": 3600
+        "price": 3599
     },
     {
         "id": 18,
@@ -149,7 +149,7 @@
         "img": "par3.jpg",
         "type": "Naszparok",
         "typeName": "Nászpárok",
-        "price": 2700
+        "price": 2699
     },
     {
         "id": 19,
@@ -157,7 +157,7 @@
         "img": "parok8.jpeg",
         "type": "Naszparok",
         "typeName": "Nászpárok",
-        "price": 5000
+        "price": 4999
     },
     {
         "id": 20,
@@ -165,7 +165,7 @@
         "img": "parok16.jpeg",
         "type": "Naszparok",
         "typeName": "Nászpárok",
-        "price": 4000
+        "price": 3999
     },
     {
         "id": 21,
@@ -181,7 +181,7 @@
         "img": "ludak.jpeg",
         "type": "Naszparok",
         "typeName": "Nászpárok",
-        "price": 2400
+        "price": 2399
     },
     {
         "id": 23,
@@ -189,7 +189,7 @@
         "img": "cukor14.jpeg",
         "type": "Eskuvocukor",
         "typeName": "Esküvő cukor",
-        "price": 3000
+        "price": 2999
     },
     {
         "id": 24,
@@ -197,7 +197,7 @@
         "img": "cukor28.jpeg",
         "type": "Eskuvocukor",
         "typeName": "Esküvő cukor",
-        "price": 2000
+        "price": 1999
     },
     {
         "id": 25,
@@ -205,7 +205,7 @@
         "img": "cukor20.jpeg",
         "type": "Eskuvocukor",
         "typeName": "Esküvő cukor",
-        "price": 2500
+        "price": 2499
     },
     {
         "id": 26,
@@ -213,7 +213,7 @@
         "img": "cukor13.jpeg",
         "type": "Eskuvocukor",
         "typeName": "Esküvő cukor",
-        "price": 4000
+        "price": 3999
     },
     {
         "id": 27,
@@ -221,7 +221,7 @@
         "img": "cukor2.jpeg",
         "type": "Eskuvocukor",
         "typeName": "Esküvő cukor",
-        "price": 3500
+        "price": 3499
     },
     {
         "id": 28,
@@ -229,7 +229,7 @@
         "img": "cukor9.jpeg",
         "type": "Eskuvocukor",
         "typeName": "Esküvő cukor",
-        "price": 3300
+        "price": 3299
     },
     {
         "id": 29,
@@ -237,7 +237,7 @@
         "img": "cukor32.jpeg",
         "type": "Eskuvocukor",
         "typeName": "Esküvő cukor",
-        "price": 2800
+        "price": 2799
     },
     {
         "id": 30,
@@ -245,6 +245,6 @@
         "img": "cukor16.jpeg",
         "type": "Eskuvocukor",
         "typeName": "Esküvő cukor",
-        "price": 4300
+        "price": 4299
     }
 ]
