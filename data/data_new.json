@@ -159,16 +159,9 @@
         "typeName": "Nászpárok",
         "price": 4999
     },
+    
     {
         "id": 20,
-        "name": "kutyák",
-        "img": "parok16.jpeg",
-        "type": "Naszparok",
-        "typeName": "Nászpárok",
-        "price": 3999
-    },
-    {
-        "id": 21,
         "name": "Shrek és Fióna",
         "img": "shrekpar.jpg",
         "type": "Naszparok",
@@ -176,7 +169,7 @@
         "price": 3000
     },
     {
-        "id": 22,
+        "id": 21,
         "name": "Ludak",
         "img": "ludak.jpeg",
         "type": "Naszparok",
@@ -184,7 +177,7 @@
         "price": 2399
     },
     {
-        "id": 23,
+        "id": 22,
         "name": "Pillangó Orchidea",
         "img": "cukor14.jpeg",
         "type": "Eskuvocukor",
@@ -192,7 +185,7 @@
         "price": 2999
     },
     {
-        "id": 24,
+        "id": 23,
         "name": "Tulipán",
         "img": "cukor28.jpeg",
         "type": "Eskuvocukor",
@@ -200,7 +193,7 @@
         "price": 1999
     },
     {
-        "id": 25,
+        "id": 24,
         "name": "Orchidea",
         "img": "cukor20.jpeg",
         "type": "Eskuvocukor",
@@ -208,7 +201,7 @@
         "price": 2499
     },
     {
-        "id": 26,
+        "id": 25,
         "name": "Bazsarózsa",
         "img": "cukor13.jpeg",
         "type": "Eskuvocukor",
@@ -216,7 +209,7 @@
         "price": 3999
     },
     {
-        "id": 27,
+        "id": 26,
         "name": "Szellőrózsa",
         "img": "cukor2.jpeg",
         "type": "Eskuvocukor",
@@ -224,7 +217,7 @@
         "price": 3499
     },
     {
-        "id": 28,
+        "id": 27,
         "name": "Liliom",
         "img": "cukor9.jpeg",
         "type": "Eskuvocukor",
@@ -232,7 +225,7 @@
         "price": 3299
     },
     {
-        "id": 29,
+        "id": 28,
         "name": "Frézia",
         "img": "cukor32.jpeg",
         "type": "Eskuvocukor",
@@ -240,7 +233,7 @@
         "price": 2799
     },
     {
-        "id": 30,
+        "id": 29,
         "name": "Sárga rózsa",
         "img": "cukor16.jpeg",
         "type": "Eskuvocukor",
