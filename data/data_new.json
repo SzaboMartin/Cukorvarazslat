@@ -217,7 +217,7 @@
     },
     {
         "id": 27,
-        "name": "Anemóna",
+        "name": "Szellőrózsa",
         "img": "cukor2.jpeg",
         "type": "Eskuvocukor",
         "typeName": "Esküvő cukor",
@@ -226,7 +226,7 @@
     {
         "id": 28,
         "name": "Liliom",
-        "img": "disz6.jpeg",
+        "img": "cukor9.jpeg",
         "type": "Eskuvocukor",
         "typeName": "Esküvő cukor",
         "price": 3300
@@ -234,7 +234,7 @@
     {
         "id": 29,
         "name": "Frézia",
-        "img": "cukor2.jpeg",
+        "img": "cukor32.jpeg",
         "type": "Eskuvocukor",
         "typeName": "Esküvő cukor",
         "price": 2800
