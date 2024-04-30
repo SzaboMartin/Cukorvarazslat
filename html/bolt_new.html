@@ -14,7 +14,7 @@
 		<li class="nav-item mx-2" 
 				role="presentation"
 				ng-repeat="x in types track by $index">
-			<button class="btn btn-lg btn-outline-primary mb-3"
+			<button class="btn btn-lg btn-outline-orange mb-3"
 							ng-class="{'active': $index===0}"
 							type="button" 
 							id="{{x.type}}-tab" 
@@ -49,7 +49,7 @@
 							<h5 class="card-title text-center">{{item.name}}</h5>
 							<p class="text-center">{{item.price | numSep}}Ft</p>
 							<div class="text-end">
-							<button class="btn btn-outline-primary text-black"
+							<button class="btn btn-outline-orange text-black"
 								 			ng-click="setModal(item)"
 								 			data-bs-toggle="modal" 
 								 			data-bs-target="#buyModal">
@@ -118,7 +118,7 @@
 									</div>
 									<div class="row mt-5 justify-content-end">
 										<button type="button" 
-														class="btn btn-primary w-auto d-inline-block mx-2 mb-3"
+														class="btn btn-outline-orange w-auto d-inline-block mx-2 mb-3"
 														ng-disabled="formQuantity.$invalid"
 														ng-click="itemToCart()"
 														data-bs-dismiss="modal">
