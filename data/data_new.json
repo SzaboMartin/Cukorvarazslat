@@ -97,7 +97,7 @@
     },
     {
         "id": 12,
-        "name": "Gyöngyvirág.jpeg",
+        "name": "Gyöngyvirág",
         "img": "disz23.jpeg",
         "type": "Cukorviragdisz",
         "typeName": "Cukorvirágdísz",
@@ -137,14 +137,6 @@
     },
     {
         "id": 17,
-        "name": "Mosómedvék",
-        "img": "mosomacik.jpeg",
-        "type": "Naszparok",
-        "typeName": "Nászpárok",
-        "price": 3599
-    },
-    {
-        "id": 18,
         "name": "Király és királyné",
         "img": "par3.jpg",
         "type": "Naszparok",
@@ -152,16 +144,15 @@
         "price": 2699
     },
     {
-        "id": 19,
+        "id": 18,
         "name": "Cicák",
         "img": "parok8.jpeg",
         "type": "Naszparok",
         "typeName": "Nászpárok",
         "price": 4999
     },
-    
     {
-        "id": 20,
+        "id": 19,
         "name": "Shrek és Fióna",
         "img": "shrekpar.jpg",
         "type": "Naszparok",
@@ -169,13 +160,22 @@
         "price": 3000
     },
     {
-        "id": 21,
+        "id": 20,
         "name": "Ludak",
         "img": "ludak.jpeg",
         "type": "Naszparok",
         "typeName": "Nászpárok",
         "price": 2399
     },
+    {
+        "id": 21,
+        "name": "Mosómedvék",
+        "img": "mosomacik.jpeg",
+        "type": "Naszparok",
+        "typeName": "Nászpárok",
+        "price": 3599
+    },
+
     {
         "id": 22,
         "name": "Pillangó Orchidea",
