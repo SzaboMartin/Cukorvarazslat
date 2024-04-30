@@ -163,20 +163,20 @@
 		"price": 4000
 	},
 	{
-		"name": "Anemóna",
+		"name": "Szellőrózsa",
 		"img": "cukor2.jpeg",
 		"type": "Eskuvocukor",
 		"price": 3500
 	},
 	{
 		"name": "Liliom",
-		"img": "disz6.jpeg",
+		"img": "cukor9.jpeg",
 		"type": "Eskuvocukor",
 		"price": 3300
 	},
 	{
 		"name": "Frézia",
-		"img": "cukor2.jpeg",
+		"img": "cukor32.jpeg",
 		"type": "Eskuvocukor",
 		"price": 2800
 	},
