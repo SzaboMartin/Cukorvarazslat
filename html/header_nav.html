@@ -166,7 +166,7 @@
 			 	<!-- Fejlesztők -->
 		  </ul>
 
-			<!-- Navbar content RIGHT -->
+				<!-- Navbar content RIGHT -->
 			<ul class="navbar-nav ms-auto">
 
 				<!-- Megosztás -->
@@ -185,57 +185,57 @@
 						{{$root.cart.length}}
 					</div>
 					</a>
-			  </li>
+			 	 </li>
 
 				<!-- Bejelentkezés -->
-		    <li class="nav-item mx-1" ng-if="!$root.user.id && $root.state.id !== 'login'">
-		  		<a class="nav-link" ui-sref="login" ui-sref-active="active">
+		    	<li class="nav-item mx-1" ng-if="!$root.user.id && $root.state.id !== 'login'">
+		  			<a class="nav-link" ui-sref="login" ui-sref-active="active">
 						<i class="fa-solid fa-right-to-bracket fa-xl bejelentkezes"></i>
 						<span class="text-capitalize text-small-caps menupontok">
 							Bejelentkezés
 						</span>
-        	</a>
-        </li>
+        			</a>
+       		 	</li>
 
-        <!-- Regisztráció  -->
-        <li class="nav-item mx-1"
+       		 <!-- Regisztráció  -->
+       		 <li class="nav-item mx-1"
 						ng-if="!$root.user.id && $root.state.id === 'login'">
-		  	  <a class="nav-link" 
-             ui-sref="register"
+		  		  <a class="nav-link" 
+            		 ui-sref="register"
 						 ui-sref-active="active">
 						<i class="fa-solid fa-id-card fa-xl regisztracio"></i>
 						<span class="text-capitalize text-small-caps menupontok">
 							Regisztráció
 						</span>
-          </a>
-		    </li>
+        		  </a>
+		  	  </li>
 
-				<!-- Profil  -->
-        <li class="nav-item mx-1"
+					<!-- Profil  -->
+       		 <li class="nav-item mx-1"
 						ng-if="$root.user.id">
-		  	  <a class="nav-link" 
-             ui-sref="profile"
-						 ui-sref-active="active">
+		  		 	 <a class="nav-link" 
+          	 				ui-sref="profile"
+							ui-sref-active="active">
 						<i class="fa-solid fa-id-card fa-xl me-1 profil"></i>
 						<span class="text-capitalize text-small-caps menupontok">
 							Profil
 						</span>
-          </a>
-		    </li>
+        	  		</a>
+		  	  </li>
 
-				<!-- Logout -->
-		    <li class="nav-item cursor-pointer" 
+					<!-- Logout -->
+		  	 	<li class="nav-item cursor-pointer" 
 						ng-if="$root.user.id">
-		  	  <a class="nav-link"
-						 ui-sref-active="active" 
-						 ng-click="logout()">
+		  			<a class="nav-link"
+							ui-sref-active="active" 
+						 	ng-click="logout()">
 						<i class="fa-solid fa-right-from-bracket fa-xl me-1 kijelentkezes"></i>
 						<span class="text-capitalize text-small-caps menupontok">
 							Kijelenkezés
 						</span>
 					</a>
-		    </li>
+		  		</li>
 			</ul>
-	  </div>
+	 	 </div>
 	</div>
 </nav>
