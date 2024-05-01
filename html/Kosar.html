@@ -24,7 +24,7 @@
         ng-if="($root.cart | sumTotal)">
       <span>Összesen: {{$root.cart | sumTotal | numSep}}Ft</span>
       <button type="button" 
-              class="btn btn-primary ms-4" 
+              class="btn btn-outline-orange ms-4" 
               ui-sref-active="active"
               data-bs-toggle="modal" 
               data-bs-target="#buyModal">
@@ -132,7 +132,7 @@
 							<!-- Buttons -->
 							<div class="row justify-content-end">
 								<button type="button" 
-												class="btn btn-primary w-auto d-inline-block mx-2"
+												class="btn btn-outline-orange w-auto d-inline-block mx-2"
 												ng-disabled="byForm.$invalid"
 												ng-click="vasarlas()">
 									Fizetés
