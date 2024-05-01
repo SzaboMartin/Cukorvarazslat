@@ -239,14 +239,14 @@ h6 {
 .page-container.home main,
 .page-container:not(.home) .heafer-top {
   background-image: url(../img/cropped-szenvdvics_kes2.jpeg),
-                    url(../img/disz19.jpeg),
-                    url(../img/virag3.jpeg),
+                    url(../img/begonia.jpeg),
+                    url(../img/tulipan.jpeg),
                     url(../img/ludak1.jpg),
-                    url(../img/virag5.jpeg),
-                    url(../img/virag6.jpeg),
-                    url(../img/virag7.jpeg),
-                    url(../img/virag8.jpg),
-                    url(../img/virag2.jpeg);
+                    url(../img/baba.jpeg),
+                    url(../img/szolo.jpeg),
+                    url(../img/tropusi_virag.jpeg),
+                    url(../img/gyongyvirag.jpg),
+                    url(../img/dalia.jpeg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -267,28 +267,28 @@ h6 {
     background-image: url(../img/cropped-szenvdvics_kes2.jpeg);
   }
   12.5%{
-    background-image: url(../img/disz19.jpeg);
+    background-image: url(../img/begonia.jpeg);
   }
   25%{
-    background-image: url(../img/virag3.jpeg);
+    background-image: url(../img/tulipan.jpeg);
   }
   37.5%{
     background-image: url(../img/ludak1.jpg);
   }
   50%{
-    background-image: url(../img/virag5.jpeg);
+    background-image: url(../img/baba.jpeg);
   } 
   62.5%{
-    background-image: url(../img/virag6.jpeg);
+    background-image: url(../img/szolo.jpeg);
   }
   75%{
-    background-image: url(../img/virag7.jpeg);
+    background-image: url(../img/tropusi_virag.jpeg);
   }
   87.5%{
-    background-image: url(../img/virag8.jpg);
+    background-image: url(../img/gyongyvirag.jpg);
   }
   100%{
-    background-image: url(../img//virag2.jpeg);
+    background-image: url(../img//dalia.jpeg);
   }
 }
 .footerhatter
