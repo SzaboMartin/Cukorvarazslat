@@ -149,12 +149,7 @@ a:active {
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: #3f423f;}
 
-/*
-hr {
-  color: white;
-  height: 60px;
-}
-*/
+
 h4 {
   color: white;
 }
