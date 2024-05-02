@@ -1,4 +1,3 @@
-Fizetés oldal nincs kész és nem megy a javascript.
 
 Kapcsolat oldalnál ha nem írunk be semmit és küldünk üzenetet, hibát ír ki.  OK
 
@@ -7,3 +6,5 @@ Bolt szűrő, kereső... OK
 Kosár vásárlás OK
 
 Login/Register - oda-vissza váltása OK
+
+Fizetés oldalnál nem működik a javascript.
