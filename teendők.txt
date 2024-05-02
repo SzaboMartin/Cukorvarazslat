@@ -8,3 +8,5 @@ Kosár vásárlás OK
 Login/Register - oda-vissza váltása OK
 
 Fizetés oldalnál nem működik a javascript.
+
+Ha be vagyunk jelentkezve és rá frissítünk az oldalra, akkor kijelentkezik.
