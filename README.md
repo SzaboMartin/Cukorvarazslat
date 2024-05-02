@@ -12,4 +12,4 @@
 3. Az előző mappákkal egy szintre kell rakni a vizsgaremek állományait, melyek a https://github.com/SzaboMartin/Cukorvarazslat GitHub oldalról érhetők el.
 4. A XAMPP indítása, az Apache és MySql szerverek felkapcsolása után létre kell hozni az adatbázist cukorvarazslat néven a PhpMyAdmin felületen. 
 Importálni kell a db/cukorvarazsat.sql állományt.
-5. A webalkalmazás localhost-ról indítható: localhost/Cukorvarazslat
+5. A webalkalmazás localhost-ról indítható: localhost/Cukorvarazslat .
