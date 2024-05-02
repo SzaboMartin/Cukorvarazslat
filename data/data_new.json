@@ -66,7 +66,7 @@
     {
         "id": 8,
         "name": "Liliom",
-        "img": "disz2.jpeg",
+        "img": "liliom.jpeg",
         "type": "Cukorviragdisz",
         "typeName": "Cukorvirágdísz",
         "price": 4999
@@ -74,7 +74,7 @@
     {
         "id": 9,
         "name": "Cymbídium Orchidea",
-        "img": "disz7.jpeg",
+        "img": "cymbidium_orchidea.jpeg",
         "type": "Cukorviragdisz",
         "typeName": "Cukorvirágdísz",
         "price": 1999
@@ -82,7 +82,7 @@
     {
         "id": 10,
         "name": "Hóvirág",
-        "img": "disz11.jpeg",
+        "img": "hovirag.jpeg",
         "type": "Cukorviragdisz",
         "typeName": "Cukorvirágdísz",
         "price": 2599
@@ -90,7 +90,7 @@
     {
         "id": 11,
         "name": "Tulipán",
-        "img": "disz12.jpeg",
+        "img": "tulipanok.jpeg",
         "type": "Cukorviragdisz",
         "typeName": "Cukorvirágdísz",
         "price": 3999
@@ -98,7 +98,7 @@
     {
         "id": 12,
         "name": "Gyöngyvirág",
-        "img": "disz23.jpeg",
+        "img": "gyongyvirag.jpeg",
         "type": "Cukorviragdisz",
         "typeName": "Cukorvirágdísz",
         "price": 2999
@@ -106,15 +106,15 @@
     {
         "id": 13,
         "name": "Mikulás virág",
-        "img": "disz29.jpg",
+        "img": "mikulasvirag.jpeg",
         "type": "Cukorviragdisz",
         "typeName": "Cukorvirágdísz",
         "price": 3499
     },
     {
         "id": 14,
-        "name": "Orgona",
-        "img": "disz16.jpeg",
+        "name": "Angol rózsa",
+        "img": "angol_rozsa.jpg",
         "type": "Cukorviragdisz",
         "typeName": "Cukorvirágdísz",
         "price": 2999
@@ -122,7 +122,7 @@
     {
         "id": 15,
         "name": "Rózsa",
-        "img": "disz4.jpeg",
+        "img": "bazsarozsa_rozsa.jpeg",
         "type": "Cukorviragdisz",
         "typeName": "Cukorvirágdísz",
         "price": 3199
@@ -179,7 +179,7 @@
     {
         "id": 22,
         "name": "Pillangó Orchidea",
-        "img": "cukor14.jpeg",
+        "img": "rozsa_pillango_hortenzia.jpg",
         "type": "Eskuvocukor",
         "typeName": "Esküvő cukor",
         "price": 2999
@@ -187,7 +187,7 @@
     {
         "id": 23,
         "name": "Tulipán",
-        "img": "cukor28.jpeg",
+        "img": "tulipan_pink.jpeg",
         "type": "Eskuvocukor",
         "typeName": "Esküvő cukor",
         "price": 1999
@@ -195,7 +195,7 @@
     {
         "id": 24,
         "name": "Orchidea",
-        "img": "cukor20.jpeg",
+        "img": "orchidea2.jpeg",
         "type": "Eskuvocukor",
         "typeName": "Esküvő cukor",
         "price": 2499
@@ -203,15 +203,15 @@
     {
         "id": 25,
         "name": "Bazsarózsa",
-        "img": "cukor13.jpeg",
+        "img": "bazsarozsa_hortenzia.jpeg",
         "type": "Eskuvocukor",
         "typeName": "Esküvő cukor",
         "price": 3999
     },
     {
         "id": 26,
-        "name": "Szellőrózsa",
-        "img": "cukor2.jpeg",
+        "name": "Piros Orchidea",
+        "img": "orchidea_piros.jpeg",
         "type": "Eskuvocukor",
         "typeName": "Esküvő cukor",
         "price": 3499
@@ -219,7 +219,7 @@
     {
         "id": 27,
         "name": "Liliom",
-        "img": "cukor9.jpeg",
+        "img": "liliom.jpeg",
         "type": "Eskuvocukor",
         "typeName": "Esküvő cukor",
         "price": 3299
@@ -227,15 +227,15 @@
     {
         "id": 28,
         "name": "Frézia",
-        "img": "cukor32.jpeg",
+        "img": "frezia_pillangovirag.jpeg",
         "type": "Eskuvocukor",
         "typeName": "Esküvő cukor",
         "price": 2799
     },
     {
         "id": 29,
-        "name": "Sárga rózsa",
-        "img": "cukor16.jpeg",
+        "name": "Anemóna",
+        "img": "anemone.jpeg",
         "type": "Eskuvocukor",
         "typeName": "Esküvő cukor",
         "price": 4299
