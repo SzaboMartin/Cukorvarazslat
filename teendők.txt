@@ -7,7 +7,7 @@ Kosár vásárlás OK
 
 Login/Register - oda-vissza váltása OK
 
-Fizetés oldalnál nem működik a javascript.
+Fizetés oldalnál nem működik a javascript. OK
 
 Adatbázis fizetéshez és a galéria képeihez.
 
