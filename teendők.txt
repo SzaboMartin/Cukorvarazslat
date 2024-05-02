@@ -1,11 +1,9 @@
-Kosár, fizetés oldal, bolt oldal nincs kész és nem megy a javascript.
-megosztás icon nem megy a javascript.
+Fizetés oldal nincs kész és nem megy a javascript.
 
+Kapcsolat oldalnál ha nem írunk be semmit és küldünk üzenetet, hibát ír ki.  OK
 
-kapcsolat oldalnál ha nem írunk be semmit és küldünk üzenetet, hibát ír ki.  OK
+Bolt szűrő, kereső... OK
 
-Bolt szűrő, kereső...
-Kosár vásárlás
-
+Kosár vásárlás OK
 
 Login/Register - oda-vissza váltása OK
