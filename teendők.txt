@@ -9,4 +9,6 @@ Login/Register - oda-vissza váltása OK
 
 Fizetés oldalnál nem működik a javascript.
 
+Adatbázis fizetéshez és a galéria képeihez.
+
 Ha be vagyunk jelentkezve és rá frissítünk az oldalra, akkor kijelentkezik.
