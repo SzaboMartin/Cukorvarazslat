@@ -149,12 +149,7 @@ a:active {
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: #3f423f;}
 
-/*
-hr {
-  color: white;
-  height: 60px;
-}
-*/
+
 h4 {
   color: white;
 }
@@ -546,7 +541,7 @@ box-shadow: none;
     background-blend-mode: hard-light;
     background-repeat: no-repeat;
   }
-  .page-container.Kapcsolat,.page-container.presing_lenke,.page-container.galeria{
+  .page-container.Kapcsolat,.page-container.presing_lenke,.page-container.galeria,.page-container.Kosar{
     background-image: url(../img/viraghattersotet.jpeg);
     background-size: 100%;
     background-position: center;
