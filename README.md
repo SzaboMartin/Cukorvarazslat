@@ -14,4 +14,4 @@
 Importálni kell a db/cukorvarazsat.sql állományt.
 5. A webalkalmazás localhost-ról indítható: localhost/Cukorvarazslat.
 
-Csoportmunka trello:https://trello.com/b/T2o79Q7L/cukraszda
+Csoportmunka trello : https://trello.com/b/T2o79Q7L/cukraszda
