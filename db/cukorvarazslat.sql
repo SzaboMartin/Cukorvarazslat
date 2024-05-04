@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2024. Ápr 24. 10:05
+-- Létrehozás ideje: 2024. Máj 04. 20:00
 -- Kiszolgáló verziója: 10.4.6-MariaDB
 -- PHP verzió: 7.3.8
 
@@ -40,6 +40,142 @@ CREATE TABLE `offers` (
 -- A tábla adatainak kiíratása `offers`
 --
 
+INSERT INTO `offers` (`id`, `name`, `email`, `message`, `date`) VALUES
+(5, 'Ódry Attila', 'odry.attila@keri.mako.hu', 'dsdsdsdsds', '2024-04-29');
+
+-- --------------------------------------------------------
+
+--
+-- Tábla szerkezet ehhez a táblához `orders`
+--
+
+CREATE TABLE `orders` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `card_number` varchar(20) NOT NULL,
+  `expiration` varchar(7) NOT NULL,
+  `cvv` varchar(3) NOT NULL,
+  `date` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- A tábla adatainak kiíratása `orders`
+--
+
+INSERT INTO `orders` (`id`, `user_id`, `card_number`, `expiration`, `cvv`, `date`) VALUES
+(1, 15, '1111111111111111', '2024/05', '123', '2024-05-04 18:24:15'),
+(2, 15, '1111111111111111', '2025/01', '123', '2024-05-04 18:27:18');
+
+-- --------------------------------------------------------
+
+--
+-- Tábla szerkezet ehhez a táblához `orders_item`
+--
+
+CREATE TABLE `orders_item` (
+  `id` int(11) NOT NULL,
+  `order_id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL,
+  `quantity` tinyint(4) NOT NULL,
+  `price` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- A tábla adatainak kiíratása `orders_item`
+--
+
+INSERT INTO `orders_item` (`id`, `order_id`, `product_id`, `quantity`, `price`) VALUES
+(1, 1, 2, 12, 2999),
+(2, 1, 7, 3, 3999),
+(3, 1, 24, 1, 1999),
+(4, 2, 2, 2, 2999),
+(5, 2, 8, 3, 4999);
+
+-- --------------------------------------------------------
+
+--
+-- Tábla szerkezet ehhez a táblához `products`
+--
+
+CREATE TABLE `products` (
+  `id` int(11) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `product_type` varchar(20) NOT NULL,
+  `img` varchar(50) NOT NULL,
+  `price` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- A tábla adatainak kiíratása `products`
+--
+
+INSERT INTO `products` (`id`, `name`, `product_type`, `img`, `price`) VALUES
+(1, 'Bambi', 'figurak', 'bambi.jpg', 2999),
+(2, 'Grincs', 'figurak', 'grincs.jpeg', 2999),
+(3, 'Oroszlánkirály', 'figurak', 'oroszlankiraly.jpeg', 3999),
+(4, 'Verdák', 'figurak', 'verdak_matuka_mc_queen.jpeg', 4999),
+(5, 'Dobbermann', 'figurak', 'dog.jpeg', 2999),
+(6, 'Mickey egér csomag', 'figurak', 'miki_eger_csomag.jpeg', 7999),
+(7, 'Micimackó és barátai', 'figurak', 'micimacko.jpg', 3999),
+(8, 'Jávorszarvas', 'figurak', 'szarvass.jpeg', 4999),
+(9, 'Liliom', 'cukorviragdisz', 'liliom.jpeg', 4999),
+(10, 'Cymbídium Orchidea', 'cukorviragdisz', 'cymbidium_orchidea.jpeg', 1999),
+(11, 'Hóvirág', 'cukorviragdisz', 'hovirag.jpeg', 2599),
+(12, 'Tulipán', 'cukorviragdisz', 'tulipanok.jpeg', 3999),
+(13, 'Gyöngyvirág', 'cukorviragdisz', 'gyongyvirag.jpeg', 2999),
+(14, 'Mikulás virág', 'cukorviragdisz', 'mikulasvirag.jpeg', 3499),
+(15, 'Angol rózsa', 'cukorviragdisz', 'angol_rozsa.jpg', 2999),
+(16, 'Rózsa', 'cukorviragdisz', 'bazsarozsa_rozsa.jpeg', 3199),
+(17, 'A halott menyasszony', 'naszparok', 'halottmenny2.jpg', 4099),
+(18, 'Király és királyné', 'naszparok', 'par3.jpg', 2699),
+(19, 'Cicák', 'naszparok', 'parok8.jpeg', 4999),
+(20, 'Shrek és Fióna', 'naszparok', 'shrekpar.jpg', 3000),
+(21, 'Ludak', 'naszparok', 'ludak.jpeg', 2399),
+(22, 'Mosómedvék', 'naszparok', 'mosomacik.jpeg', 3599),
+(23, 'Arany rózsa', 'eskuvocukor', 'fantasia_rozsa.jpeg', 2999),
+(24, 'Tulipán', 'eskuvocukor', 'tulipan_pink.jpeg', 1999),
+(25, 'Orchidea', 'eskuvocukor', 'orchidea2.jpeg', 2499),
+(26, 'Bazsarózsa', 'eskuvocukor', 'bazsarozsa_hortenzia.jpeg', 3999),
+(27, 'Piros Orchidea', 'eskuvocukor', 'orchidea_piros.jpeg', 3499),
+(28, 'Liliom', 'eskuvocukor', 'liliom.jpeg', 3299),
+(29, 'Frézia', 'eskuvocukor', 'frezia_pillangovirag.jpeg', 2799),
+(30, 'Anemóna', 'eskuvocukor', 'anemone.jpeg', 4299);
+
+-- --------------------------------------------------------
+
+--
+-- Tábla szerkezet ehhez a táblához `products_type`
+--
+
+CREATE TABLE `products_type` (
+  `id` int(11) NOT NULL,
+  `type` varchar(50) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `order_by` tinyint(4) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- A tábla adatainak kiíratása `products_type`
+--
+
+INSERT INTO `products_type` (`id`, `type`, `name`, `order_by`) VALUES
+(1, 'cukorviragdisz', 'Cukorvirágdísz', 2),
+(2, 'eskuvocukor', 'Esküvő cukor', 4),
+(3, 'figurak', 'Figurák', 1),
+(4, 'naszparok', 'Nászpárok', 3);
+
+-- --------------------------------------------------------
+
+--
+-- Tábla szerkezet ehhez a táblához `shopping_cart`
+--
+
+CREATE TABLE `shopping_cart` (
+  `user_id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL,
+  `quantity` tinyint(3) UNSIGNED NOT NULL,
+  `price` int(11) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -134,6 +270,36 @@ ALTER TABLE `offers`
   ADD PRIMARY KEY (`id`);
 
 --
+-- A tábla indexei `orders`
+--
+ALTER TABLE `orders`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- A tábla indexei `orders_item`
+--
+ALTER TABLE `orders_item`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- A tábla indexei `products`
+--
+ALTER TABLE `products`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- A tábla indexei `products_type`
+--
+ALTER TABLE `products_type`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- A tábla indexei `shopping_cart`
+--
+ALTER TABLE `shopping_cart`
+  ADD PRIMARY KEY (`user_id`,`product_id`,`price`) USING BTREE;
+
+--
 -- A tábla indexei `type`
 --
 ALTER TABLE `type`
@@ -161,7 +327,31 @@ ALTER TABLE `vasarlas`
 -- AUTO_INCREMENT a táblához `offers`
 --
 ALTER TABLE `offers`
-  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT a táblához `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT a táblához `orders_item`
+--
+ALTER TABLE `orders_item`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT a táblához `products`
+--
+ALTER TABLE `products`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+
+--
+-- AUTO_INCREMENT a táblához `products_type`
+--
+ALTER TABLE `products_type`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT a táblához `users`
