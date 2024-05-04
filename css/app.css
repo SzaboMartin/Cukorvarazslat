@@ -541,7 +541,7 @@ box-shadow: none;
     background-blend-mode: hard-light;
     background-repeat: no-repeat;
   }
-  .page-container.Kapcsolat,.page-container.presing_lenke,.page-container.galeria,.page-container.Kosar{
+  .page-container.Kapcsolat,.page-container.presing_lenke,.page-container.galeria,.page-container.Kosar, .page-container.order{
     background-image: url(../img/viraghattersotet_new.jpeg);
     background-size: 100%;
     background-position: center;
