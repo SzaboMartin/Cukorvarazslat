@@ -526,7 +526,7 @@ box-shadow: none;
     line-height: 3;
   }
   .page-container.receptek{
-    background-image: url(../img/modern-flowers-concept-with-elegant-stylee.jpg);
+    background-image: url(../img/modern-flowers-concept-with-elegant-stylee_new.jpg);
     background-size: 100%;
     background-position: center;
     background-blend-mode: hard-light;
@@ -535,14 +535,14 @@ box-shadow: none;
   
   .page-container.bolt,.page-container.fejlesztok{
     
-    background-image: url(../img/lovely-flowers-concept-with-white-stones.jpg);
+    background-image: url(../img/lovely-flowers-concept-with-white-stones_new.jpg);
     background-size: 100%;
     background-position: center;
     background-blend-mode: hard-light;
     background-repeat: no-repeat;
   }
   .page-container.Kapcsolat,.page-container.presing_lenke,.page-container.galeria,.page-container.Kosar{
-    background-image: url(../img/viraghattersotet.jpeg);
+    background-image: url(../img/viraghattersotet_new.jpeg);
     background-size: 100%;
     background-position: center;
     background-blend-mode: hard-light;

@@ -5,7 +5,8 @@
   // Application module
   angular.module('app', [
     'ui.router',
-		'app.common'
+		'app.common',
+		'app_user'
   ])
 
   // Application config
@@ -82,13 +83,19 @@
       .state('bolt', {
 				url: '/bolt',
 				parent: 'root',
-				templateUrl: './html/bolt_new.html',
+				templateUrl: './html/bolt.html',
 				controller:'boltController'
 			})
 			.state('termek', {
 				url: '/termek',
 				parent: 'root',
 				templateUrl: './html/termek.html'
+			})
+			.state('order', {
+				url: '/order',
+				parent: 'root',
+				templateUrl: './html/order.html',
+				controller:'orderController'
 			})
 			.state('Kapcsolat', {
 				url: '/Kapcsolat',
@@ -165,58 +172,31 @@
 
   // Application run
   .run([
-		'$state',
     '$rootScope',
-    '$timeout',
     'trans',
-    'util',
-    ($state, $rootScope, $timeout, trans, util) => {
+		'user',
+    ($rootScope, trans, user) => {
 
       // Transaction events
 			trans.events({
-				name: 'Kosar',
-				group: 'user'
+				name: 'Kosar,order',
+				group: 'user',
 			});
 
-			// Set user properties
-			$rootScope.user = {
-				id: null,
-				type: null,
-				type_name: null,
-				name: null,
-				born: null,
-				gender: null,
-				address: null,
-				country_code: null,
-				phone: null,
-				email: null
-			};
+			// Get user
+			user.get().then(() => {
 
-			// Set cart
-			$rootScope.cart = [];
+				// Check user exist
+				if ($rootScope.user.id) {
 
-			// Logout
-			$rootScope.logout = () => {
+					// Get/Set user properties
+					user.user().then(() => {
 
-        // Reset asynchronous
-        $timeout(() => {
-
-				  // Confirm
-				  if (confirm('Biztosan ki akar jelentkezni?')) {
-
-            // Reset user
-					  Object.keys($rootScope.user).forEach((key) => $rootScope.user[key] = null);
-
-						// Reset cart
-						$rootScope.cart = [];
-
-					  // Go to prevent enabled state, or to home
-				    if ($rootScope.state.prevEnabled)
-                  $state.go($rootScope.state.prevEnabled);
-            else	$state.go('home');
-				  }
-        }, 50);
-			};
+						// Get/Set user cart properties
+						user.cart();
+					});
+				}
+			});
     }
   ])
 
@@ -334,7 +314,8 @@
     '$element',
     'http',
     'util',
-    function($state, $rootScope, $scope, $timeout, $element, http, util) {
+		'user',
+    function($state, $rootScope, $scope, $timeout, $element, http, util, user) {
 			
       // Set methods
       let methods = {
@@ -343,7 +324,8 @@
         init: () => {
 
           // Set model
-			    $scope.model = {email: localStorage.getItem('userEmailAddress')};
+			    $scope.model = {email: user.getEmail()};
+					console.log($scope.model);
 
           // Set focus
           methods.focus();
@@ -385,18 +367,23 @@
 
             // Convert born to date type
 						response.born = moment(response.born).toDate();
-
-            // Save in local storige email address
-						localStorage.setItem('userEmailAddress', args.email);
+						response.email = args.email;
             
             // Set user
 						$rootScope.user = util.objMerge($rootScope.user, response, true);
 
-            // Apply change
-						$rootScope.$applyAsync();
+						// Save user properties to local storage
+						user.save();
 
-            // Go to prevent enabled state, or to home
-            $scope.methods.cancel();
+						// Get/Set user cart properties
+						user.cart().then(() => {
+
+							// Apply change
+							$rootScope.$applyAsync();
+
+							// Go to prevent enabled state, or to home
+							$scope.methods.cancel();
+						});
           })
           .catch(error => {
 
@@ -517,9 +504,6 @@
             // Convert to date type
             args.born = moment(args.born).toDate();
 
-            // Save in local storige email address
-						localStorage.setItem('userEmailAddress', args.email);
-
             // Set user identifier, default type, and type name.
             args['id'] 				= response['id'];
 						args['type'] 			= 'U';
@@ -527,6 +511,9 @@
             
             // Set user
 						$rootScope.user = util.objMerge($rootScope.user, args, true);
+
+						// Save user properties to local storage
+						user.save();
 
             // Apply change
 						$rootScope.$applyAsync();
@@ -767,19 +754,15 @@
     '$scope',
 		'$timeout',
 		'http',
-		'util',
-    function($rootScope, $scope, $timeout, http, util) {
+    function($rootScope, $scope, $timeout, http) {
 
-			// Get data
-			http.request('./data/data_new.json')
+			// Get products
+			http.request('./php/products.php')
 			.then(response => {
 
-				// Set types
-				let types			= util.arrayObjFilterByKeys(response, 'type;typeName');
-				$scope.types	= util.arrayObjUniqueByKeys(types, 'type');
-
-				// Set data
-				$scope.data = response;
+				// Set types, and data
+				$scope.types	= response.types;
+				$scope.data 	= response.data;
 				$scope.$applyAsync();
 			})
 			.catch(e => $timeout(() => { alert(e); }, 50));
@@ -801,13 +784,29 @@
 					$timeout(() => {alert('Be kell jelenkeznie!')}, 100);
 					return;
 				}
-				$scope.item.quantity = $scope.model.quantity;
-				$scope.item.total = $scope.model.total;
-				let index = util.indexByKeyValue($rootScope.cart, 'id', $scope.item.id);
-				if (index !== -1) {
-								$rootScope.cart[index].quantity += $scope.item.quantity;
-								$rootScope.cart[index].total += $scope.item.total;
-				} else	$rootScope.cart.push($scope.item);
+
+				// Set arguments
+				let args = {
+					user_id 		: $rootScope.user.id,
+					product_id 	: $scope.item.id,
+					quantity 		: $scope.model.quantity,
+					price 			: $scope.item.price
+				};
+				
+				// Http request
+				http.request({
+					url: `./php/add_cart.php`,
+					data: args
+				})
+				.then(response => {
+					$rootScope.cart = response;
+					$rootScope.$applyAsync();
+				})
+				.catch(e => {
+					$timeout(() => {
+						alert(e);
+					}, 50);
+				});
 			};
 		}
 	])
@@ -820,9 +819,21 @@
 		'util',
     function($rootScope, $scope, $timeout, http, util) {
 
+			// Table header
+			$scope.header = {
+				name: "Termék",
+				price: "Egységár (Ft)",
+				quantity: "Mennyiség (db)",
+				total: "Össesen (Ft)"
+			};
+
+			// Get current date
+      let currentDate 	= new Date(),
+					currentYear 	= currentDate.getFullYear(),
+					currentMonth 	= currentDate.getMonth();
+
 			// Set years
-      let currentYear = new Date().getFullYear();
-      $scope.years    = Array.from({length: 11}, 
+      $scope.years = 	Array.from({length: 11}, 
                         (_, i) => currentYear + i);
 
       // Set months
@@ -841,20 +852,118 @@
         "December",
       ];
 
-			$scope.torol = (item) => {
-				if (!confirm('Biztos eltávolítja a kosárból?')) return;
-				let index = util.indexByKeyValue($rootScope.cart, 'id', item.id);
-				if (index !== -1) {
-					$rootScope.cart.splice(index, 1);
-					$scope.$applyAsync();
+			// Reset model
+			let resetModel = (msg=null) => {
+				Object.keys($scope.model).forEach((k) => {
+					$scope.model[k] = null;
+				});
+				if (msg) {
+					$timeout(() => {
+						alert(msg);
+					}, 50);
 				}
 			};
-			
-			$scope.vasarlas = () => {
-				$timeout(() => {
-					alert('Fejlesztés alatt!');
-				}, 100);
+
+			// Remove item
+			$scope.torol = (item) => {
+				if (!confirm('Biztos eltávolítja a kosárból?')) return;
+
+				// Set arguments
+				let args = {
+					user_id 		: $rootScope.user.id,
+					product_id 	: item.product_id,
+					quantity 		: item.quantity,
+					price 			: item.price
+				};
+
+				// Http request
+				http.request({
+					url: `./php/remove_cart.php`,
+					data: args
+				})
+				.then(response => {
+					$rootScope.cart = response;
+					$rootScope.$applyAsync();
+				})
+				.catch(e => {
+					$timeout(() => {
+						alert(e);
+					}, 50);
+				});
 			};
+			
+			// Set order
+			$scope.vasarlas = () => {
+
+				// Check credit card expiration
+				let month = $scope.months.indexOf($scope.model.month);
+				if ($scope.model.year === currentYear &&
+						month < currentMonth) {
+					resetModel('A hitelkártya lejárt!');
+					return;
+				}
+
+				let totalElement = document.querySelector('table tfoot th#total');
+				if (!totalElement) {
+					resetModel('Mindösszesen elem hiányzik!');
+					return;
+				} 
+				let total = parseInt(totalElement.innerText.replace(/\s/g,''));
+				if (isNaN(total)) {
+					resetModel('Mindösszesen érték hibás!');
+					return;
+				}
+
+				// Set expiration date
+				let expiration = 	$scope.model.year + '/' + 
+													(month+1).toString().padStart(2,"0");
+
+				// Set arguments
+				let args = {
+					user_id 		: $rootScope.user.id,
+					card_number : $scope.model.cardNumber,
+					expiration 	: expiration,
+					cvv 				: $scope.model.cvv,
+					total 			: total
+				};
+
+				// Http request
+				http.request({
+					url: `./php/set_order.php`,
+					data: {
+						order:	args,
+						items:	util.arrayObjFilterByKeys($rootScope.cart, 
+											'product_id,quantity,price')
+					}
+				})
+				.then(response => {
+					$rootScope.cart = [];
+					$rootScope.$applyAsync();
+					$timeout(() => {
+						alert(response);
+					}, 50);
+				})
+				.catch(e => {
+					$timeout(() => {
+						alert(e);
+					}, 50);
+				});
+
+				// Reset model
+				resetModel();
+			};
+		}
+	])
+
+	.controller('orderController', [
+		'$rootScope',
+    '$scope',
+		'$timeout',
+		'http',
+		'util',
+    function($rootScope, $scope, $timeout, http, util) {
+
+			
 		}
 	]);
 

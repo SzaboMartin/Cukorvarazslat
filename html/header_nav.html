@@ -171,69 +171,121 @@
 				<!-- Navbar content RIGHT -->
 			<ul class="navbar-nav ms-auto">
 
-				<!-- Kosár -->
-				<li class="nav-item kosarIkon shopping position-relative 
-									 mt-4 mt-xxl-0 me-3">
-				  <a class="nav-link" 
-						 ui-sref="Kosar" 
-						 ui-sref-active="active"> 
-						<img ng-src="./img/icons/shopping.svg" >
-						<div class="text-white position-absolute 
-											 border rounded-circle px-2"
-											 style="left:25px;top:-10px;">
-						{{$root.cart.length}}
-					</div>
-					</a>
-			 	 </li>
+				<!-- User -->
+				<li class="nav-item dropdown mt-4 mt-xxl-0 me-4 position-relative"
+						ng-if="$root.user.id">
+					<a class="nav-link dropdown-toggle" 
+						 href="#" role="button" 
+						 data-bs-toggle="dropdown" 
+						 aria-expanded="false">
+						<i class="position-absolute fa-solid fa-user text-white fa-2x top-0"></i>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
+						<li>
+							<span class="dropdown-item-text">
+								{{$root.user.name}}
+							</span>
+						</li>
+						<li><hr class="dropdown-divider text-bg-light"></li>
+						<li>
+							<a class="dropdown-item" 
+								 ui-sref="profile"
+					 	 		 ui-sref-active="active">
+								<i class="fa-solid fa-id-card fa-xl profil me-2"></i>
+								<span class="text-capitalize text-small-caps menupontok">
+									Profil
+								</span>
+							</a>
+						</li>
+						<li>
+							<a class="dropdown-item" 
+								 ui-sref="order"
+					 	 		 ui-sref-active="active">
+								<i class="fa-regular fa-rectangle-list fa-xl order me-2"></i>
+								<span class="text-capitalize text-small-caps menupontok">
+									Rendeléseim
+								</span>
+							</a>
+						</li>
+            <li><hr class="dropdown-divider text-bg-light"></li>
+            <li>
+							<a class="dropdown-item" 
+								 ng-click="logout()"
+					 	 		 ui-sref-active="active">
+								<i class="fa-solid fa-right-from-bracket fa-xl kijelentkezes me-2"></i>
+								<span class="text-capitalize text-small-caps menupontok">
+									Kijelenkezés
+								</span>
+							</a>
+						</li>
+          </ul>
+			 	</li>
 
 				<!-- Bejelentkezés -->
-		    	<li class="nav-item mx-1" ng-if="!$root.user.id && $root.state.id !== 'login'">
-		  			<a class="nav-link" ui-sref="login" ui-sref-active="active">
+		    <li class="nav-item mx-2" 
+						ng-if="!$root.user.id && $root.state.id !== 'login'">
+		  		<a class="nav-link" ui-sref="login" ui-sref-active="active">
 						<i class="fa-solid fa-right-to-bracket fa-xl bejelentkezes"></i>
 						<span class="text-capitalize text-small-caps menupontok">
 							Bejelentkezés
 						</span>
-        			</a>
-       		 	</li>
+        	</a>
+       	</li>
 
-       		 <!-- Regisztráció  -->
-       		 <li class="nav-item mx-1"
+       	<!-- Regisztráció  -->
+       	<li class="nav-item mx-2"
 						ng-if="!$root.user.id && $root.state.id === 'login'">
-		  		  <a class="nav-link" 
-            		 ui-sref="register"
-						 ui-sref-active="active">
+		  	  <a class="nav-link" 
+          	 ui-sref="register"
+					 	 ui-sref-active="active">
 						<i class="fa-solid fa-id-card fa-xl regisztracio"></i>
 						<span class="text-capitalize text-small-caps menupontok">
 							Regisztráció
 						</span>
-        		  </a>
-		  	  </li>
+        	</a>
+		  	</li>
 
-					<!-- Profil  -->
-       		 <li class="nav-item mx-1"
-						ng-if="$root.user.id">
-		  		 	 <a class="nav-link" 
-          	 				ui-sref="profile"
-							ui-sref-active="active">
+				<!-- Kosár -->
+				<li class="nav-item kosarIkon shopping position-relative 
+									 mt-4 mt-xxl-0 me-4">
+				  <a class="nav-link" 
+						 ng-class="{'disabled': !$root.user.id}"
+						 ui-sref="Kosar" 
+						 ui-sref-active="active"> 
+						<img ng-src="./img/icons/shopping.svg" >
+						<div class="text-white position-absolute 
+											  border rounded-circle px-2"
+								 style="left:25px;top:-10px;">
+							{{$root.cart.length}}
+						</div>
+					</a>
+			 	</li>
+
+				<!-- Profil  -->
+       	<!-- <li class="nav-item mx-1"
+					 	ng-if="$root.user.id">
+		  	 	<a class="nav-link" 
+         		 ui-sref="profile"
+						 ui-sref-active="active">
 						<i class="fa-solid fa-id-card fa-xl me-1 profil"></i>
 						<span class="text-capitalize text-small-caps menupontok">
 							Profil
 						</span>
-        	  		</a>
-		  	  </li>
+        	</a>
+		  	</li> -->
 
-					<!-- Logout -->
-		  	 	<li class="nav-item cursor-pointer" 
+				<!-- Logout -->
+		  	<!-- <li class="nav-item cursor-pointer" 
 						ng-if="$root.user.id">
-		  			<a class="nav-link"
-							ui-sref-active="active" 
-						 	ng-click="logout()">
+		  		<a class="nav-link"
+						ui-sref-active="active" 
+					 	ng-click="logout()">
 						<i class="fa-solid fa-right-from-bracket fa-xl me-1 kijelentkezes"></i>
 						<span class="text-capitalize text-small-caps menupontok">
 							Kijelenkezés
 						</span>
 					</a>
-		  		</li>
+		  	</li> -->
 			</ul>
 	 	 </div>
 	</div>
