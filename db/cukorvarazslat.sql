@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2024. Máj 05. 12:11
--- Kiszolgáló verziója: 10.4.6-MariaDB
--- PHP verzió: 7.3.8
+-- Létrehozás ideje: 2024. Máj 05. 21:11
+-- Kiszolgáló verziója: 10.4.32-MariaDB
+-- PHP verzió: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -34,7 +33,7 @@ CREATE TABLE `offers` (
   `email` varchar(40) NOT NULL,
   `message` varchar(200) NOT NULL,
   `date` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- A tábla adatainak kiíratása `offers`
@@ -57,7 +56,7 @@ CREATE TABLE `orders` (
   `cvv` varchar(3) NOT NULL,
   `date` datetime NOT NULL,
   `total` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- A tábla adatainak kiíratása `orders`
@@ -67,7 +66,9 @@ INSERT INTO `orders` (`id`, `user_id`, `card_number`, `expiration`, `cvv`, `date
 (1, 15, '1111111111111111', '2024/05', '123', '2024-05-04 18:24:15', 49984),
 (2, 15, '1111111111111111', '2025/01', '123', '2024-05-04 18:27:18', 20995),
 (3, 15, '1111111111111111', '2024/05', '123', '2024-05-04 20:34:45', 5998),
-(4, 15, '1111111111111111', '2024/05', '123', '2024-05-05 09:57:43', 10797);
+(4, 15, '1111111111111111', '2024/05', '123', '2024-05-05 09:57:43', 10797),
+(5, 17, '0132132313101212', '2026/03', '510', '2024-05-05 19:49:57', 5998),
+(6, 17, '0132132313101212', '2026/03', '510', '2024-05-05 20:50:33', 5997);
 
 -- --------------------------------------------------------
 
@@ -81,7 +82,7 @@ CREATE TABLE `orders_item` (
   `product_id` int(11) NOT NULL,
   `quantity` tinyint(4) NOT NULL,
   `price` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- A tábla adatainak kiíratása `orders_item`
@@ -95,7 +96,9 @@ INSERT INTO `orders_item` (`id`, `order_id`, `product_id`, `quantity`, `price`) 
 (5, 2, 8, 3, 4999),
 (6, 3, 2, 2, 2999),
 (7, 4, 3, 2, 3999),
-(8, 4, 29, 1, 2799);
+(8, 4, 29, 1, 2799),
+(9, 5, 2, 2, 2999),
+(10, 6, 10, 3, 1999);
 
 -- --------------------------------------------------------
 
@@ -109,7 +112,7 @@ CREATE TABLE `products` (
   `product_type` varchar(20) NOT NULL,
   `img` varchar(50) NOT NULL,
   `price` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- A tábla adatainak kiíratása `products`
@@ -120,7 +123,7 @@ INSERT INTO `products` (`id`, `name`, `product_type`, `img`, `price`) VALUES
 (2, 'Grincs', 'figurak', 'grincs.jpeg', 2999),
 (3, 'Oroszlánkirály', 'figurak', 'oroszlankiraly.jpeg', 3999),
 (4, 'Verdák', 'figurak', 'verdak_matuka_mc_queen.jpeg', 4999),
-(5, 'Dobbermann', 'figurak', 'dog.jpeg', 2999),
+(5, 'Dobermann', 'figurak', 'dog.jpeg', 2999),
 (6, 'Mickey egér csomag', 'figurak', 'miki_eger_csomag.jpeg', 7999),
 (7, 'Micimackó és barátai', 'figurak', 'micimacko.jpg', 3999),
 (8, 'Jávorszarvas', 'figurak', 'szarvass.jpeg', 4999),
@@ -158,7 +161,7 @@ CREATE TABLE `products_type` (
   `type` varchar(50) NOT NULL,
   `name` varchar(50) NOT NULL,
   `order_by` tinyint(4) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- A tábla adatainak kiíratása `products_type`
@@ -181,7 +184,7 @@ CREATE TABLE `shopping_cart` (
   `product_id` int(11) NOT NULL,
   `quantity` tinyint(3) UNSIGNED NOT NULL,
   `price` int(11) UNSIGNED NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -193,7 +196,7 @@ CREATE TABLE `type` (
   `id` char(1) NOT NULL,
   `type` varchar(10) NOT NULL,
   `name` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- A tábla adatainak kiíratása `type`
@@ -227,7 +230,7 @@ CREATE TABLE `users` (
   `email` varchar(50) NOT NULL,
   `password` varchar(20) NOT NULL,
   `valid` tinyint(1) UNSIGNED NOT NULL DEFAULT 1
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- A tábla adatainak kiíratása `users`
@@ -251,19 +254,6 @@ INSERT INTO `users` (`id`, `type`, `name`, `born`, `gender`, `country_code`, `ph
 (15, 'A', 'Ódry Attila', '1964-03-08', 'M', '36', '304816888', '6725 Szeged, Futrinka utca 66.', 'odry.attila@keri.mako.hu', '1234Aa', 1),
 (16, 'A', 'Vidéki Gyula Milán', NULL, 'M', NULL, NULL, NULL, 'videki.gyula.milan@gmail.com', '1234Aa', 1),
 (17, 'U', 'Földi Ákos', '2004-03-17', 'M', '36', '301168611', 'Szegedi utca 9-13/c', 'akoska610@gmail.com', 'Majompok1', 1);
-
--- --------------------------------------------------------
-
---
--- Tábla szerkezet ehhez a táblához `vasarlas`
---
-
-CREATE TABLE `vasarlas` (
-  `id` int(11) NOT NULL,
-  `userid` int(5) NOT NULL,
-  `kartyaszam` int(19) NOT NULL,
-  `fizetes_idopont` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Indexek a kiírt táblákhoz
@@ -319,13 +309,6 @@ ALTER TABLE `users`
   ADD UNIQUE KEY `email` (`email`);
 
 --
--- A tábla indexei `vasarlas`
---
-ALTER TABLE `vasarlas`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `userid` (`userid`);
-
---
 -- A kiírt táblák AUTO_INCREMENT értéke
 --
 
@@ -339,13 +322,13 @@ ALTER TABLE `offers`
 -- AUTO_INCREMENT a táblához `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT a táblához `orders_item`
 --
 ALTER TABLE `orders_item`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT a táblához `products`
