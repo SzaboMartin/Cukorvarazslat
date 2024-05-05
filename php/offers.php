@@ -32,14 +32,6 @@ $query = "INSERT INTO `offers`
 // Execute query with arguments
 $result = $db->execute($query, $args);
 
-if ($result['affectedRows']) {
-  $to = "akoska610@gmail.com"; // Admin's email address
-  $subject = "New message from your website";
-  $body = "Name: " . $args['name'] . "\n";
-  $body .= "Email: " . $args['email'] . "\n\n";
-  $body .= "Message:\n" . $args['message'];
-  $headers = "From: " . $args['email'];
-}
 // Close connection
 $db = null;
 
@@ -47,9 +39,10 @@ $db = null;
 if (!$result['affectedRows']) {
 
 	// Set error
-	Util::setError('Az üzenetet nem sikerült elküldeni!');
+	Util::setError('Az üzenetet nem sikerült regisztrálni!');
 }
 
 // Set response
-Util::setResponse("Az üzenet elküldése sikeresen megtörtént!");
+Util::setResponse(
+  "Az üzenetet sikeressen regisztráltuk.\nHamarossan felvesszük Önnel a kapcsolatot!");
 ?>

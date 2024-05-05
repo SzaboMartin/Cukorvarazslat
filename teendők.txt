@@ -7,8 +7,8 @@ Kosár vásárlás OK
 
 Login/Register - oda-vissza váltása OK
 
-Fizetés oldalnál nem működik a javascript. 
+Fizetés oldalnál nem működik a javascript. Értelmezhezezlen megoldva controller-el OK
 
-Adatbázis fizetéshez és a galéria képeihez.
+Adatbázis fizetéshez és a galéria képeihez.	OK
 
-Ha be vagyunk jelentkezve és rá frissítünk az oldalra, akkor kijelentkezik.
+Ha be vagyunk jelentkezve és rá frissítünk az oldalra, akkor kijelentkezik. OK

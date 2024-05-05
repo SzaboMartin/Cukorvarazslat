@@ -960,10 +960,38 @@
     '$scope',
 		'$timeout',
 		'http',
-		'util',
-    function($rootScope, $scope, $timeout, http, util) {
+    function($rootScope, $scope, $timeout, http) {
 
-			
+			// Accordion header
+			$scope.header = {
+				button: {
+					id: "Rendelésszám",
+					items: "Tétel (db)",
+					date: "Dátum",
+					total: "Összeg (Ft)"
+				},
+				body: {
+					name: "Termék",
+					price: "Egységár (Ft)",
+					quantity: "Mennyiség (db)",
+					total: "Össesen (Ft)"
+				}
+			};
+
+			// Http request
+			http.request({
+				url: `./php/get_orders.php`,
+				data: {user_id: $rootScope.user.id}
+			})
+			.then(response => {
+				$scope.orders = response;
+				$scope.$applyAsync();
+			})
+			.catch(e => {
+				$timeout(() => {
+					alert(e);
+				}, 50);
+			});
 		}
 	]);
 

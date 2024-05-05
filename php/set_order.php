@@ -35,7 +35,7 @@ $dateNow = date("Y-m-d H:i:s");
 
 // Set query
 $query ="INSERT INTO `orders` 
-										(`user_id`, `card_number`, `expiration`, `cvv`, `date`) 
+										(`user_id`, `card_number`, `expiration`, `cvv`, `date`, `total`) 
 							VALUES";
 
 // Execute query
@@ -44,7 +44,8 @@ $order = $db->execute($query, array(
 	$args["order"]["card_number"],
 	$args["order"]["expiration"], 
 	$args["order"]["cvv"], 
-	$dateNow
+	$dateNow,
+	$total
 ));
 
 // Check not success

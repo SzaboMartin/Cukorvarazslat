@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2024. Máj 04. 20:00
+-- Létrehozás ideje: 2024. Máj 05. 12:11
 -- Kiszolgáló verziója: 10.4.6-MariaDB
 -- PHP verzió: 7.3.8
 
@@ -55,16 +55,19 @@ CREATE TABLE `orders` (
   `card_number` varchar(20) NOT NULL,
   `expiration` varchar(7) NOT NULL,
   `cvv` varchar(3) NOT NULL,
-  `date` datetime NOT NULL
+  `date` datetime NOT NULL,
+  `total` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- A tábla adatainak kiíratása `orders`
 --
 
-INSERT INTO `orders` (`id`, `user_id`, `card_number`, `expiration`, `cvv`, `date`) VALUES
-(1, 15, '1111111111111111', '2024/05', '123', '2024-05-04 18:24:15'),
-(2, 15, '1111111111111111', '2025/01', '123', '2024-05-04 18:27:18');
+INSERT INTO `orders` (`id`, `user_id`, `card_number`, `expiration`, `cvv`, `date`, `total`) VALUES
+(1, 15, '1111111111111111', '2024/05', '123', '2024-05-04 18:24:15', 49984),
+(2, 15, '1111111111111111', '2025/01', '123', '2024-05-04 18:27:18', 20995),
+(3, 15, '1111111111111111', '2024/05', '123', '2024-05-04 20:34:45', 5998),
+(4, 15, '1111111111111111', '2024/05', '123', '2024-05-05 09:57:43', 10797);
 
 -- --------------------------------------------------------
 
@@ -89,7 +92,10 @@ INSERT INTO `orders_item` (`id`, `order_id`, `product_id`, `quantity`, `price`) 
 (2, 1, 7, 3, 3999),
 (3, 1, 24, 1, 1999),
 (4, 2, 2, 2, 2999),
-(5, 2, 8, 3, 4999);
+(5, 2, 8, 3, 4999),
+(6, 3, 2, 2, 2999),
+(7, 4, 3, 2, 3999),
+(8, 4, 29, 1, 2799);
 
 -- --------------------------------------------------------
 
@@ -333,13 +339,13 @@ ALTER TABLE `offers`
 -- AUTO_INCREMENT a táblához `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT a táblához `orders_item`
 --
 ALTER TABLE `orders_item`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT a táblához `products`

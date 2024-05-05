@@ -159,7 +159,7 @@
 							$rootScope.goToPreviousState();
 						});
 					}
-				}, 50);
+				}, 300);
 			};
 
 			// Return service
